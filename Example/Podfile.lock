@@ -1,0 +1,37 @@
+PODS:
+  - Kiwi (2.3.1)
+  - PPEventRegistryAPI (0.1.0):
+    - SwiftyJSON
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Kiwi (from `https://github.com/kiwi-bdd/Kiwi.git`, branch `3.0-development`)
+  - PPEventRegistryAPI (from `../`)
+  - SwiftyJSON (from `https://github.com/ratkins/SwiftyJSON.git`, branch `swift3`)
+
+EXTERNAL SOURCES:
+  Kiwi:
+    :branch: 3.0-development
+    :git: https://github.com/kiwi-bdd/Kiwi.git
+  PPEventRegistryAPI:
+    :path: "../"
+  SwiftyJSON:
+    :branch: swift3
+    :git: https://github.com/ratkins/SwiftyJSON.git
+
+CHECKOUT OPTIONS:
+  Kiwi:
+    :commit: 598f3a9bd7a9b362e64c1106aa55e50eac162100
+    :git: https://github.com/kiwi-bdd/Kiwi.git
+  SwiftyJSON:
+    :commit: b9e393d9378aa60b00e8416784ba265ffbb69de9
+    :git: https://github.com/ratkins/SwiftyJSON.git
+
+SPEC CHECKSUMS:
+  Kiwi: 13a2a8a58d85979f53f191b39d5087f289c3613c
+  PPEventRegistryAPI: 3d76cbf211bf87e0b2f02450fc9e264cc87af287
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+PODFILE CHECKSUM: 57c7f46f74a811e08536f5b287c54215f8e21db9
+
+COCOAPODS: 1.0.0
