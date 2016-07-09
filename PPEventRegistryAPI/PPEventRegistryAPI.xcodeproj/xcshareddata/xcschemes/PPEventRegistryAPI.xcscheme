@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-               BuildableName = "PPEventRegistryAPI_Example.app"
-               BlueprintName = "PPEventRegistryAPI_Example"
-               ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "PPEventRegistryAPI_Tests.xctest"
-               BlueprintName = "PPEventRegistryAPI_Tests"
+               BlueprintIdentifier = "E9385AE51D17325C009716D1"
+               BuildableName = "PPEventRegistryAPI.framework"
+               BlueprintName = "PPEventRegistryAPI"
                ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "607FACE41AFB9204008FA782"
-               BuildableName = "PPEventRegistryAPI_Tests.xctest"
-               BlueprintName = "PPEventRegistryAPI_Tests"
+               BlueprintIdentifier = "E9385AEE1D17325C009716D1"
+               BuildableName = "PPEventRegistryAPITests.xctest"
+               BlueprintName = "PPEventRegistryAPITests"
                ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "PPEventRegistryAPI_Example.app"
-            BlueprintName = "PPEventRegistryAPI_Example"
+            BlueprintIdentifier = "E9385AE51D17325C009716D1"
+            BuildableName = "PPEventRegistryAPI.framework"
+            BlueprintName = "PPEventRegistryAPI"
             ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,16 +61,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "PPEventRegistryAPI_Example.app"
-            BlueprintName = "PPEventRegistryAPI_Example"
+            BlueprintIdentifier = "E9385AE51D17325C009716D1"
+            BuildableName = "PPEventRegistryAPI.framework"
+            BlueprintName = "PPEventRegistryAPI"
             ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -94,16 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
-            BuildableName = "PPEventRegistryAPI_Example.app"
-            BlueprintName = "PPEventRegistryAPI_Example"
+            BlueprintIdentifier = "E9385AE51D17325C009716D1"
+            BuildableName = "PPEventRegistryAPI.framework"
+            BlueprintName = "PPEventRegistryAPI"
             ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -4,9 +4,15 @@ platform :ios, '10.0'
 
 use_frameworks!
 
-target 'PPEventRegisterTest' do
+target 'PPEventRegistryAPI' do
+#  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON', :branch => 'swift3'
+# Fix compilation errors for Xcode beta 2
   pod 'SwiftyJSON', :git => 'https://github.com/ratkins/SwiftyJSON.git', :branch => 'swift3'
-  pod 'PPEventRegistryAPI', :path => '..'
+end
+
+target 'PPEventRegistryAPITests' do
+  pod 'PPEventRegistryAPI', :path => '../'
+  pod 'Kiwi', :git => 'https://github.com/kiwi-bdd/Kiwi.git', :branch => '3.0-development'
 end
 
 # [Xcode 8 beta 2]: CopySwiftLibs for Pods framework fails with Mach-O header error #5598

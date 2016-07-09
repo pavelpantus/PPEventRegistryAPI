@@ -56,7 +56,6 @@
 		E9584F861D201AAA00B32570 /* PPArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPArticle.swift; path = Models/PPArticle.swift; sourceTree = "<group>"; };
 		E9584F881D2025D100B32570 /* PPModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelType.swift; path = Models/PPModelType.swift; sourceTree = "<group>"; };
 		E9D9F38A1D172C52007267AD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		E9D9F38C1D172C52007267AD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+PPJoin.swift"; path = "Utility/Dictionary+PPJoin.swift"; sourceTree = "<group>"; };
 		E9E0B73C1D18CFAA00702E4E /* Dictionary+PPJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+PPJoin.swift"; path = "Utility/Dictionary+PPJoin.swift"; sourceTree = "<group>"; };
 		E9F2E8E51D174BE400DBF268 /* PPTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPTransport.swift; path = Transport/PPTransport.swift; sourceTree = "<group>"; };
@@ -190,7 +189,6 @@
 				E9F2E9FF1D176E3500DBF268 /* API */,
 				E9F2E8E41D174BC700DBF268 /* Transport */,
 				E9E0B7381D18C9D200702E4E /* Utility */,
-				E9D9F38C1D172C52007267AD /* .gitkeep */,
 			);
 			name = Classes;
 			path = ../PPEventRegistryAPI/Classes;
