@@ -10,6 +10,16 @@ Swift framework for accessing data in Event Registry (http://eventregistry.org/)
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+## Supported API calls
+
+- `Log In`
+- `Get Event By Identifier`
+- `Get Recent Articles`
+
+## Known Issues
+
+- `Log In` operation does not return `error` in case of bad input (empty email and/or password)
+
 ## Requirements
 
 ## Installation
