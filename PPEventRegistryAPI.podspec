@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'PPEventRegistryAPI'
-  s.version          = '0.1.0'
+  s.version          = '0.0.1'
   s.summary          = 'Swift framework for accessing data in Event Registry (http://eventregistry.org/)'
 
   s.description      = <<-DESC
