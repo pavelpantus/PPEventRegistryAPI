@@ -8,6 +8,7 @@ target 'PPEventRegistryAPI' do
 #  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON', :branch => 'swift3'
 # Fix compilation errors for Xcode beta 2
   pod 'SwiftyJSON', :git => 'https://github.com/ratkins/SwiftyJSON.git', :branch => 'swift3'
+  pod 'OHHTTPStubs', :git => 'https://github.com/djbriane/OHHTTPStubs.git', :branch => 'swift3'
 end
 
 def testing_pods
