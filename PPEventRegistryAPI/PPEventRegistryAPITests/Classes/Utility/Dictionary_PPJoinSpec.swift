@@ -8,10 +8,12 @@
 
 import Quick
 import Nimble
+@testable import PPEventRegistryAPI
 
 class Dictionary_PPJoinSpec: QuickSpec {
     override func spec() {
         describe("pp_join") {
+
             it("returns an empty string in case of empty dictionary") {
                 let emptyDictionary: [String: String] = [:]
                 expect(emptyDictionary.pp_join()).to(equal(""))
@@ -27,6 +29,7 @@ class Dictionary_PPJoinSpec: QuickSpec {
                 expect(joinedParams).to(contain("&"))
                 expect(joinedParams).to(contain("key2=val2"))
             }
+
         }
     }
 }

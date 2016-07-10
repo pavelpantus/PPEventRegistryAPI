@@ -10,12 +10,12 @@
 		6A5842011FB0C682F7DA504E /* Pods_PPEventRegistryAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524A7C4356A9669B36DBCF25 /* Pods_PPEventRegistryAPITests.framework */; };
 		C5FFF1AEEE11A54A1899FE76 /* Pods_PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42F1E2B5780462A1E296A33 /* Pods_PPEventRegistryAPI.framework */; };
 		E910476C1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */; };
-		E910476D1D32F33B0048B0DE /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
 		E9385AE91D17325C009716D1 /* PPEventRegistryAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9385AF01D17325C009716D1 /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */; };
 		E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
 		E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
 		E9584F891D2025D100B32570 /* PPModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F881D2025D100B32570 /* PPModelType.swift */; };
+		E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */; };
 		E9E0B73A1D18CAD300702E4E /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
 		E9F2E8E61D174BE400DBF268 /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
 		E9F2EA011D176E7800DBF268 /* PPEventRegistryServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryServerAPI.swift */; };
@@ -55,6 +55,7 @@
 		E9584F841D20196800B32570 /* PPModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelMapper.swift; path = Models/PPModelMapper.swift; sourceTree = "<group>"; };
 		E9584F861D201AAA00B32570 /* PPArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPArticle.swift; path = Models/PPArticle.swift; sourceTree = "<group>"; };
 		E9584F881D2025D100B32570 /* PPModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelType.swift; path = Models/PPModelType.swift; sourceTree = "<group>"; };
+		E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPArticleSpec.swift; sourceTree = "<group>"; };
 		E9D9F38A1D172C52007267AD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+PPJoin.swift"; path = "Utility/Dictionary+PPJoin.swift"; sourceTree = "<group>"; };
 		E9F2E8E51D174BE400DBF268 /* PPTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPTransport.swift; path = Transport/PPTransport.swift; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 		E91047671D32E8970048B0DE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E97669AF1D32FB5E00AD40B7 /* API */,
 				E91047681D32E8970048B0DE /* Utility */,
 			);
 			path = Classes;
@@ -186,6 +188,22 @@
 				E9584F861D201AAA00B32570 /* PPArticle.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		E97669AF1D32FB5E00AD40B7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E97669B01D32FB5E00AD40B7 /* Models */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E97669B01D32FB5E00AD40B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E9D9F3891D172C52007267AD /* Assets */ = {
@@ -464,7 +482,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E910476C1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift in Sources */,
-				E910476D1D32F33B0048B0DE /* Dictionary+PPJoin.swift in Sources */,
+				E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
