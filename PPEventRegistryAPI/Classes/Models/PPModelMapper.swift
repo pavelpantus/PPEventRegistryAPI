@@ -22,7 +22,7 @@ class PPModelMapper: NSObject {
 
 }
 
-// MARK: PPEvent
+// MARK: PPArticle
 
 extension PPModelMapper {
     func mapDataToModelObject(_ json: JSON) -> PPArticle {
@@ -38,10 +38,33 @@ extension PPModelMapper {
     }
 
     func mapDataToModelObjects(_ json: JSON) -> [PPArticle] {
-        var events: [PPArticle] = []
+        var articles: [PPArticle] = []
         if let eventsInfo = json["recentActivity"]["articles"]["activity"].array {
-            eventsInfo.forEach { events.append(mapDataToModelObject($0)) }
+            eventsInfo.forEach { articles.append(mapDataToModelObject($0)) }
         }
+        return articles
+    }
+}
+
+// MARK: PPEvent
+
+extension PPModelMapper {
+    func mapDataToModelObject(_ json: JSON) -> PPEvent {
+        let eventInfo = json["info"]
+        let lang = "eng"
+
+        let title = eventInfo["title"][lang].stringValue
+        let summary = eventInfo["summary"][lang].stringValue
+        let eventDate = eventInfo["eventDate"].stringValue
+        let location = eventInfo["location"]["label"][lang].stringValue
+        let image = eventInfo["images"][0].URL
+
+        return PPEvent(title: title, summary: summary, eventDate: eventDate, location: location, image: image)
+    }
+
+    func mapDataToModelObjects(_ json: JSON) -> [PPEvent] {
+        var events: [PPEvent] = []
+        json.forEach { events.append(mapDataToModelObject($1)) }
         return events
     }
 }

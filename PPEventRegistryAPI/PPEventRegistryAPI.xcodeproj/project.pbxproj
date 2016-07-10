@@ -16,6 +16,8 @@
 		E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
 		E9584F891D2025D100B32570 /* PPModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F881D2025D100B32570 /* PPModelType.swift */; };
 		E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */; };
+		E9889B101D33023B0032C030 /* PPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B0F1D33023B0032C030 /* PPEvent.swift */; };
+		E9889B121D33087D0032C030 /* PPEventSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B111D33087D0032C030 /* PPEventSpec.swift */; };
 		E9E0B73A1D18CAD300702E4E /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
 		E9F2E8E61D174BE400DBF268 /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
 		E9F2EA011D176E7800DBF268 /* PPEventRegistryServerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryServerAPI.swift */; };
@@ -56,6 +58,8 @@
 		E9584F861D201AAA00B32570 /* PPArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPArticle.swift; path = Models/PPArticle.swift; sourceTree = "<group>"; };
 		E9584F881D2025D100B32570 /* PPModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelType.swift; path = Models/PPModelType.swift; sourceTree = "<group>"; };
 		E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPArticleSpec.swift; sourceTree = "<group>"; };
+		E9889B0F1D33023B0032C030 /* PPEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPEvent.swift; path = Models/PPEvent.swift; sourceTree = "<group>"; };
+		E9889B111D33087D0032C030 /* PPEventSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPEventSpec.swift; sourceTree = "<group>"; };
 		E9D9F38A1D172C52007267AD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+PPJoin.swift"; path = "Utility/Dictionary+PPJoin.swift"; sourceTree = "<group>"; };
 		E9F2E8E51D174BE400DBF268 /* PPTransport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPTransport.swift; path = Transport/PPTransport.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 				E9584F841D20196800B32570 /* PPModelMapper.swift */,
 				E9584F881D2025D100B32570 /* PPModelType.swift */,
 				E9584F861D201AAA00B32570 /* PPArticle.swift */,
+				E9889B0F1D33023B0032C030 /* PPEvent.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */,
+				E9889B111D33087D0032C030 /* PPEventSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -470,6 +476,7 @@
 				E9FB398A1D1A1F0B003E17EA /* PPGetEventOperation.swift in Sources */,
 				E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */,
 				E9584F891D2025D100B32570 /* PPModelType.swift in Sources */,
+				E9889B101D33023B0032C030 /* PPEvent.swift in Sources */,
 				E9F2EA051D176F1C00DBF268 /* PPAsyncOperation.swift in Sources */,
 				E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */,
 				E9F2E8E61D174BE400DBF268 /* PPTransport.swift in Sources */,
@@ -483,6 +490,7 @@
 			files = (
 				E910476C1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift in Sources */,
 				E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */,
+				E9889B121D33087D0032C030 /* PPEventSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 PODS:
-  - PPEventRegistryAPI (0.1.0):
+  - PPEventRegistryAPI (0.0.1):
     - SwiftyJSON
   - SwiftyJSON (2.3.2)
 
@@ -20,7 +20,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ratkins/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  PPEventRegistryAPI: 3d76cbf211bf87e0b2f02450fc9e264cc87af287
+  PPEventRegistryAPI: b354b0442ebd3e807d7f92d1861bb94617596603
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 PODFILE CHECKSUM: 8e2a4a96966232e9aa1d9cbfe3b039a65f4a7aa2

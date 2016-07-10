@@ -10,18 +10,24 @@ import Foundation
 import SwiftyJSON
 
 final class PPGetEventOperation: PPAsyncOperation {
-    init(identifier: NSNumber, completionHandler: ((error: NSError?) -> Void)?) {
+    init(identifier: NSNumber, completionHandler: ((event: PPEvent?, error: NSError?) -> Void)?) {
         let parameters = ["action": "getEvent",
                           "eventUri": identifier,
                           "infoConceptLang": "eng",
                           "infoEventImageCount": 1,
                           "resultType": "info"]
-        let completion: (JSON?, NSError?) -> Void = { (data, error) -> Void in
-            print("PPGetEventOperation \(error) items: \(data)")
-            completionHandler?(error: error)
+        super.init(controller: "event", httpMethod: "GET", parameters: parameters)
+
+        let completion: (JSON?, NSError?) -> Void = { (json, error) -> Void in
+            var events: [PPEvent] = []
+
+            if let json = json {
+                events = self.modelMapper.mapDataToModelObjects(json)
+            }
+
+            completionHandler?(event: events.first, error: error)
         }
 
-        super.init(controller: "event", httpMethod: "GET", parameters: parameters)
         self.completionHandler = completion
     }
 }

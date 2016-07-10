@@ -33,9 +33,9 @@ extension PPEventRegistryServerAPI {
         schedule(login)
     }
 
-    public func getEvent(withID id: NSNumber, completionHandler: ((error: NSError?) -> Void)?) {
-        let getEvent = PPGetEventOperation(identifier: id) { (error) in
-            completionHandler?(error: error)
+    public func getEvent(withID id: NSNumber, completionHandler: ((event: PPEvent?, error: NSError?) -> Void)?) {
+        let getEvent = PPGetEventOperation(identifier: id) { (event, error) in
+            completionHandler?(event: event, error: error)
         }
         schedule(getEvent)
     }
