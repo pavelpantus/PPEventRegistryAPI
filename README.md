@@ -43,4 +43,4 @@ Pavel Pantus, pantusp@gmail.com
 PPEventRegistryAPI is available under the MIT license. See the LICENSE file for more info.
 
 ## Links
-[[Accessing Event Registry data through Python](https://github.com/gregorleban/EventRegistry)]
+- [Accessing Event Registry data through Python](https://github.com/gregorleban/EventRegistry)
