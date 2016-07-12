@@ -19,11 +19,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 - `Get Event By Identifier`
 - `Get Recent Articles`
 
-## Known Issues
-
-- `Log In` operation does not return `error` in case of bad input (empty email and/or password)
-
-## Requirements
+## [Known Issues](https://github.com/pantuspavel/PPEventRegistryAPI/issues)
 
 ## Installation
 
