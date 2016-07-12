@@ -34,6 +34,28 @@ it, simply add the following line to your Podfile:
 pod "PPEventRegistryAPI"
 ```
 
+## Developer Setup
+
+*The following stuff needed:* Xcode 8 Beta 2, [Bundler](http://bundler.io/), [CocoaPods](http://cocoapods.org/).
+
+To open the project:
+```bash
+git clone git@github.com:pantuspavel/PPEventRegistryAPI.git
+cd PPEventRegistryAPI
+bundle
+pod install
+open PPEventRegistryAPI.xcworkspace
+```
+
+To open an example project:
+```bash
+git clone git@github.com:pantuspavel/PPEventRegistryAPI.git
+cd PPEventRegistryAPI/Example
+bundle
+pod install
+open PPEventRegistryTest.xcworkspace
+```
+
 ## Author
 
 Pavel Pantus, pantusp@gmail.com
