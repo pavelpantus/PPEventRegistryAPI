@@ -7,7 +7,7 @@ Swift framework for accessing data in Event Registry (http://eventregistry.org/)
 [![Platform](https://img.shields.io/cocoapods/p/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
 
 # Warning
-Pod is not released yet, because lint fails. Waiting for CocoaPods fix.
+Pod is not released yet.
 
 ## Example
 
