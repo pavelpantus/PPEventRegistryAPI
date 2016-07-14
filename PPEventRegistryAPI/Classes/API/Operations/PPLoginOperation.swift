@@ -13,7 +13,11 @@ final class PPLoginOperation: PPAsyncOperation {
     init(email: String, password: String, completionHandler: ((error: NSError?) -> Void)?) {
         let parameters = ["email": email, "pass": password]
         let completion: (JSON?, NSError?) -> Void = { (data, error) -> Void in
-            completionHandler?(error: error)
+            if let data = data where data["action"].stringValue == "unknownUser" {
+                completionHandler?(error: NSError(domain: "Unknown User", code: 0, userInfo: nil))
+            } else {
+                completionHandler?(error: error)
+            }
         }
 
         super.init(controller: "login", httpMethod: "POST", parameters: parameters)
