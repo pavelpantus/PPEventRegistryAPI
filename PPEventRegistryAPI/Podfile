@@ -13,6 +13,8 @@ end
 def testing_pods
   pod 'Quick', :git => 'https://github.com/norio-nomura/Quick.git', :branch => 'nn-swift-3-compatibility'
   pod 'Nimble', :git => 'https://github.com/norio-nomura/Nimble.git', :branch => 'nn-swift-3-compatibility'
+  pod 'OHHTTPStubs', :git => 'https://github.com/djbriane/OHHTTPStubs.git', :branch => 'swift3'
+  pod 'OHHTTPStubs/Swift', :git => 'https://github.com/djbriane/OHHTTPStubs.git', :branch => 'swift3'
 end
 
 target 'PPEventRegistryAPITests' do

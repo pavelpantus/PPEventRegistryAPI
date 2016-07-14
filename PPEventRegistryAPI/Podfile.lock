@@ -1,5 +1,20 @@
 PODS:
   - Nimble (5.0.0-alpha.30p1)
+  - OHHTTPStubs (5.1.0):
+    - OHHTTPStubs/Default (= 5.1.0)
+  - OHHTTPStubs/Core (5.1.0)
+  - OHHTTPStubs/Default (5.1.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.1.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.1.0)
+  - OHHTTPStubs/Swift (5.1.0):
+    - OHHTTPStubs/Core
   - PPEventRegistryAPI (0.0.1):
     - SwiftyJSON
   - Quick (0.9.2)
@@ -7,6 +22,8 @@ PODS:
 
 DEPENDENCIES:
   - Nimble (from `https://github.com/norio-nomura/Nimble.git`, branch `nn-swift-3-compatibility`)
+  - OHHTTPStubs (from `https://github.com/djbriane/OHHTTPStubs.git`, branch `swift3`)
+  - OHHTTPStubs/Swift (from `https://github.com/djbriane/OHHTTPStubs.git`, branch `swift3`)
   - PPEventRegistryAPI (from `../`)
   - Quick (from `https://github.com/norio-nomura/Quick.git`, branch `nn-swift-3-compatibility`)
   - SwiftyJSON (from `https://github.com/ratkins/SwiftyJSON.git`, branch `swift3`)
@@ -15,6 +32,9 @@ EXTERNAL SOURCES:
   Nimble:
     :branch: nn-swift-3-compatibility
     :git: https://github.com/norio-nomura/Nimble.git
+  OHHTTPStubs:
+    :branch: swift3
+    :git: https://github.com/djbriane/OHHTTPStubs.git
   PPEventRegistryAPI:
     :path: "../"
   Quick:
@@ -28,6 +48,9 @@ CHECKOUT OPTIONS:
   Nimble:
     :commit: 97bc35989e142179851d84eb89d6fcae214ee32b
     :git: https://github.com/norio-nomura/Nimble.git
+  OHHTTPStubs:
+    :commit: f22fa0537a0f816afa3e083052d9b71a6fe2e387
+    :git: https://github.com/djbriane/OHHTTPStubs.git
   Quick:
     :commit: 78078b45490f31adfdfb9c2b723f2f96af5dd8d3
     :git: https://github.com/norio-nomura/Quick.git
@@ -37,10 +60,11 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
+  OHHTTPStubs: 592f74439d2d72615115cf99a954237a3fbe26e5
   PPEventRegistryAPI: b354b0442ebd3e807d7f92d1861bb94617596603
   Quick: 19b5d0e23c18c06741e4f4b21b00c3101c78eeca
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: a0e5bb2441b624364d6da32350e44bd9c1bbe7c1
+PODFILE CHECKSUM: 792ec5faa6bd279e92e88d19e0b80d95900c3f64
 
 COCOAPODS: 1.1.0.beta.1
