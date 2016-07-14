@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class PPEventRegistryServerAPI {
+public final class PPEventRegistryAPI {
     private let queue = OperationQueue()
     private let transport = PPTransport()
     private let modelMapper = PPModelMapper()
@@ -24,7 +24,7 @@ public final class PPEventRegistryServerAPI {
 
 // MARK: Public API Methods
 
-extension PPEventRegistryServerAPI {
+extension PPEventRegistryAPI {
 
     public func login(_ email: String, password: String, completionHandler: ((error: NSError?) -> Void)?) {
         let login = PPLoginOperation(email: email, password: password) { error in

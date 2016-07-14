@@ -10,7 +10,7 @@ import UIKit
 import PPEventRegistryAPI
 
 class ViewController: UIViewController {
-    let eventRegistryAPI = PPEventRegistryServerAPI()
+    let eventRegistryAPI = PPEventRegistryAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
