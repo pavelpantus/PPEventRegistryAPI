@@ -1,0 +1,10 @@
+language: swift
+
+osx_image: xcode8
+
+before_install:
+- bundle
+- pod install --project-directory=PPEventRegistryAPI
+
+script:
+- xcodebuild test -workspace "PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace" -scheme "PPEventRegistryAPI" -destination "platform=iOS Simulator,name='iPhone 6s',OS=10.0"
