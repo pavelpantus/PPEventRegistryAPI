@@ -12,9 +12,9 @@ import SwiftyJSON
 class PPAsyncOperation: Operation {
     private var _executing = false
     private var _finished = false
-    private let controller: String
-    private let parameters: [String: AnyObject]
-    private let httpMethod: String
+    internal let controller: String
+    internal let parameters: [String: AnyObject]
+    internal let httpMethod: String
     internal var transport: PPTransport!
     internal var modelMapper: PPModelMapper!
     internal var completionHandler: ((JSON?, NSError?) -> Void)?
