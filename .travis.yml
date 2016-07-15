@@ -7,4 +7,4 @@ before_install:
 - pod install --project-directory=PPEventRegistryAPI
 
 script:
-- xcodebuild test -workspace "PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace" -scheme "PPEventRegistryAPI" -destination "platform=iOS Simulator,name='iPhone 6s',OS=10.0"
+- xcodebuild test -workspace "PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace" -scheme "PPEventRegistryAPI" -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.0"
