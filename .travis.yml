@@ -10,4 +10,4 @@ notifications:
   email: false
 
 script:
-- xcodebuild test-without-building -workspace "PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace" -scheme "PPEventRegistry" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+- xcodebuild build-for-testing test-without-building -workspace "PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace" -scheme "PPEventRegistry" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
