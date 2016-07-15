@@ -364,8 +364,6 @@
 					};
 					E9385AEE1D17325C009716D1 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 5MFLUTCEP9;
-						DevelopmentTeamName = "Pavel Pantus (Personal Team)";
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
