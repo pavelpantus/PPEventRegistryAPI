@@ -11,3 +11,6 @@ notifications:
 
 script:
 - xcodebuild build-for-testing test-without-building -workspace "PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace" -scheme "PPEventRegistry" -sdk iphonesimulator -destination "platform=iOS Simulator,name=iPhone 6s,OS=10.0" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
