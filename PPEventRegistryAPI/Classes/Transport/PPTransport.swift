@@ -9,6 +9,10 @@
 import Foundation
 import SwiftyJSON
 
+protocol PPTransportProtocol {
+    func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (json: JSON?, error: NSError?) -> Void)
+}
+
 final class PPTransport: NSObject {
     private var session: URLSession!
     private let baseURI = "http://eventregistry.org"
@@ -17,7 +21,11 @@ final class PPTransport: NSObject {
         super.init()
         session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
+}
 
+// MARK: PPTransportProtocol
+
+extension PPTransport: PPTransportProtocol {
     internal func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (json: JSON?, error: NSError?) -> Void) {
         var request: URLRequest!
         if httpMethod == "GET" {
@@ -38,9 +46,9 @@ final class PPTransport: NSObject {
             }
 
             guard let data = data,
-                  let resultObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
-                completionHandler(json: nil, error: NSError(domain: "Response Data is Corrupted", code: 0, userInfo: nil))
-                return
+                let resultObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
+                    completionHandler(json: nil, error: NSError(domain: "Response Data is Corrupted", code: 0, userInfo: nil))
+                    return
             }
 
             completionHandler(json: JSON(resultObject), error: nil)

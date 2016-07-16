@@ -13,7 +13,7 @@ import Nimble
 class PPGetEventOperationSpec: QuickSpec {
     override func spec() {
 
-        var getEventOperation: PPGetEventOperation?
+        var getEventOperation: PPGetEventOperation!
 
         beforeEach {
             getEventOperation = PPGetEventOperation(identifier: 123, completionHandler: nil)
@@ -28,23 +28,23 @@ class PPGetEventOperationSpec: QuickSpec {
         }
 
         it("configured with correct httpMethod") {
-            expect(getEventOperation!.httpMethod).to(equal("GET"))
+            expect(getEventOperation.httpMethod).to(equal("GET"))
         }
 
         it("configured with correct controller") {
-            expect(getEventOperation!.controller).to(equal("event"))
+            expect(getEventOperation.controller).to(equal("event"))
         }
 
         it("configured with a completion") {
-            expect(getEventOperation!.completionHandler).notTo(beNil())
+            expect(getEventOperation.completionHandler).notTo(beNil())
         }
 
         it("configured with correct parameters") {
-            expect(getEventOperation!.parameters).to(equal(["action": "getEvent",
-                                                            "eventUri": 123,
-                                                            "infoConceptLang": "eng",
-                                                            "infoEventImageCount": 1,
-                                                            "resultType": "info"] as NSDictionary))
+            expect(getEventOperation.parameters).to(equal(["action": "getEvent",
+                                                           "eventUri": 123,
+                                                           "infoConceptLang": "eng",
+                                                           "infoEventImageCount": 1,
+                                                           "resultType": "info"] as NSDictionary))
         }
 
     }

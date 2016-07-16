@@ -13,7 +13,7 @@ import Nimble
 class PPLoginOperationSpec: QuickSpec {
     override func spec() {
 
-        var loginOperation: PPLoginOperation?
+        var loginOperation: PPLoginOperation!
 
         beforeEach {
             loginOperation = PPLoginOperation(email: "email@email.com", password: "qwerty", completionHandler: nil)
@@ -28,19 +28,19 @@ class PPLoginOperationSpec: QuickSpec {
         }
 
         it("configured with correct httpMethod") {
-            expect(loginOperation!.httpMethod).to(equal("POST"))
+            expect(loginOperation.httpMethod).to(equal("POST"))
         }
 
         it("configured with correct controller") {
-            expect(loginOperation!.controller).to(equal("login"))
+            expect(loginOperation.controller).to(equal("login"))
         }
 
         it("configured with a completion") {
-            expect(loginOperation!.completionHandler).notTo(beNil())
+            expect(loginOperation.completionHandler).notTo(beNil())
         }
 
         it("configured with correct parameters") {
-            expect(loginOperation!.parameters).to(equal(["email": "email@email.com",
+            expect(loginOperation.parameters).to(equal(["email": "email@email.com",
                                                         "pass": "qwerty"] as NSDictionary))
         }
 
