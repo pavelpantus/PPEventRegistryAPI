@@ -3,6 +3,7 @@ Swift framework for accessing data in Event Registry (http://eventregistry.org/)
 
 [![CI Status](http://img.shields.io/travis/pantuspavel/PPEventRegistryAPI.svg?style=flat)](https://travis-ci.org/pantuspavel/PPEventRegistryAPI)
 [![codecov.io](https://codecov.io/gh/pantuspavel/PPEventRegistryAPI/branch/master/graphs/badge.svg)](https://codecov.io/gh/pantuspavel/PPEventRegistryAPI/branch/master)
+[![Code Climate](https://codeclimate.com/github/pantuspavel/PPEventRegistryAPI/badges/gpa.svg)](https://codeclimate.com/github/pantuspavel/PPEventRegistryAPI)
 [![Version](https://img.shields.io/cocoapods/v/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
 [![License](https://img.shields.io/cocoapods/l/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
 [![Platform](https://img.shields.io/cocoapods/p/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
