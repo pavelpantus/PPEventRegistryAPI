@@ -6,6 +6,10 @@ before_install:
 - bundle
 - pod install --project-directory=PPEventRegistryAPI
 
+branches:
+  only:
+    - master
+
 notifications:
   email: false
 
