@@ -1,7 +1,5 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '10.0'
-
 project 'PPEventRegistryAPI.xcodeproj'
 inhibit_all_warnings!
 
@@ -19,13 +17,31 @@ def testing_pods
   pod 'OHHTTPStubs/Swift', :git => 'https://github.com/djbriane/OHHTTPStubs.git', :branch => 'swift3'
 end
 
-target 'PPEventRegistryAPI iOS' do
+abstract_target 'TargetPods' do
   pods
+
+  target 'PPEventRegistryAPI iOS' do
+    platform :ios, '10.0'
+  end
+
+  target 'PPEventRegistryAPI tvOS' do
+    platform :tvos, '10.0'
+  end
+
 end
 
-target 'PPEventRegistryAPITests iOS' do
+abstract_target 'TestingPods' do
   pods
   testing_pods
+
+  target 'PPEventRegistryAPITests iOS' do
+    platform :ios, '10.0'
+  end
+
+  target 'PPEventRegistryAPITests tvOS' do
+    platform :tvos, '10.0'
+  end
+
 end
 
 # [Xcode 8 beta 2]: CopySwiftLibs for Pods framework fails with Mach-O header error #5598
