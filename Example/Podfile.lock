@@ -20,7 +20,7 @@ CHECKOUT OPTIONS:
     :git: https://github.com/ratkins/SwiftyJSON.git
 
 SPEC CHECKSUMS:
-  PPEventRegistryAPI: b354b0442ebd3e807d7f92d1861bb94617596603
+  PPEventRegistryAPI: 2d82bdbda544c6dcef7cf80e08d228187e259c4e
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 PODFILE CHECKSUM: 8e2a4a96966232e9aa1d9cbfe3b039a65f4a7aa2
