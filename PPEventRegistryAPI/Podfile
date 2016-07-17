@@ -2,23 +2,27 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '10.0'
 
+project 'PPEventRegistryAPI.xcodeproj'
+inhibit_all_warnings!
 use_frameworks!
 
-target 'PPEventRegistryAPI' do
-#  pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON', :branch => 'swift3'
-# Fix compilation errors for Xcode beta 2
+def pods
   pod 'SwiftyJSON', :git => 'https://github.com/ratkins/SwiftyJSON.git', :branch => 'swift3'
 end
 
 def testing_pods
+  pod 'PPEventRegistryAPI', :path => '../'
   pod 'Quick', :git => 'https://github.com/norio-nomura/Quick.git', :branch => 'nn-swift-3-compatibility'
   pod 'Nimble', :git => 'https://github.com/norio-nomura/Nimble.git', :branch => 'nn-swift-3-compatibility'
   pod 'OHHTTPStubs', :git => 'https://github.com/djbriane/OHHTTPStubs.git', :branch => 'swift3'
-  pod 'OHHTTPStubs/Swift', :git => 'https://github.com/djbriane/OHHTTPStubs.git', :branch => 'swift3'
 end
 
-target 'PPEventRegistryAPITests' do
-  pod 'PPEventRegistryAPI', :path => '../'
+target 'PPEventRegistryAPI iOS' do
+  pods
+end
+
+target 'PPEventRegistryAPITests iOS' do
+  pods
   testing_pods
 end
 
