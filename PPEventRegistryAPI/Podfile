@@ -17,6 +17,11 @@ def testing_pods
   pod 'OHHTTPStubs/Swift', :git => 'https://github.com/djbriane/OHHTTPStubs.git', :branch => 'swift3'
 end
 
+target 'WatchHost watchOS Extension' do
+  # hosting target of `PPEventRegistryAPI watchOS`
+  platform :watchos, '3.0'
+end
+
 abstract_target 'TargetPods' do
   pods
 
@@ -26,6 +31,10 @@ abstract_target 'TargetPods' do
 
   target 'PPEventRegistryAPI tvOS' do
     platform :tvos, '10.0'
+  end
+
+  target 'PPEventRegistryAPI watchOS' do
+    platform :watchos, '3.0'
   end
 
 end
