@@ -16,9 +16,9 @@ notifications:
 env:
   global:
   - WORKSPACE=PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace
-  - SCHEME_IOS="PPEventRegistry iOS"
-  - SCHEME_TVOS="PPEventRegistry tvOS"
-  - SCHEME_WATCHOS="PPEventRegistry watchOS"
+  - SCHEME_IOS="PPEventRegistryAPI iOS"
+  - SCHEME_TVOS="PPEventRegistryAPI tvOS"
+  - SCHEME_WATCHOS="PPEventRegistryAPI watchOS"
   - IOS_SDK=iphonesimulator10.0
   - WATCHOS_SDK=watchsimulator3.0
   - TVOS_SDK=appletvsimulator10.0
