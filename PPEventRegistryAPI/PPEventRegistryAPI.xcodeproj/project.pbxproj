@@ -348,12 +348,6 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				E9385AE71D17325C009716D1 /* PPEventRegistryAPI */,
 				E9385AF31D17325C009716D1 /* PPEventRegistryAPITests */,
-				E9F8450D1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */,
-				E9F845181D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS */,
-				E909C2261D3DBE4D00E0DDB6 /* WatchHost */,
-				E909C23A1D3DBECB00E0DDB6 /* WatchHost watchOS */,
-				E909C2491D3DBECB00E0DDB6 /* WatchHost watchOS Extension */,
-				E909C2621D3DBEE800E0DDB6 /* PPEventRegistryAPI watchOS */,
 				607FACD11AFB9204008FA782 /* Products */,
 				350E116210746F582E0FEF10 /* Pods */,
 				BDE6ED17B81C713DBE5000B2 /* Frameworks */,
@@ -418,7 +412,8 @@
 				E909C2301D3DBE4D00E0DDB6 /* LaunchScreen.storyboard */,
 				E909C2331D3DBE4D00E0DDB6 /* Info.plist */,
 			);
-			path = WatchHost;
+			name = WatchHost;
+			path = ../WatchHost;
 			sourceTree = "<group>";
 		};
 		E909C23A1D3DBECB00E0DDB6 /* WatchHost watchOS */ = {
@@ -428,7 +423,8 @@
 				E909C23E1D3DBECB00E0DDB6 /* Assets.xcassets */,
 				E909C2401D3DBECB00E0DDB6 /* Info.plist */,
 			);
-			path = "WatchHost watchOS";
+			name = "WatchHost watchOS";
+			path = "../WatchHost watchOS";
 			sourceTree = "<group>";
 		};
 		E909C2491D3DBECB00E0DDB6 /* WatchHost watchOS Extension */ = {
@@ -439,17 +435,21 @@
 				E909C24E1D3DBECB00E0DDB6 /* Assets.xcassets */,
 				E909C2501D3DBECB00E0DDB6 /* Info.plist */,
 			);
-			path = "WatchHost watchOS Extension";
+			name = "WatchHost watchOS Extension";
+			path = "../WatchHost watchOS Extension";
 			sourceTree = "<group>";
 		};
 		E909C2621D3DBEE800E0DDB6 /* PPEventRegistryAPI watchOS */ = {
 			isa = PBXGroup;
 			children = (
+				E909C2261D3DBE4D00E0DDB6 /* WatchHost */,
+				E909C23A1D3DBECB00E0DDB6 /* WatchHost watchOS */,
+				E909C2491D3DBECB00E0DDB6 /* WatchHost watchOS Extension */,
 				E909C2631D3DBEE800E0DDB6 /* PPEventRegistryAPI watchOS.h */,
 				E909C2641D3DBEE800E0DDB6 /* Info.plist */,
 			);
 			path = "PPEventRegistryAPI watchOS";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		E91047671D32E8970048B0DE /* Classes */ = {
 			isa = PBXGroup;
@@ -473,6 +473,8 @@
 		E9385AE71D17325C009716D1 /* PPEventRegistryAPI */ = {
 			isa = PBXGroup;
 			children = (
+				E9F8450D1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */,
+				E909C2621D3DBEE800E0DDB6 /* PPEventRegistryAPI watchOS */,
 				E9D9F3891D172C52007267AD /* Assets */,
 				E9D9F38B1D172C52007267AD /* Classes */,
 				E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */,
@@ -600,11 +602,12 @@
 		E9F8450D1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */ = {
 			isa = PBXGroup;
 			children = (
+				E9F845181D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS */,
 				E9F8450E1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS.h */,
 				E9F8450F1D3B286200F4E3D9 /* Info.plist */,
 			);
 			path = "PPEventRegistryAPI tvOS";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		E9F845181D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS */ = {
 			isa = PBXGroup;
@@ -613,7 +616,7 @@
 			);
 			name = "PPEventRegistryAPITests tvOS";
 			path = "PPEventRegistryAPI tvOSTests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
