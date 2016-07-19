@@ -15,6 +15,9 @@ PPEventRegistryAPI is a Swift framework for accessing Event Registry data (http:
   s.social_media_url = 'https://twitter.com/pantusp'
 
   s.ios.deployment_target = '10.0'
+  s.watchos.deployment_target = '3.0'
+  s.tvos.deployment_target = '10.0'
+
   s.requires_arc  = true
 
   s.frameworks = 'Foundation'

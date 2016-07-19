@@ -46,13 +46,13 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Nimble:
-    :commit: 97bc35989e142179851d84eb89d6fcae214ee32b
+    :commit: 20bb2eaad01f9df2b29f35d90783ae81b89f86b2
     :git: https://github.com/norio-nomura/Nimble.git
   OHHTTPStubs:
     :commit: f22fa0537a0f816afa3e083052d9b71a6fe2e387
     :git: https://github.com/djbriane/OHHTTPStubs.git
   Quick:
-    :commit: 78078b45490f31adfdfb9c2b723f2f96af5dd8d3
+    :commit: 594479916dc6f87af514e3d64635a1358f3ae904
     :git: https://github.com/norio-nomura/Quick.git
   SwiftyJSON:
     :commit: b9e393d9378aa60b00e8416784ba265ffbb69de9
@@ -61,10 +61,10 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
   OHHTTPStubs: 592f74439d2d72615115cf99a954237a3fbe26e5
-  PPEventRegistryAPI: b354b0442ebd3e807d7f92d1861bb94617596603
+  PPEventRegistryAPI: 2d82bdbda544c6dcef7cf80e08d228187e259c4e
   Quick: 19b5d0e23c18c06741e4f4b21b00c3101c78eeca
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 792ec5faa6bd279e92e88d19e0b80d95900c3f64
+PODFILE CHECKSUM: 588d4ca857c4c6866ba1bc12b8df90376d3fb029
 
 COCOAPODS: 1.1.0.beta.1
