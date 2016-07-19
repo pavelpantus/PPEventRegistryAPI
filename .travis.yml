@@ -23,20 +23,20 @@ env:
   - WATCHOS_SDK=watchsimulator3.0
   - TVOS_SDK=appletvsimulator10.0
   matrix:
-    - DESTINATION="name=iPhone 6s,OS=10.0"         SDK="$IOS_SDK"     SCHEME="$SCHEME_IOS"     TESTS="YES" COVERAGE="YES"
-    - DESTINATION="name=Apple Watch - 42mm,OS=3.0" SDK="$WATCHOS_SDK" SCHEME="$SCHEME_WATCHOS" TESTS="NO"  COVERAGE="NO"
-    - DESTINATION="name=Apple TV 1080p,OS=10.0"    SDK="$TVOS_SDK"    SCHEME="$SCHEME_TVOS"    TESTS="YES" COVERAGE="NO"
+    - DESTINATION="name=iPhone 6s,OS=10.0"         SDK="$IOS_SDK"     SCHEME="$SCHEME_IOS"     RUN_TESTS="YES" SEND_COVERAGE="YES"
+    - DESTINATION="name=Apple Watch - 42mm,OS=3.0" SDK="$WATCHOS_SDK" SCHEME="$SCHEME_WATCHOS" RUN_TESTS="NO"  SEND_COVERAGE="NO"
+    - DESTINATION="name=Apple TV 1080p,OS=10.0"    SDK="$TVOS_SDK"    SCHEME="$SCHEME_TVOS"    RUN_TESTS="YES" SEND_COVERAGE="NO"
 
 script:
 - set -o pipefail
 
-- if [ $TESTS == "YES" ]; then
+- if [ $RUN_TESTS == "YES" ]; then
     xcodebuild build-for-testing test-without-building -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c;
   else
     xcodebuild build-for-testing -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c;
   fi
 
 after_success:
-- if [ $COVERAGE == "YES" ]; then
+- if [ $SEND_COVERAGE == "YES" ]; then
     bash <(curl -s https://codecov.io/bash)
   fi
