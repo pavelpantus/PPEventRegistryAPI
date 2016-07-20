@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E98C7DBB544D5BDE018516B /* Pods_TargetPods_PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F389058B59C0E2CE373FCD3 /* Pods_TargetPods_PPEventRegistryAPI.framework */; };
 		3078418FFC9B36860DC202C8 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9B939C9F4F1A971968DC33 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework */; };
 		49CC08294FE3AEAFCDA2A8A7 /* Pods_TargetPods_PPEventRegistryAPI_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38AEB219500D52C06C6CB67 /* Pods_TargetPods_PPEventRegistryAPI_tvOS.framework */; };
-		4ED3A2552AD26EFBDEEE6086 /* Pods_TestingPods_PPEventRegistryAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63BC66E3E5AA1A1D19FDBD /* Pods_TestingPods_PPEventRegistryAPITests.framework */; };
 		800235345E4DAA7E25358171 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0CFD44FDA0F83ADAC7D917 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework */; };
 		E909C2281D3DBE4D00E0DDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C2271D3DBE4D00E0DDB6 /* AppDelegate.swift */; };
 		E909C22A1D3DBE4D00E0DDB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C2291D3DBE4D00E0DDB6 /* ViewController.swift */; };
@@ -159,12 +157,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		071BECDA397D480423AE1F44 /* Pods-TargetPods-PPEventRegistryAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI/Pods-TargetPods-PPEventRegistryAPI.release.xcconfig"; sourceTree = "<group>"; };
-		11E7889771D02E294D3D9465 /* Pods-TestingPods-PPEventRegistryAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests/Pods-TestingPods-PPEventRegistryAPITests.debug.xcconfig"; sourceTree = "<group>"; };
 		283AD8E303897A2723DC5E57 /* Pods-PPEventRegistryAPITests tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests tvOS/Pods-PPEventRegistryAPITests tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2D60B7BE5DF1EF38FB8F1975 /* Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI watchOS/Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		33261A2B8922DC9A26EA357A /* Pods_WatchHost_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchHost_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43B18B1E4B9DEE17101E5C89 /* Pods-TestingPods-PPEventRegistryAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests/Pods-TestingPods-PPEventRegistryAPITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DBAB495C1A590C8C14E5732 /* Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig"; sourceTree = "<group>"; };
 		50160434A929064878939946 /* Pods-PPEventRegistryAPITests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests iOS/Pods-PPEventRegistryAPITests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		524A7C4356A9669B36DBCF25 /* Pods_PPEventRegistryAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,8 +171,6 @@
 		59590F10D365E86913934C1B /* Pods-TestingPods-PPEventRegistryAPITests tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests tvOS/Pods-TestingPods-PPEventRegistryAPITests tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		59F250622E0A45CF7BE7175C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		679EED4FDA62E1F2A6C4A746 /* Pods_WatchHost_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchHost_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		68B53C78E1DBDA28B04F5654 /* Pods-TargetPods-PPEventRegistryAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI/Pods-TargetPods-PPEventRegistryAPI.debug.xcconfig"; sourceTree = "<group>"; };
-		6F389058B59C0E2CE373FCD3 /* Pods_TargetPods_PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetPods_PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83406C153D323D28C795746A /* Pods-TestingPods-PPEventRegistryAPITests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests iOS/Pods-TestingPods-PPEventRegistryAPITests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		86692FA7A40988A5D04EC7E0 /* Pods-TestingPods-PPEventRegistryAPITests tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests tvOS/Pods-TestingPods-PPEventRegistryAPITests tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		8721F8E719CE364E0F55E9D9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +188,6 @@
 		CB42BCBCCACF71DF48426F0A /* Pods-PPEventRegistryAPI iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI iOS/Pods-PPEventRegistryAPI iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB52D9C8EE8E45DE1DE9354D /* Pods_PPEventRegistryAPITests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPITests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD40B4698F8A0B477B0EFC7F /* Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI tvOS/Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		CD63BC66E3E5AA1A1D19FDBD /* Pods_TestingPods_PPEventRegistryAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC087AFA702259AE3B9C69A /* Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D32B34E2F5FA4828F44031B2 /* Pods_PPEventRegistryAPI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06FE44D02704E4A19070471 /* Pods-WatchHost watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchHost watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchHost watchOS Extension/Pods-WatchHost watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,7 +243,7 @@
 		E9F8450F1D3B286200F4E3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9F845141D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PPEventRegistryAPITests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F8451B1D3B286200F4E3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9F845391D3B28DC00F4E3D9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E9F845391D3B28DC00F4E3D9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPGetEventOperation.swift; path = API/Operations/PPGetEventOperation.swift; sourceTree = "<group>"; };
 		E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPGetRecentArticles.swift; path = API/Operations/PPGetRecentArticles.swift; sourceTree = "<group>"; };
 		EF9B939C9F4F1A971968DC33 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -297,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				800235345E4DAA7E25358171 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework in Frameworks */,
-				2E98C7DBB544D5BDE018516B /* Pods_TargetPods_PPEventRegistryAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +298,6 @@
 			files = (
 				E9385AF01D17325C009716D1 /* PPEventRegistryAPI.framework in Frameworks */,
 				FB890A46D1BE37DC04C3D4F9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework in Frameworks */,
-				4ED3A2552AD26EFBDEEE6086 /* Pods_TestingPods_PPEventRegistryAPITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,10 +344,6 @@
 				581BAF57923196E413FB6A48 /* Pods-TargetPods-PPEventRegistryAPI watchOS.release.xcconfig */,
 				F57579D9A4B2EE24204EE5CF /* Pods-WatchHost watchOS Extension.debug.xcconfig */,
 				E06FE44D02704E4A19070471 /* Pods-WatchHost watchOS Extension.release.xcconfig */,
-				68B53C78E1DBDA28B04F5654 /* Pods-TargetPods-PPEventRegistryAPI.debug.xcconfig */,
-				071BECDA397D480423AE1F44 /* Pods-TargetPods-PPEventRegistryAPI.release.xcconfig */,
-				11E7889771D02E294D3D9465 /* Pods-TestingPods-PPEventRegistryAPITests.debug.xcconfig */,
-				43B18B1E4B9DEE17101E5C89 /* Pods-TestingPods-PPEventRegistryAPITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -418,8 +404,6 @@
 				33261A2B8922DC9A26EA357A /* Pods_WatchHost_iOS.framework */,
 				679EED4FDA62E1F2A6C4A746 /* Pods_WatchHost_watchOS.framework */,
 				54F91F8C17CAE99DF591FA37 /* Pods_WatchHost_watchOS_Extension.framework */,
-				6F389058B59C0E2CE373FCD3 /* Pods_TargetPods_PPEventRegistryAPI.framework */,
-				CD63BC66E3E5AA1A1D19FDBD /* Pods_TestingPods_PPEventRegistryAPITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1062,7 +1046,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests/Pods-TestingPods-PPEventRegistryAPITests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests iOS/Pods-TestingPods-PPEventRegistryAPITests iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3D56981667D060E74D7B4677 /* [CP] Copy Pods Resources */ = {
@@ -1137,7 +1121,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI/Pods-TargetPods-PPEventRegistryAPI-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7C0819839B815BB4A0CA8675 /* [CP] Embed Pods Frameworks */ = {
@@ -1242,7 +1226,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests/Pods-TestingPods-PPEventRegistryAPITests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests iOS/Pods-TestingPods-PPEventRegistryAPITests iOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DD214847F6F33FDA60A6C25C /* [CP] Copy Pods Resources */ = {
@@ -1708,7 +1692,7 @@
 		};
 		E9385AF81D17325C009716D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 68B53C78E1DBDA28B04F5654 /* Pods-TargetPods-PPEventRegistryAPI.debug.xcconfig */;
+			baseConfigurationReference = CEC087AFA702259AE3B9C69A /* Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1740,7 +1724,7 @@
 		};
 		E9385AF91D17325C009716D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 071BECDA397D480423AE1F44 /* Pods-TargetPods-PPEventRegistryAPI.release.xcconfig */;
+			baseConfigurationReference = 4DBAB495C1A590C8C14E5732 /* Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1770,7 +1754,7 @@
 		};
 		E9385AFB1D17325C009716D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 11E7889771D02E294D3D9465 /* Pods-TestingPods-PPEventRegistryAPITests.debug.xcconfig */;
+			baseConfigurationReference = 570F952FE8D361BFFFB49CB7 /* Pods-TestingPods-PPEventRegistryAPITests iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1794,7 +1778,7 @@
 		};
 		E9385AFC1D17325C009716D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43B18B1E4B9DEE17101E5C89 /* Pods-TestingPods-PPEventRegistryAPITests.release.xcconfig */;
+			baseConfigurationReference = 83406C153D323D28C795746A /* Pods-TestingPods-PPEventRegistryAPITests iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
