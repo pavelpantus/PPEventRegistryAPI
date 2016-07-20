@@ -14,9 +14,13 @@ final class PPLoginOperation: PPAsyncOperation {
         let parameters = ["email": email, "pass": password]
         let completion: (JSON?, NSError?) -> Void = { (data, error) -> Void in
             if let data = data where data["action"].stringValue == "unknownUser" {
-                completionHandler?(error: NSError(domain: "Unknown User", code: 0, userInfo: nil))
+                DispatchQueue.main.async {
+                    completionHandler?(error: NSError(domain: "Unknown User", code: 0, userInfo: nil))
+                }
             } else {
-                completionHandler?(error: error)
+                DispatchQueue.main.async {
+                    completionHandler?(error: error)
+                }
             }
         }
 

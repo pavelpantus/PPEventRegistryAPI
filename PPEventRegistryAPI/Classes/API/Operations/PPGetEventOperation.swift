@@ -20,12 +20,21 @@ final class PPGetEventOperation: PPAsyncOperation {
 
         let completion: (JSON?, NSError?) -> Void = { (json, error) -> Void in
             var events: [PPEvent] = []
+            var error: NSError?
 
             if let json = json {
-                events = self.modelMapper.mapDataToModelObjects(json)
+                if let errorDescription = json[identifier.stringValue]["error"].string {
+                    error = NSError(domain: errorDescription, code: 0, userInfo: nil)
+                } else {
+                    events = self.modelMapper.mapDataToModelObjects(json)
+                }
+            } else {
+                error = NSError(domain: "Corrupted json", code: 0, userInfo: nil)
             }
 
-            completionHandler?(event: events.first, error: error)
+            DispatchQueue.main.async {
+                completionHandler?(event: events.first, error: error)
+            }
         }
 
         self.completionHandler = completion
