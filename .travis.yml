@@ -37,6 +37,5 @@ script:
   fi
 
 after_success:
-- if [ $SEND_COVERAGE == "YES" ]; then
-    curl -s https://codecov.io/bash | bash
-  fi
+- test $SEND_COVERAGE = "YES" \
+  && bash <(curl -s https://codecov.io/bash)
