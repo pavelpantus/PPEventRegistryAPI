@@ -216,7 +216,7 @@
 		E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventRegistryAPI.h; sourceTree = "<group>"; };
 		E9385AEA1D17325C009716D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PPEventRegistryAPITests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PPEventRegistryAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9385AF61D17325C009716D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9584F841D20196800B32570 /* PPModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelMapper.swift; path = Models/PPModelMapper.swift; sourceTree = "<group>"; };
 		E9584F861D201AAA00B32570 /* PPArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPArticle.swift; path = Models/PPArticle.swift; sourceTree = "<group>"; };
@@ -364,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */,
-				E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests iOS.xctest */,
+				E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests.xctest */,
 				E9F8450C1D3B286200F4E3D9 /* PPEventRegistryAPI.framework */,
 				E9F845141D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS.xctest */,
 				E909C2251D3DBE4D00E0DDB6 /* WatchHost iOS.app */,
@@ -740,9 +740,9 @@
 			productReference = E909C2611D3DBEE800E0DDB6 /* PPEventRegistryAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E9385AE51D17325C009716D1 /* PPEventRegistryAPI iOS */ = {
+		E9385AE51D17325C009716D1 /* PPEventRegistryAPI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9385AF71D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPI iOS" */;
+			buildConfigurationList = E9385AF71D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPI" */;
 			buildPhases = (
 				E9F3B6240D9B951D23C2C236 /* [CP] Check Pods Manifest.lock */,
 				E9385AE11D17325C009716D1 /* Sources */,
@@ -755,14 +755,14 @@
 			);
 			dependencies = (
 			);
-			name = "PPEventRegistryAPI iOS";
+			name = PPEventRegistryAPI;
 			productName = PPEventRegistryAPI;
 			productReference = E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E9385AEE1D17325C009716D1 /* PPEventRegistryAPITests iOS */ = {
+		E9385AEE1D17325C009716D1 /* PPEventRegistryAPITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E9385AFA1D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPITests iOS" */;
+			buildConfigurationList = E9385AFA1D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPITests" */;
 			buildPhases = (
 				E8EBC78F10754161D0750356 /* [CP] Check Pods Manifest.lock */,
 				E9385AEB1D17325C009716D1 /* Sources */,
@@ -776,9 +776,9 @@
 			dependencies = (
 				E94BBB901D3B2B9D00A9DB54 /* PBXTargetDependency */,
 			);
-			name = "PPEventRegistryAPITests iOS";
+			name = PPEventRegistryAPITests;
 			productName = PPEventRegistryAPITests;
-			productReference = E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests iOS.xctest */;
+			productReference = E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		E9F8450B1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */ = {
@@ -896,8 +896,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E9385AE51D17325C009716D1 /* PPEventRegistryAPI iOS */,
-				E9385AEE1D17325C009716D1 /* PPEventRegistryAPITests iOS */,
+				E9385AE51D17325C009716D1 /* PPEventRegistryAPI */,
+				E9385AEE1D17325C009716D1 /* PPEventRegistryAPITests */,
 				E9F8450B1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */,
 				E9F845131D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS */,
 				E909C2241D3DBE4D00E0DDB6 /* WatchHost iOS */,
@@ -1398,7 +1398,7 @@
 		};
 		E94BBB901D3B2B9D00A9DB54 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E9385AE51D17325C009716D1 /* PPEventRegistryAPI iOS */;
+			target = E9385AE51D17325C009716D1 /* PPEventRegistryAPI */;
 			targetProxy = E94BBB8F1D3B2B9D00A9DB54 /* PBXContainerItemProxy */;
 		};
 		E94BBB921D3B2BA600A9DB54 /* PBXTargetDependency */ = {
@@ -1936,7 +1936,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9385AF71D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPI iOS" */ = {
+		E9385AF71D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9385AF81D17325C009716D1 /* Debug */,
@@ -1945,7 +1945,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E9385AFA1D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPITests iOS" */ = {
+		E9385AFA1D17325C009716D1 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E9385AFB1D17325C009716D1 /* Debug */,
