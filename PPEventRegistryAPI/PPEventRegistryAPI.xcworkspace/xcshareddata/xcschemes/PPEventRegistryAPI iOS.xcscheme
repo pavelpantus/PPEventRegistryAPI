@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9385AE51D17325C009716D1"
                BuildableName = "PPEventRegistryAPI.framework"
-               BlueprintName = "PPEventRegistryAPI"
+               BlueprintName = "PPEventRegistryAPI iOS"
                ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,8 +29,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9385AEE1D17325C009716D1"
-               BuildableName = "PPEventRegistryAPITests.xctest"
-               BlueprintName = "PPEventRegistryAPITests"
+               BuildableName = "PPEventRegistryAPITests iOS.xctest"
+               BlueprintName = "PPEventRegistryAPITests iOS"
                ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -48,8 +48,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E9385AEE1D17325C009716D1"
-               BuildableName = "PPEventRegistryAPITests.xctest"
-               BlueprintName = "PPEventRegistryAPITests"
+               BuildableName = "PPEventRegistryAPITests iOS.xctest"
+               BlueprintName = "PPEventRegistryAPITests iOS"
                ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -59,7 +59,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9385AE51D17325C009716D1"
             BuildableName = "PPEventRegistryAPI.framework"
-            BlueprintName = "PPEventRegistryAPI"
+            BlueprintName = "PPEventRegistryAPI iOS"
             ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -81,7 +81,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9385AE51D17325C009716D1"
             BuildableName = "PPEventRegistryAPI.framework"
-            BlueprintName = "PPEventRegistryAPI"
+            BlueprintName = "PPEventRegistryAPI iOS"
             ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -99,7 +99,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E9385AE51D17325C009716D1"
             BuildableName = "PPEventRegistryAPI.framework"
-            BlueprintName = "PPEventRegistryAPI"
+            BlueprintName = "PPEventRegistryAPI iOS"
             ReferencedContainer = "container:PPEventRegistryAPI.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
