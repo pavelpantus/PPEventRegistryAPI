@@ -11,6 +11,7 @@
 		3078418FFC9B36860DC202C8 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9B939C9F4F1A971968DC33 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework */; };
 		49CC08294FE3AEAFCDA2A8A7 /* Pods_TargetPods_PPEventRegistryAPI_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38AEB219500D52C06C6CB67 /* Pods_TargetPods_PPEventRegistryAPI_tvOS.framework */; };
 		4ED3A2552AD26EFBDEEE6086 /* Pods_TestingPods_PPEventRegistryAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD63BC66E3E5AA1A1D19FDBD /* Pods_TestingPods_PPEventRegistryAPITests.framework */; };
+		800235345E4DAA7E25358171 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0CFD44FDA0F83ADAC7D917 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework */; };
 		E909C2281D3DBE4D00E0DDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C2271D3DBE4D00E0DDB6 /* AppDelegate.swift */; };
 		E909C22A1D3DBE4D00E0DDB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C2291D3DBE4D00E0DDB6 /* ViewController.swift */; };
 		E909C22D1D3DBE4D00E0DDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E909C22B1D3DBE4D00E0DDB6 /* Main.storyboard */; };
@@ -79,6 +80,7 @@
 		E9FB398A1D1A1F0B003E17EA /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
 		E9FB398C1D1B6164003E17EA /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
 		EBFA2B323C329E0E8E911F2B /* Pods_WatchHost_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F91F8C17CAE99DF591FA37 /* Pods_WatchHost_watchOS_Extension.framework */; };
+		FB890A46D1BE37DC04C3D4F9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8721F8E719CE364E0F55E9D9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework */; };
 		FF85B8E5E1B0704990A5F547 /* Pods_TargetPods_PPEventRegistryAPI_watchOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74997A0A5A759FBE4097DE4 /* Pods_TargetPods_PPEventRegistryAPI_watchOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -294,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				800235345E4DAA7E25358171 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework in Frameworks */,
 				2E98C7DBB544D5BDE018516B /* Pods_TargetPods_PPEventRegistryAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9385AF01D17325C009716D1 /* PPEventRegistryAPI.framework in Frameworks */,
+				FB890A46D1BE37DC04C3D4F9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework in Frameworks */,
 				4ED3A2552AD26EFBDEEE6086 /* Pods_TestingPods_PPEventRegistryAPITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
