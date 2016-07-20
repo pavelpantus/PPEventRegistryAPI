@@ -38,4 +38,4 @@ script:
 
 after_success:
 - test $SEND_COVERAGE = "YES" \
-  && bash <(curl -s https://codecov.io/bash)
+  && curl -s https://codecov.io/bash | bash
