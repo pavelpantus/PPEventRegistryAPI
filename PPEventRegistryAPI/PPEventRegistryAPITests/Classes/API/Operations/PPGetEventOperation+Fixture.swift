@@ -77,8 +77,8 @@ extension PPGetEventOperation {
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: AnyObject] = [
-                "4480838701" : [
-                    "error" : "Provided event uri (4480838701) is not a valid event uri"
+                "44808387" : [
+                    "error" : "Provided event uri (44808387) is not a valid event uri"
                 ]
             ]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)

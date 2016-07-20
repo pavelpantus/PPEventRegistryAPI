@@ -70,11 +70,11 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetEventOperation.stubEventNotFound()
 
             waitUntil { done in
-                api.getEvent(withID: 4480838701) { event, error in
+                api.getEvent(withID: 44808387) { event, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(event).to(beNil())
                     expect(error!.code).to(equal(0))
-                    expect(error!.domain).to(equal("Provided event uri (4480838701) is not a valid event uri"))
+                    expect(error!.domain).to(equal("Provided event uri (44808387) is not a valid event uri"))
                     expect(error!.userInfo).to(haveCount(0))
                     done()
                 }
