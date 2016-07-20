@@ -28,8 +28,9 @@ final class PPGetRecentArticles: PPAsyncOperation {
                 events = self.modelMapper.mapDataToModelObjects(json)
             }
 
-            print("PPGetRecentActivity \(error) items: \(json)")
-            completionHandler?(events: events, error: error)
+            DispatchQueue.main.async {
+                completionHandler?(events: events, error: error)
+            }
         }
     }
 }

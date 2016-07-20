@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         eventRegistryAPI.login("", password: "") { (error) in
             print("login with error: \(error)")
-            self.eventRegistryAPI.getEvent(withID: 4480701, completionHandler: { (event, error) in
+            self.eventRegistryAPI.getEvent(withID: 4480838701, completionHandler: { (event, error) in
                 print("get event error \(event)")
             })
             self.eventRegistryAPI.getRecentArticles({ (aricles, error) in
