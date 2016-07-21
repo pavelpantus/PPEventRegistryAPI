@@ -30,6 +30,8 @@
 		E92194321D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */; };
 		E92194341D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
 		E92194351D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
+		E9367DDB1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */; };
+		E9367DDC1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */; };
 		E9385AE91D17325C009716D1 /* PPEventRegistryAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9385AF01D17325C009716D1 /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */; };
 		E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
@@ -42,6 +44,10 @@
 		E9CB7B491D37C43B001BBEDB /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
 		E9CB7B4B1D37C69C001BBEDB /* PPGetEventOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B4A1D37C69C001BBEDB /* PPGetEventOperationSpec.swift */; };
 		E9E0B73A1D18CAD300702E4E /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
+		E9E9CBC61D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
+		E9E9CBC71D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
+		E9E9CBC91D40FC7C00EE5F0C /* PPArticle+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */; };
+		E9E9CBCA1D40FC7C00EE5F0C /* PPArticle+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */; };
 		E9ED06EE1D3A6E720035CFD8 /* PPTransportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06ED1D3A6E720035CFD8 /* PPTransportSpec.swift */; };
 		E9ED06F01D3A6EA40035CFD8 /* PPTransportMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06EF1D3A6EA40035CFD8 /* PPTransportMock.swift */; };
 		E9ED06F21D3A70F90035CFD8 /* PPAsyncOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06F11D3A70F90035CFD8 /* PPAsyncOperationSpec.swift */; };
@@ -213,6 +219,7 @@
 		E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary_PPJoinSpec.swift; sourceTree = "<group>"; };
 		E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPGetEventOperation+Fixture.swift"; sourceTree = "<group>"; };
 		E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPGetRecentAricles+Fixture.swift"; sourceTree = "<group>"; };
+		E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPEvent+Fixture.swift"; sourceTree = "<group>"; };
 		E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventRegistryAPI.h; sourceTree = "<group>"; };
 		E9385AEA1D17325C009716D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -229,6 +236,8 @@
 		E9CB7B4A1D37C69C001BBEDB /* PPGetEventOperationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPGetEventOperationSpec.swift; sourceTree = "<group>"; };
 		E9D9F38A1D172C52007267AD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+PPJoin.swift"; path = "Utility/Dictionary+PPJoin.swift"; sourceTree = "<group>"; };
+		E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPModelMapperSpec.swift; sourceTree = "<group>"; };
+		E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPArticle+Fixture.swift"; sourceTree = "<group>"; };
 		E9ED06ED1D3A6E720035CFD8 /* PPTransportSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTransportSpec.swift; sourceTree = "<group>"; };
 		E9ED06EF1D3A6EA40035CFD8 /* PPTransportMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTransportMock.swift; sourceTree = "<group>"; };
 		E9ED06F11D3A70F90035CFD8 /* PPAsyncOperationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPAsyncOperationSpec.swift; sourceTree = "<group>"; };
@@ -461,9 +470,9 @@
 			isa = PBXGroup;
 			children = (
 				E97669AF1D32FB5E00AD40B7 /* API */,
+				E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */,
 				E9ED06EC1D3A6E720035CFD8 /* Transport */,
 				E91047681D32E8970048B0DE /* Utility */,
-				E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -522,7 +531,10 @@
 			isa = PBXGroup;
 			children = (
 				E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */,
+				E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */,
 				E9889B111D33087D0032C030 /* PPEventSpec.swift */,
+				E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */,
+				E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1325,11 +1337,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9ED06F21D3A70F90035CFD8 /* PPAsyncOperationSpec.swift in Sources */,
+				E9E9CBC61D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */,
 				E9CB7B491D37C43B001BBEDB /* PPEventRegistryAPISpec.swift in Sources */,
 				E92194341D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */,
+				E9367DDB1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */,
 				E9CB7B4B1D37C69C001BBEDB /* PPGetEventOperationSpec.swift in Sources */,
 				E910476C1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift in Sources */,
 				E9ED06F01D3A6EA40035CFD8 /* PPTransportMock.swift in Sources */,
+				E9E9CBC91D40FC7C00EE5F0C /* PPArticle+Fixture.swift in Sources */,
 				E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */,
 				E9ED06EE1D3A6E720035CFD8 /* PPTransportSpec.swift in Sources */,
 				E92194311D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift in Sources */,
@@ -1363,11 +1378,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F8452E1D3B28AB00F4E3D9 /* PPArticleSpec.swift in Sources */,
+				E9E9CBC71D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */,
 				E9F8452F1D3B28AB00F4E3D9 /* PPEventSpec.swift in Sources */,
 				E92194351D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */,
+				E9367DDC1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */,
 				E9F845301D3B28AB00F4E3D9 /* PPAsyncOperationSpec.swift in Sources */,
 				E9F845311D3B28AB00F4E3D9 /* PPLoginOperationSpec.swift in Sources */,
 				E9F845321D3B28AB00F4E3D9 /* PPLoginOperation+Fixture.swift in Sources */,
+				E9E9CBCA1D40FC7C00EE5F0C /* PPArticle+Fixture.swift in Sources */,
 				E9F845331D3B28AB00F4E3D9 /* PPGetEventOperationSpec.swift in Sources */,
 				E9F845341D3B28AB00F4E3D9 /* PPGetRecentAriclesSpec.swift in Sources */,
 				E92194321D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift in Sources */,
