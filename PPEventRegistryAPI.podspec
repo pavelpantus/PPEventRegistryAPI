@@ -17,6 +17,7 @@ PPEventRegistryAPI is a Swift framework for accessing Event Registry data (http:
   s.ios.deployment_target = '10.0'
   s.watchos.deployment_target = '3.0'
   s.tvos.deployment_target = '10.0'
+  s.osx.deployment_target = '10.11'
 
   s.requires_arc  = true
 

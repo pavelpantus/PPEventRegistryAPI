@@ -19,13 +19,16 @@ env:
   - SCHEME_IOS="PPEventRegistryAPI iOS"
   - SCHEME_TVOS="PPEventRegistryAPI tvOS"
   - SCHEME_WATCHOS="PPEventRegistryAPI watchOS"
+  - SCHEME_MACOS="PPEventRegistryAPI macOS"
   - IOS_SDK=iphonesimulator10.0
   - WATCHOS_SDK=watchsimulator3.0
   - TVOS_SDK=appletvsimulator10.0
+  - MACOS_SDK=macosx10.12
   matrix:
     - DESTINATION="name=iPhone 6s,OS=10.0"         SDK="$IOS_SDK"     SCHEME="$SCHEME_IOS"     RUN_TESTS="YES" SEND_COVERAGE="YES"
     - DESTINATION="name=Apple Watch - 42mm,OS=3.0" SDK="$WATCHOS_SDK" SCHEME="$SCHEME_WATCHOS" RUN_TESTS="NO"  SEND_COVERAGE="NO"
     - DESTINATION="name=Apple TV 1080p,OS=10.0"    SDK="$TVOS_SDK"    SCHEME="$SCHEME_TVOS"    RUN_TESTS="YES" SEND_COVERAGE="NO"
+    - DESTINATION="arch=x86_64"                    SDK="$MACOS_SDK"   SCHEME="$SCHEME_MACOS"   RUN_TESTS="YES" SEND_COVERAGE="NO"
 
 script:
 - set -o pipefail

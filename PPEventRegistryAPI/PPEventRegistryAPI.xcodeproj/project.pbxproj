@@ -10,6 +10,8 @@
 		3078418FFC9B36860DC202C8 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF9B939C9F4F1A971968DC33 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework */; };
 		49CC08294FE3AEAFCDA2A8A7 /* Pods_TargetPods_PPEventRegistryAPI_tvOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38AEB219500D52C06C6CB67 /* Pods_TargetPods_PPEventRegistryAPI_tvOS.framework */; };
 		800235345E4DAA7E25358171 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F0CFD44FDA0F83ADAC7D917 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework */; };
+		830CA69B28AF483D0D221E3A /* Pods_TestingPods_PPEventRegistryAPITests_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CBCCF328C181B89CEB907E /* Pods_TestingPods_PPEventRegistryAPITests_macOS.framework */; };
+		C446C4FA175FC5B047DE27DF /* Pods_TargetPods_PPEventRegistryAPI_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C31224A93B84D4C7EDEE630B /* Pods_TargetPods_PPEventRegistryAPI_macOS.framework */; };
 		E909C2281D3DBE4D00E0DDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C2271D3DBE4D00E0DDB6 /* AppDelegate.swift */; };
 		E909C22A1D3DBE4D00E0DDB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E909C2291D3DBE4D00E0DDB6 /* ViewController.swift */; };
 		E909C22D1D3DBE4D00E0DDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E909C22B1D3DBE4D00E0DDB6 /* Main.storyboard */; };
@@ -48,6 +50,35 @@
 		E9E9CBC71D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
 		E9E9CBC91D40FC7C00EE5F0C /* PPArticle+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */; };
 		E9E9CBCA1D40FC7C00EE5F0C /* PPArticle+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */; };
+		E9EC45C51D4240E600D1A68F /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EC45BC1D4240E600D1A68F /* PPEventRegistryAPI.framework */; };
+		E9EC45CC1D4240E600D1A68F /* PPEventRegistryAPI macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E9EC45BE1D4240E600D1A68F /* PPEventRegistryAPI macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E9EC45D31D4240F500D1A68F /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
+		E9EC45D41D4240F500D1A68F /* PPModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F881D2025D100B32570 /* PPModelType.swift */; };
+		E9EC45D51D4240F500D1A68F /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
+		E9EC45D61D4240F500D1A68F /* PPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B0F1D33023B0032C030 /* PPEvent.swift */; };
+		E9EC45D71D4240F500D1A68F /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
+		E9EC45D81D4240F500D1A68F /* PPLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA061D1770EB00DBF268 /* PPLoginOperation.swift */; };
+		E9EC45D91D4240F500D1A68F /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
+		E9EC45DA1D4240F500D1A68F /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
+		E9EC45DB1D4240F500D1A68F /* PPEventRegistryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryAPI.swift */; };
+		E9EC45DC1D4240F500D1A68F /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
+		E9EC45DD1D4240F500D1A68F /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
+		E9EC45DE1D42410400D1A68F /* PPArticleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */; };
+		E9EC45DF1D42410400D1A68F /* PPArticle+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */; };
+		E9EC45E01D42410400D1A68F /* PPEventSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B111D33087D0032C030 /* PPEventSpec.swift */; };
+		E9EC45E11D42410400D1A68F /* PPEvent+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */; };
+		E9EC45E21D42410400D1A68F /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
+		E9EC45E31D42410400D1A68F /* PPAsyncOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06F11D3A70F90035CFD8 /* PPAsyncOperationSpec.swift */; };
+		E9EC45E41D42410400D1A68F /* PPLoginOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB1D21D36F53A00CECCD9 /* PPLoginOperationSpec.swift */; };
+		E9EC45E51D42410400D1A68F /* PPLoginOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB1D41D36F96700CECCD9 /* PPLoginOperation+Fixture.swift */; };
+		E9EC45E61D42410400D1A68F /* PPGetEventOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B4A1D37C69C001BBEDB /* PPGetEventOperationSpec.swift */; };
+		E9EC45E71D42410400D1A68F /* PPGetEventOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */; };
+		E9EC45E81D42410400D1A68F /* PPGetRecentAriclesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3362A1D399A160021E933 /* PPGetRecentAriclesSpec.swift */; };
+		E9EC45E91D42410400D1A68F /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
+		E9EC45EA1D42410400D1A68F /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
+		E9EC45EB1D42410400D1A68F /* PPTransportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06ED1D3A6E720035CFD8 /* PPTransportSpec.swift */; };
+		E9EC45EC1D42410400D1A68F /* PPTransportMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06EF1D3A6EA40035CFD8 /* PPTransportMock.swift */; };
+		E9EC45ED1D42410400D1A68F /* Dictionary_PPJoinSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */; };
 		E9ED06EE1D3A6E720035CFD8 /* PPTransportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06ED1D3A6E720035CFD8 /* PPTransportSpec.swift */; };
 		E9ED06F01D3A6EA40035CFD8 /* PPTransportMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06EF1D3A6EA40035CFD8 /* PPTransportMock.swift */; };
 		E9ED06F21D3A70F90035CFD8 /* PPAsyncOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06F11D3A70F90035CFD8 /* PPAsyncOperationSpec.swift */; };
@@ -124,6 +155,13 @@
 			remoteGlobalIDString = E9F8450B1D3B286200F4E3D9;
 			remoteInfo = "PPEventRegistryAPI tvOS";
 		};
+		E9EC45C61D4240E600D1A68F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9EC45BB1D4240E600D1A68F;
+			remoteInfo = "PPEventRegistryAPI macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -163,8 +201,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		02B97C09BF3F3D316E53238C /* Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests macOS/Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig"; sourceTree = "<group>"; };
 		283AD8E303897A2723DC5E57 /* Pods-PPEventRegistryAPITests tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests tvOS/Pods-PPEventRegistryAPITests tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		2D60B7BE5DF1EF38FB8F1975 /* Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI watchOS/Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig"; sourceTree = "<group>"; };
+		31EB3E9FE75FD391B8AAC763 /* Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests macOS/Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		33261A2B8922DC9A26EA357A /* Pods_WatchHost_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchHost_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DBAB495C1A590C8C14E5732 /* Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig"; sourceTree = "<group>"; };
 		50160434A929064878939946 /* Pods-PPEventRegistryAPITests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests iOS/Pods-PPEventRegistryAPITests iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,11 +222,14 @@
 		8721F8E719CE364E0F55E9D9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D24D13708DA6EA9B4B29D6B /* Pods-PPEventRegistryAPI iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI iOS/Pods-PPEventRegistryAPI iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9F0CFD44FDA0F83ADAC7D917 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetPods_PPEventRegistryAPI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CBCCF328C181B89CEB907E /* Pods_TestingPods_PPEventRegistryAPITests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A713EDFB66C593CFC7467BF3 /* Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI macOS/Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE8701A7142E3CA4EFCF42A /* Pods-PPEventRegistryAPI tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI tvOS/Pods-PPEventRegistryAPI tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AE603137954FB8FC7B07ECCC /* Pods_PPEventRegistryAPI_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13A8D6E94A41493FAE0749A /* Pods-PPEventRegistryAPI tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI tvOS/Pods-PPEventRegistryAPI tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		B3036A14D51BDBE6BAC008E6 /* PPEventRegistryAPI.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PPEventRegistryAPI.podspec; path = ../PPEventRegistryAPI.podspec; sourceTree = "<group>"; };
 		B62D57F34D5DCE065E03E1AF /* Pods_PPEventRegistryAPITests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPITests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C31224A93B84D4C7EDEE630B /* Pods_TargetPods_PPEventRegistryAPI_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetPods_PPEventRegistryAPI_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C38AEB219500D52C06C6CB67 /* Pods_TargetPods_PPEventRegistryAPI_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetPods_PPEventRegistryAPI_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C42F1E2B5780462A1E296A33 /* Pods_PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51BC68B16698CC6F8A1BAE3 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -194,6 +237,7 @@
 		CB42BCBCCACF71DF48426F0A /* Pods-PPEventRegistryAPI iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI iOS/Pods-PPEventRegistryAPI iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB52D9C8EE8E45DE1DE9354D /* Pods_PPEventRegistryAPITests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPITests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD40B4698F8A0B477B0EFC7F /* Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI tvOS/Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		CE6B4AA13F230A22FAB04E07 /* Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI macOS/Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig"; sourceTree = "<group>"; };
 		CEC087AFA702259AE3B9C69A /* Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D32B34E2F5FA4828F44031B2 /* Pods_PPEventRegistryAPI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06FE44D02704E4A19070471 /* Pods-WatchHost watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchHost watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchHost watchOS Extension/Pods-WatchHost watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +282,11 @@
 		E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+PPJoin.swift"; path = "Utility/Dictionary+PPJoin.swift"; sourceTree = "<group>"; };
 		E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPModelMapperSpec.swift; sourceTree = "<group>"; };
 		E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPArticle+Fixture.swift"; sourceTree = "<group>"; };
+		E9EC45BC1D4240E600D1A68F /* PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EC45BE1D4240E600D1A68F /* PPEventRegistryAPI macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PPEventRegistryAPI macOS.h"; sourceTree = "<group>"; };
+		E9EC45BF1D4240E600D1A68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9EC45C41D4240E600D1A68F /* PPEventRegistryAPITests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PPEventRegistryAPITests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9EC45CB1D4240E600D1A68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9ED06ED1D3A6E720035CFD8 /* PPTransportSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTransportSpec.swift; sourceTree = "<group>"; };
 		E9ED06EF1D3A6EA40035CFD8 /* PPTransportMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPTransportMock.swift; sourceTree = "<group>"; };
 		E9ED06F11D3A70F90035CFD8 /* PPAsyncOperationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPAsyncOperationSpec.swift; sourceTree = "<group>"; };
@@ -252,7 +301,7 @@
 		E9F8450F1D3B286200F4E3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9F845141D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PPEventRegistryAPITests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F8451B1D3B286200F4E3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9F845391D3B28DC00F4E3D9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		E9F845391D3B28DC00F4E3D9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPGetEventOperation.swift; path = API/Operations/PPGetEventOperation.swift; sourceTree = "<group>"; };
 		E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPGetRecentArticles.swift; path = API/Operations/PPGetRecentArticles.swift; sourceTree = "<group>"; };
 		EF9B939C9F4F1A971968DC33 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -310,6 +359,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E9EC45B81D4240E600D1A68F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C446C4FA175FC5B047DE27DF /* Pods_TargetPods_PPEventRegistryAPI_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC45C11D4240E600D1A68F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC45C51D4240E600D1A68F /* PPEventRegistryAPI.framework in Frameworks */,
+				830CA69B28AF483D0D221E3A /* Pods_TestingPods_PPEventRegistryAPITests_macOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9F845081D3B286200F4E3D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -353,6 +419,10 @@
 				581BAF57923196E413FB6A48 /* Pods-TargetPods-PPEventRegistryAPI watchOS.release.xcconfig */,
 				F57579D9A4B2EE24204EE5CF /* Pods-WatchHost watchOS Extension.debug.xcconfig */,
 				E06FE44D02704E4A19070471 /* Pods-WatchHost watchOS Extension.release.xcconfig */,
+				A713EDFB66C593CFC7467BF3 /* Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig */,
+				CE6B4AA13F230A22FAB04E07 /* Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig */,
+				31EB3E9FE75FD391B8AAC763 /* Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig */,
+				02B97C09BF3F3D316E53238C /* Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -380,6 +450,8 @@
 				E909C2391D3DBECB00E0DDB6 /* WatchHost watchOS.app */,
 				E909C2451D3DBECB00E0DDB6 /* WatchHost watchOS Extension.appex */,
 				E909C2611D3DBEE800E0DDB6 /* PPEventRegistryAPI.framework */,
+				E9EC45BC1D4240E600D1A68F /* PPEventRegistryAPI.framework */,
+				E9EC45C41D4240E600D1A68F /* PPEventRegistryAPITests macOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -413,6 +485,8 @@
 				33261A2B8922DC9A26EA357A /* Pods_WatchHost_iOS.framework */,
 				679EED4FDA62E1F2A6C4A746 /* Pods_WatchHost_watchOS.framework */,
 				54F91F8C17CAE99DF591FA37 /* Pods_WatchHost_watchOS_Extension.framework */,
+				C31224A93B84D4C7EDEE630B /* Pods_TargetPods_PPEventRegistryAPI_macOS.framework */,
+				A0CBCCF328C181B89CEB907E /* Pods_TestingPods_PPEventRegistryAPITests_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -488,6 +562,7 @@
 		E9385AE71D17325C009716D1 /* PPEventRegistryAPI */ = {
 			isa = PBXGroup;
 			children = (
+				E9EC45BD1D4240E600D1A68F /* PPEventRegistryAPI macOS */,
 				E9F8450D1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */,
 				E909C2621D3DBEE800E0DDB6 /* PPEventRegistryAPI watchOS */,
 				E9D9F3891D172C52007267AD /* Assets */,
@@ -566,6 +641,24 @@
 			);
 			name = Utility;
 			sourceTree = "<group>";
+		};
+		E9EC45BD1D4240E600D1A68F /* PPEventRegistryAPI macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC45C81D4240E600D1A68F /* PPEventRegistryAPI macOSTests */,
+				E9EC45BE1D4240E600D1A68F /* PPEventRegistryAPI macOS.h */,
+				E9EC45BF1D4240E600D1A68F /* Info.plist */,
+			);
+			path = "PPEventRegistryAPI macOS";
+			sourceTree = SOURCE_ROOT;
+		};
+		E9EC45C81D4240E600D1A68F /* PPEventRegistryAPI macOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9EC45CB1D4240E600D1A68F /* Info.plist */,
+			);
+			path = "PPEventRegistryAPI macOSTests";
+			sourceTree = SOURCE_ROOT;
 		};
 		E9ED06EC1D3A6E720035CFD8 /* Transport */ = {
 			isa = PBXGroup;
@@ -654,6 +747,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9385AE91D17325C009716D1 /* PPEventRegistryAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC45B91D4240E600D1A68F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC45CC1D4240E600D1A68F /* PPEventRegistryAPI macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,6 +894,47 @@
 			productReference = E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		E9EC45BB1D4240E600D1A68F /* PPEventRegistryAPI macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EC45D11D4240E600D1A68F /* Build configuration list for PBXNativeTarget "PPEventRegistryAPI macOS" */;
+			buildPhases = (
+				5FB8B2F6BAC6D021A5AF8342 /* [CP] Check Pods Manifest.lock */,
+				E9EC45B71D4240E600D1A68F /* Sources */,
+				E9EC45B81D4240E600D1A68F /* Frameworks */,
+				E9EC45B91D4240E600D1A68F /* Headers */,
+				E9EC45BA1D4240E600D1A68F /* Resources */,
+				80E793CC6712D30C77467AC9 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PPEventRegistryAPI macOS";
+			productName = "PPEventRegistryAPI macOS";
+			productReference = E9EC45BC1D4240E600D1A68F /* PPEventRegistryAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E9EC45C31D4240E600D1A68F /* PPEventRegistryAPITests macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9EC45D21D4240E600D1A68F /* Build configuration list for PBXNativeTarget "PPEventRegistryAPITests macOS" */;
+			buildPhases = (
+				7AB05353DD1B9CCE2CD9F020 /* [CP] Check Pods Manifest.lock */,
+				E9EC45C01D4240E600D1A68F /* Sources */,
+				E9EC45C11D4240E600D1A68F /* Frameworks */,
+				E9EC45C21D4240E600D1A68F /* Resources */,
+				29FE6EE58888F22DDB9085AB /* [CP] Embed Pods Frameworks */,
+				F83389AEACE855EA8773DE9F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9EC45C71D4240E600D1A68F /* PBXTargetDependency */,
+			);
+			name = "PPEventRegistryAPITests macOS";
+			productName = "PPEventRegistryAPI macOSTests";
+			productReference = E9EC45C41D4240E600D1A68F /* PPEventRegistryAPITests macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E9F8450B1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9F845211D3B286200F4E3D9 /* Build configuration list for PBXNativeTarget "PPEventRegistryAPI tvOS" */;
@@ -881,6 +1023,18 @@
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
+					E9EC45BB1D4240E600D1A68F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5MFLUTCEP9;
+						DevelopmentTeamName = "Pavel Pantus (Personal Team)";
+						ProvisioningStyle = Automatic;
+					};
+					E9EC45C31D4240E600D1A68F = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 5MFLUTCEP9;
+						DevelopmentTeamName = "Pavel Pantus (Personal Team)";
+						ProvisioningStyle = Automatic;
+					};
 					E9F8450B1D3B286200F4E3D9 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 5MFLUTCEP9;
@@ -916,6 +1070,8 @@
 				E909C2381D3DBECB00E0DDB6 /* WatchHost watchOS */,
 				E909C2441D3DBECB00E0DDB6 /* WatchHost watchOS Extension */,
 				E909C2601D3DBEE800E0DDB6 /* PPEventRegistryAPI watchOS */,
+				E9EC45BB1D4240E600D1A68F /* PPEventRegistryAPI macOS */,
+				E9EC45C31D4240E600D1A68F /* PPEventRegistryAPITests macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -963,6 +1119,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		E9385AED1D17325C009716D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC45BA1D4240E600D1A68F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC45C21D4240E600D1A68F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1029,6 +1199,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests tvOS/Pods-TestingPods-PPEventRegistryAPITests tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		29FE6EE58888F22DDB9085AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests macOS/Pods-TestingPods-PPEventRegistryAPITests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3519F8FA26369D69931C96D7 /* [CP] Copy Pods Resources */ = {
@@ -1121,6 +1306,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		5FB8B2F6BAC6D021A5AF8342 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		741E916FEEF4B337D465F740 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1134,6 +1334,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7AB05353DD1B9CCE2CD9F020 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7C0819839B815BB4A0CA8675 /* [CP] Embed Pods Frameworks */ = {
@@ -1164,6 +1379,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80E793CC6712D30C77467AC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI macOS/Pods-TargetPods-PPEventRegistryAPI macOS-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		81985BFA6991E06EEC3C3206 /* [CP] Check Pods Manifest.lock */ = {
@@ -1286,6 +1516,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		F83389AEACE855EA8773DE9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests macOS/Pods-TestingPods-PPEventRegistryAPITests macOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1352,6 +1597,47 @@
 				E9EDB1D31D36F53A00CECCD9 /* PPLoginOperationSpec.swift in Sources */,
 				E9C3362B1D399A160021E933 /* PPGetRecentAriclesSpec.swift in Sources */,
 				E9889B121D33087D0032C030 /* PPEventSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC45B71D4240E600D1A68F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC45D31D4240F500D1A68F /* PPModelMapper.swift in Sources */,
+				E9EC45D41D4240F500D1A68F /* PPModelType.swift in Sources */,
+				E9EC45D51D4240F500D1A68F /* PPArticle.swift in Sources */,
+				E9EC45D61D4240F500D1A68F /* PPEvent.swift in Sources */,
+				E9EC45D71D4240F500D1A68F /* PPAsyncOperation.swift in Sources */,
+				E9EC45D81D4240F500D1A68F /* PPLoginOperation.swift in Sources */,
+				E9EC45D91D4240F500D1A68F /* PPGetEventOperation.swift in Sources */,
+				E9EC45DA1D4240F500D1A68F /* PPGetRecentArticles.swift in Sources */,
+				E9EC45DB1D4240F500D1A68F /* PPEventRegistryAPI.swift in Sources */,
+				E9EC45DC1D4240F500D1A68F /* PPTransport.swift in Sources */,
+				E9EC45DD1D4240F500D1A68F /* Dictionary+PPJoin.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9EC45C01D4240E600D1A68F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9EC45DE1D42410400D1A68F /* PPArticleSpec.swift in Sources */,
+				E9EC45DF1D42410400D1A68F /* PPArticle+Fixture.swift in Sources */,
+				E9EC45E01D42410400D1A68F /* PPEventSpec.swift in Sources */,
+				E9EC45E11D42410400D1A68F /* PPEvent+Fixture.swift in Sources */,
+				E9EC45E21D42410400D1A68F /* PPModelMapperSpec.swift in Sources */,
+				E9EC45E31D42410400D1A68F /* PPAsyncOperationSpec.swift in Sources */,
+				E9EC45E41D42410400D1A68F /* PPLoginOperationSpec.swift in Sources */,
+				E9EC45E51D42410400D1A68F /* PPLoginOperation+Fixture.swift in Sources */,
+				E9EC45E61D42410400D1A68F /* PPGetEventOperationSpec.swift in Sources */,
+				E9EC45E71D42410400D1A68F /* PPGetEventOperation+Fixture.swift in Sources */,
+				E9EC45E81D42410400D1A68F /* PPGetRecentAriclesSpec.swift in Sources */,
+				E9EC45E91D42410400D1A68F /* PPGetRecentAricles+Fixture.swift in Sources */,
+				E9EC45EA1D42410400D1A68F /* PPEventRegistryAPISpec.swift in Sources */,
+				E9EC45EB1D42410400D1A68F /* PPTransportSpec.swift in Sources */,
+				E9EC45EC1D42410400D1A68F /* PPTransportMock.swift in Sources */,
+				E9EC45ED1D42410400D1A68F /* Dictionary_PPJoinSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1423,6 +1709,11 @@
 			isa = PBXTargetDependency;
 			target = E9F8450B1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS */;
 			targetProxy = E94BBB911D3B2BA600A9DB54 /* PBXContainerItemProxy */;
+		};
+		E9EC45C71D4240E600D1A68F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9EC45BB1D4240E600D1A68F /* PPEventRegistryAPI macOS */;
+			targetProxy = E9EC45C61D4240E600D1A68F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1816,6 +2107,104 @@
 			};
 			name = Release;
 		};
+		E9EC45CD1D4240E600D1A68F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A713EDFB66C593CFC7467BF3 /* Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "PPEventRegistryAPI macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantusp.PPEventRegistryAPI-macOS";
+				PRODUCT_NAME = PPEventRegistryAPI;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E9EC45CE1D4240E600D1A68F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE6B4AA13F230A22FAB04E07 /* Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "PPEventRegistryAPI macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantusp.PPEventRegistryAPI-macOS";
+				PRODUCT_NAME = PPEventRegistryAPI;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E9EC45CF1D4240E600D1A68F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31EB3E9FE75FD391B8AAC763 /* Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "PPEventRegistryAPI macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantusp.PPEventRegistryAPI-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		E9EC45D01D4240E600D1A68F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02B97C09BF3F3D316E53238C /* Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig */;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "PPEventRegistryAPI macOSTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pantusp.PPEventRegistryAPI-macOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		E9F8451D1D3B286200F4E3D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD40B4698F8A0B477B0EFC7F /* Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig */;
@@ -1968,6 +2357,24 @@
 			buildConfigurations = (
 				E9385AFB1D17325C009716D1 /* Debug */,
 				E9385AFC1D17325C009716D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9EC45D11D4240E600D1A68F /* Build configuration list for PBXNativeTarget "PPEventRegistryAPI macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EC45CD1D4240E600D1A68F /* Debug */,
+				E9EC45CE1D4240E600D1A68F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9EC45D21D4240E600D1A68F /* Build configuration list for PBXNativeTarget "PPEventRegistryAPITests macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9EC45CF1D4240E600D1A68F /* Debug */,
+				E9EC45D01D4240E600D1A68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
