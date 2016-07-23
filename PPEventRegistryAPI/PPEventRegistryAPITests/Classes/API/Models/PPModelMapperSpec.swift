@@ -31,6 +31,27 @@ class PPModelMapperSpec: QuickSpec {
                 expect(article.image).to(equal(URL(string: "www.image.com/image")))
             }
 
+            it("Create empty URL object in case of absence of the data") {
+                let article: PPArticle = modelMapper.mapDataToModelObject(PPArticle.fixtureEmptyURLAndBrokenImage())
+                expect(article.url).to(equal(URL(string: "")))
+            }
+
+            it("Create empty image object in case of nil data") {
+                let article: PPArticle = modelMapper.mapDataToModelObject(PPArticle.fixtureEmptyURLAndBrokenImage())
+                expect(article.image).to(equal(URL(string: "")))
+            }
+
+            it("Create empty article in case of an empty input") {
+                let article: PPArticle = modelMapper.mapDataToModelObject([:])
+                expect(article.title).to(equal(""))
+                expect(article.body).to(equal(""))
+                expect(article.date).to(equal(""))
+                expect(article.time).to(equal(""))
+                expect(article.uri).to(equal(""))
+                expect(article.url).to(equal(URL(string: "")))
+                expect(article.image).to(equal(URL(string: "")))
+            }
+
             it("Maps events correctly") {
                 let event: PPEvent = modelMapper.mapDataToModelObject(PPEvent.fixture1())
                 expect(event.title).to(equal("Exxon Mobil struggles to run California plant long enough to dump it"))

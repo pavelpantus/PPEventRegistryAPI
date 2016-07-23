@@ -5,7 +5,6 @@ platform :ios, '10.0'
 use_frameworks!
 
 target 'PPEventRegistryTest' do
-  pod 'SwiftyJSON', :git => 'https://github.com/ratkins/SwiftyJSON.git', :branch => 'swift3'
   pod 'PPEventRegistryAPI', :path => '..'
 end
 
