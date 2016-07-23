@@ -5,10 +5,6 @@ inhibit_all_warnings!
 
 use_frameworks!
 
-def pods
-  pod 'SwiftyJSON', :git => 'https://github.com/ratkins/SwiftyJSON.git', :branch => 'swift3'
-end
-
 def testing_pods
   pod 'PPEventRegistryAPI', :path => '../'
   pod 'Quick', :git => 'https://github.com/norio-nomura/Quick.git', :branch => 'nn-swift-3-compatibility'
@@ -23,8 +19,6 @@ target 'WatchHost watchOS Extension' do
 end
 
 abstract_target 'TargetPods' do
-  pods
-
   target 'PPEventRegistryAPI iOS' do
     platform :ios, '10.0'
   end
@@ -44,7 +38,6 @@ abstract_target 'TargetPods' do
 end
 
 abstract_target 'TestingPods' do
-  pods
   testing_pods
 
   target 'PPEventRegistryAPITests iOS' do

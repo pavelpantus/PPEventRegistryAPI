@@ -23,7 +23,5 @@ PPEventRegistryAPI is a Swift framework for accessing Event Registry data (http:
 
   s.frameworks = 'Foundation'
 
-  s.dependency 'SwiftyJSON'
-
   s.source_files = 'PPEventRegistryAPI/Classes/**/*.{swift}'
 end

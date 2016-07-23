@@ -7,15 +7,14 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 class PPModelMapper: NSObject {
 
-    func mapDataToModelObject(_ json: JSON) -> PPModelType? {
+    func mapDataToModelObject(_ data: [String: AnyObject]) -> PPModelType? {
         return nil;
     }
 
-    func mapDataToModelObjects(_ json: JSON) -> [PPModelType] {
+    func mapDataToModelObjects(_ data: [String: AnyObject]) -> [PPModelType] {
         let models: [PPModelType] = []
         return models;
     }
@@ -25,22 +24,26 @@ class PPModelMapper: NSObject {
 // MARK: PPArticle
 
 extension PPModelMapper {
-    func mapDataToModelObject(_ json: JSON) -> PPArticle {
-        let title = json["title"].stringValue
-        let body = json["body"].stringValue
-        let date = json["date"].stringValue
-        let time = json["time"].stringValue
-        let uri = json["uri"].intValue
-        let url = json["url"].URL
-        let image = json["image"].URL
+    func mapDataToModelObject(_ data: [String: AnyObject]) -> PPArticle {
+        let title = data["title"] as? String ?? ""
+        let body  = data["body"]  as? String ?? ""
+        let date  = data["date"]  as? String ?? ""
+        let time  = data["time"]  as? String ?? ""
+        let uri   = data["uri"]   as? String ?? ""
+        let url   = URL(string: data["url"] as? String ?? "")
+        let image = URL(string: data["image"] as? String ?? "")
 
         return PPArticle(title: title, body: body, date: date, time: time, uri: uri, url: url, image: image)
     }
 
-    func mapDataToModelObjects(_ json: JSON) -> [PPArticle] {
+    func mapDataToModelObjects(_ data: [String: AnyObject]) -> [PPArticle] {
         var articles: [PPArticle] = []
-        if let eventsInfo = json["recentActivity"]["articles"]["activity"].array {
-            eventsInfo.forEach { articles.append(mapDataToModelObject($0)) }
+        if let recentActivity = data["recentActivity"] as? [String: AnyObject] {
+            if let articlesData = recentActivity["articles"] as? [String: AnyObject] {
+                if let activity = articlesData["activity"] as? [[String: AnyObject]] {
+                    activity.forEach { articles.append(mapDataToModelObject($0)) }
+                }
+            }
         }
         return articles
     }
@@ -49,22 +52,22 @@ extension PPModelMapper {
 // MARK: PPEvent
 
 extension PPModelMapper {
-    func mapDataToModelObject(_ json: JSON) -> PPEvent {
-        let eventInfo = json["info"]
+    func mapDataToModelObject(_ data: [String: AnyObject]) -> PPEvent {
+        let eventInfo = data["info"] as? [String: AnyObject] ?? [:]
         let lang = "eng"
 
-        let title = eventInfo["title"][lang].stringValue
-        let summary = eventInfo["summary"][lang].stringValue
-        let eventDate = eventInfo["eventDate"].stringValue
-        let location = eventInfo["location"]["label"][lang].stringValue
-        let image = eventInfo["images"][0].URL
+        let title     = eventInfo["title"]?[lang]   as? String ?? ""
+        let summary   = eventInfo["summary"]?[lang] as? String ?? ""
+        let eventDate = eventInfo["eventDate"]      as? String ?? ""
+        let image     = URL(string: eventInfo["images"]?[0] as? String ?? "")
+        let location  = eventInfo["location"]?["label"]??[lang] as? String ?? ""
 
         return PPEvent(title: title, summary: summary, eventDate: eventDate, location: location, image: image)
     }
 
-    func mapDataToModelObjects(_ json: JSON) -> [PPEvent] {
+    func mapDataToModelObjects(_ data: [String: AnyObject]) -> [PPEvent] {
         var events: [PPEvent] = []
-        json.forEach { events.append(mapDataToModelObject($1)) }
+        data.forEach { events.append(mapDataToModelObject($1 as? [String : AnyObject] ?? [:])) }
         return events
     }
 }

@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 @testable import PPEventRegistryAPI
 
 class PPTransportMock {
@@ -19,16 +18,16 @@ class PPTransportMock {
 // MARK: PPTransportProtocol
 
 extension PPTransportMock: PPTransportProtocol {
-    internal func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (json: JSON?, error: NSError?) -> Void) {
+    internal func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (response: [String: AnyObject]?, error: NSError?) -> Void) {
         if (rejectInvocation) {
             fatalError("Unexpected method was invoked")
         }
 
         DispatchQueue.main.after(when: .now() + delay) {
             if self.mockSuccess {
-                completionHandler(json: JSON("Success"), error: nil)
+                completionHandler(response: ["Result": "Success"], error: nil)
             } else {
-                completionHandler(json: JSON("Failure"), error: NSError(domain: "Mocked Transport Failure", code: 123, userInfo: nil))
+                completionHandler(response: ["Result": "Failure"], error: NSError(domain: "Mocked Transport Failure", code: 123, userInfo: nil))
             }
         }
     }

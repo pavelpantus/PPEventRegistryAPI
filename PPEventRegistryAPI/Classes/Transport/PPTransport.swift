@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 protocol PPTransportProtocol {
-    func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (json: JSON?, error: NSError?) -> Void)
+    func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (response: [String: AnyObject]?, error: NSError?) -> Void)
 }
 
 final class PPTransport: NSObject {
@@ -26,7 +25,7 @@ final class PPTransport: NSObject {
 // MARK: PPTransportProtocol
 
 extension PPTransport: PPTransportProtocol {
-    internal func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (json: JSON?, error: NSError?) -> Void) {
+    internal func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (response: [String: AnyObject]?, error: NSError?) -> Void) {
         var request: URLRequest!
         if httpMethod == "GET" {
             request = URLRequest(url: URL(string: baseURI + "/json/" + controller + "?" + parameters.pp_join())!)
@@ -41,17 +40,18 @@ extension PPTransport: PPTransportProtocol {
 
         let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: NSError?) in
             guard error == nil else {
-                completionHandler(json: nil, error: error)
+                completionHandler(response: nil, error: error)
                 return
             }
 
             guard let data = data,
-                let resultObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) else {
-                    completionHandler(json: nil, error: NSError(domain: "Response Data is Corrupted", code: 0, userInfo: nil))
+                let resultObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
+                let response = resultObject as? [String: AnyObject] else {
+                    completionHandler(response: nil, error: NSError(domain: "Response Data is Corrupted", code: 0, userInfo: nil))
                     return
             }
 
-            completionHandler(json: JSON(resultObject), error: nil)
+            completionHandler(response: response, error: nil)
         }
         task.resume()
     }

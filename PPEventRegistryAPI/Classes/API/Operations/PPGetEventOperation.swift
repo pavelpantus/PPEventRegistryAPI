@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 final class PPGetEventOperation: PPAsyncOperation {
     init(identifier: NSNumber, completionHandler: ((event: PPEvent?, error: NSError?) -> Void)?) {
@@ -18,18 +17,16 @@ final class PPGetEventOperation: PPAsyncOperation {
                           "resultType": "info"]
         super.init(controller: "event", httpMethod: "GET", parameters: parameters)
 
-        let completion: (JSON?, NSError?) -> Void = { (json, error) -> Void in
+        let completion: ([String: AnyObject]?, NSError?) -> Void = { response, error in
             var events: [PPEvent] = []
             var error: NSError?
 
-            if let json = json {
-                if let errorDescription = json[identifier.stringValue]["error"].string {
-                    error = NSError(domain: errorDescription, code: 0, userInfo: nil)
-                } else {
-                    events = self.modelMapper.mapDataToModelObjects(json)
-                }
-            } else {
-                error = NSError(domain: "Corrupted json", code: 0, userInfo: nil)
+            let eventData = response?[identifier.stringValue] as? [String: AnyObject]
+
+            if let errorDescription = eventData?["error"] as? String {
+                error = NSError(domain: errorDescription, code: 0, userInfo: nil)
+            } else if let responseData = response {
+                events = self.modelMapper.mapDataToModelObjects(responseData)
             }
 
             DispatchQueue.main.async {

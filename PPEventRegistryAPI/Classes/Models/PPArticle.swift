@@ -13,7 +13,7 @@ public struct PPArticle: PPModelType {
     let body: String
     let date: String
     let time: String
-    let uri: Int
+    let uri: String
     let url: URL?
     let image: URL?
 }
