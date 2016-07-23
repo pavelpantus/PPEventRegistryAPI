@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  PPEventRegisterTest
+//  PPEventRegistryTest
 //
-//  Created by Pavel Pantus on 6/19/16.
+//  Created by Pavel Pantus on 7/23/16.
 //  Copyright © 2016 Pavel Pantus. All rights reserved.
 //
 
@@ -10,12 +10,11 @@ import UIKit
 import PPEventRegistryAPI
 
 class ViewController: UIViewController {
+
     let eventRegistryAPI = PPEventRegistryAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         eventRegistryAPI.login("", password: "") { (error) in
             print("login with error: \(error)")
             self.eventRegistryAPI.getEvent(withID: 4480838701, completionHandler: { (event, error) in

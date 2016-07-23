@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  PPEventRegisterTest
+//  PPEventRegistryTest
 //
-//  Created by Pavel Pantus on 6/19/16.
+//  Created by Pavel Pantus on 7/23/16.
 //  Copyright © 2016 Pavel Pantus. All rights reserved.
 //
 

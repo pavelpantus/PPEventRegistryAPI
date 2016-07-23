@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PPEventRegisterTest.xcodeproj">
+      location = "self:PPEventRegistryTest.xcodeproj">
    </FileRef>
 </Workspace>
