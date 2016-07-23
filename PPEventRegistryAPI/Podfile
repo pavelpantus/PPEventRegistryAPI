@@ -38,7 +38,7 @@ abstract_target 'TargetPods' do
   end
 
   target 'PPEventRegistryAPI macOS' do
-    platform :osx, '10.11'
+    platform :osx, '10.12'
   end
 
 end
@@ -56,7 +56,7 @@ abstract_target 'TestingPods' do
   end
 
   target 'PPEventRegistryAPITests macOS' do
-    platform :osx, '10.11'
+    platform :osx, '10.12'
   end
 
 end
