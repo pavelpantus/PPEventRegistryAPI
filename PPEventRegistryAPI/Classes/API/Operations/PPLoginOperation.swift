@@ -14,7 +14,8 @@ final class PPLoginOperation: PPAsyncOperation {
         let completion: ([String: AnyObject]?, NSError?) -> Void = { response, error in
             if let action = response?["action"] as? String where action == "unknownUser" {
                 DispatchQueue.main.async {
-                    completionHandler?(error: NSError(domain: "Unknown User", code: 0, userInfo: nil))
+                    let error = NSError(domain: "Unknown User", code: 0, userInfo: nil)
+                    completionHandler?(error: error)
                 }
             } else {
                 DispatchQueue.main.async {
