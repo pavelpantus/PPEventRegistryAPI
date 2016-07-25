@@ -75,7 +75,6 @@
 		E9EC45E71D42410400D1A68F /* PPGetEventOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */; };
 		E9EC45E81D42410400D1A68F /* PPGetRecentAriclesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3362A1D399A160021E933 /* PPGetRecentAriclesSpec.swift */; };
 		E9EC45E91D42410400D1A68F /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
-		E9EC45EA1D42410400D1A68F /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
 		E9EC45EB1D42410400D1A68F /* PPTransportSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06ED1D3A6E720035CFD8 /* PPTransportSpec.swift */; };
 		E9EC45EC1D42410400D1A68F /* PPTransportMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06EF1D3A6EA40035CFD8 /* PPTransportMock.swift */; };
 		E9EC45ED1D42410400D1A68F /* Dictionary_PPJoinSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */; };
@@ -1634,7 +1633,6 @@
 				E9EC45E71D42410400D1A68F /* PPGetEventOperation+Fixture.swift in Sources */,
 				E9EC45E81D42410400D1A68F /* PPGetRecentAriclesSpec.swift in Sources */,
 				E9EC45E91D42410400D1A68F /* PPGetRecentAricles+Fixture.swift in Sources */,
-				E9EC45EA1D42410400D1A68F /* PPEventRegistryAPISpec.swift in Sources */,
 				E9EC45EB1D42410400D1A68F /* PPTransportSpec.swift in Sources */,
 				E9EC45EC1D42410400D1A68F /* PPTransportMock.swift in Sources */,
 				E9EC45ED1D42410400D1A68F /* Dictionary_PPJoinSpec.swift in Sources */,

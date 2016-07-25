@@ -58,9 +58,9 @@ class PPEventRegistryAPISpec: QuickSpec {
 
             waitUntil { done in
                 api.getEvent(withID: 123) { event, error in
-//                    expect(Thread.current).to(equal(Thread.main))
-//                    expect(event).toNot(beNil())
-//                    expect(error).to(beNil())
+                    expect(Thread.current).to(equal(Thread.main))
+                    expect(event).toNot(beNil())
+                    expect(error).to(beNil())
                     done()
                 }
             }
@@ -71,11 +71,11 @@ class PPEventRegistryAPISpec: QuickSpec {
 
             waitUntil { done in
                 api.getEvent(withID: 44808387) { event, error in
-//                    expect(Thread.current).to(equal(Thread.main))
-//                    expect(event).to(beNil())
-//                    expect(error!.code).to(equal(0))
-//                    expect(error!.domain).to(equal("Provided event uri (44808387) is not a valid event uri"))
-//                    expect(error!.userInfo).to(haveCount(0))
+                    expect(Thread.current).to(equal(Thread.main))
+                    expect(event).to(beNil())
+                    expect(error!.code).to(equal(0))
+                    expect(error!.domain).to(equal("Provided event uri (44808387) is not a valid event uri"))
+                    expect(error!.userInfo).to(haveCount(0))
                     done()
                 }
             }
@@ -86,9 +86,9 @@ class PPEventRegistryAPISpec: QuickSpec {
 
             waitUntil { done in
                 api.getRecentArticles{ articles, error in
-//                    expect(Thread.current).to(equal(Thread.main))
-//                    expect(articles).to(haveCount(3))
-//                    expect(error).to(beNil())
+                    expect(Thread.current).to(equal(Thread.main))
+                    expect(articles).to(haveCount(3))
+                    expect(error).to(beNil())
                     done()
                 }
             }
@@ -99,9 +99,9 @@ class PPEventRegistryAPISpec: QuickSpec {
 
             waitUntil { done in
                 api.getRecentArticles{ articles, error in
-//                    expect(Thread.current).to(equal(Thread.main))
-//                    expect(articles).to(haveCount(0))
-//                    expect(error).to(beNil())
+                    expect(Thread.current).to(equal(Thread.main))
+                    expect(articles).to(haveCount(0))
+                    expect(error).to(beNil())
                     done()
                 }
             }
