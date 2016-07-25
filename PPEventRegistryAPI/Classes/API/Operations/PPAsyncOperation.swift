@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 class PPAsyncOperation: Operation {
     private var _executing = false
@@ -17,7 +16,7 @@ class PPAsyncOperation: Operation {
     internal let httpMethod: String
     internal var transport: PPTransportProtocol!
     internal var modelMapper: PPModelMapper!
-    internal var completionHandler: ((JSON?, NSError?) -> Void)?
+    internal var completionHandler: (([String: AnyObject]?, NSError?) -> Void)?
 
     init(controller: String, httpMethod: String, parameters: [String: AnyObject]) {
         self.controller = controller
@@ -60,11 +59,11 @@ class PPAsyncOperation: Operation {
 
         isExecuting = true
 
-        transport.postRequest(to: controller, httpMethod: httpMethod, parameters: parameters) { (json, error) -> Void in
+        transport.postRequest(to: controller, httpMethod: httpMethod, parameters: parameters) { response, error -> Void in
             if self.isCancelled {
-                self.completionHandler?(json, NSError(domain: "Operation was cancelled", code: 0, userInfo: nil))
+                self.completionHandler?(response, NSError(domain: "Operation was cancelled", code: 0, userInfo: nil))
             } else {
-                self.completionHandler?(json, error)
+                self.completionHandler?(response, error)
             }
 
             self.isExecuting = false

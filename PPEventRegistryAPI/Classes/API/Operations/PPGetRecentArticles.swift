@@ -21,11 +21,11 @@ final class PPGetRecentArticles: PPAsyncOperation {
 
         super.init(controller: "overview", httpMethod: "GET", parameters: parameters)
 
-        self.completionHandler = { (json, error) -> Void in
+        self.completionHandler = { response, error -> Void in
             var events: [PPArticle] = []
 
-            if let json = json {
-                events = self.modelMapper.mapDataToModelObjects(json)
+            if let response = response {
+                events = self.modelMapper.mapDataToModelObjects(response)
             }
 
             DispatchQueue.main.async {

@@ -15,10 +15,8 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (5.1.0)
   - OHHTTPStubs/Swift (5.1.0):
     - OHHTTPStubs/Core
-  - PPEventRegistryAPI (0.0.1):
-    - SwiftyJSON
+  - PPEventRegistryAPI (0.0.1)
   - Quick (0.9.2)
-  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Nimble (from `https://github.com/norio-nomura/Nimble.git`, branch `nn-swift-3-compatibility`)
@@ -26,7 +24,6 @@ DEPENDENCIES:
   - OHHTTPStubs/Swift (from `https://github.com/djbriane/OHHTTPStubs.git`, branch `swift3`)
   - PPEventRegistryAPI (from `../`)
   - Quick (from `https://github.com/norio-nomura/Quick.git`, branch `nn-swift-3-compatibility`)
-  - SwiftyJSON (from `https://github.com/ratkins/SwiftyJSON.git`, branch `swift3`)
 
 EXTERNAL SOURCES:
   Nimble:
@@ -40,9 +37,6 @@ EXTERNAL SOURCES:
   Quick:
     :branch: nn-swift-3-compatibility
     :git: https://github.com/norio-nomura/Quick.git
-  SwiftyJSON:
-    :branch: swift3
-    :git: https://github.com/ratkins/SwiftyJSON.git
 
 CHECKOUT OPTIONS:
   Nimble:
@@ -54,17 +48,13 @@ CHECKOUT OPTIONS:
   Quick:
     :commit: 594479916dc6f87af514e3d64635a1358f3ae904
     :git: https://github.com/norio-nomura/Quick.git
-  SwiftyJSON:
-    :commit: b9e393d9378aa60b00e8416784ba265ffbb69de9
-    :git: https://github.com/ratkins/SwiftyJSON.git
 
 SPEC CHECKSUMS:
   Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
   OHHTTPStubs: 592f74439d2d72615115cf99a954237a3fbe26e5
-  PPEventRegistryAPI: fbcf258d61dafce4c6bbc82ff01dd73f6e80c8a7
+  PPEventRegistryAPI: 8d4edb4b1385cf6a99e28dd23301bdc1051f663a
   Quick: 19b5d0e23c18c06741e4f4b21b00c3101c78eeca
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 4d5d1ff3e8c92808fc8718267512fe136110da72
+PODFILE CHECKSUM: 2afa307c0a984d89fcf8d7a0f0f7243e5f0e4f20
 
 COCOAPODS: 1.1.0.beta.1

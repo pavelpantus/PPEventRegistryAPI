@@ -7,15 +7,15 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 final class PPLoginOperation: PPAsyncOperation {
     init(email: String, password: String, completionHandler: ((error: NSError?) -> Void)?) {
         let parameters = ["email": email, "pass": password]
-        let completion: (JSON?, NSError?) -> Void = { (data, error) -> Void in
-            if let data = data where data["action"].stringValue == "unknownUser" {
+        let completion: ([String: AnyObject]?, NSError?) -> Void = { response, error in
+            if let action = response?["action"] as? String where action == "unknownUser" {
                 DispatchQueue.main.async {
-                    completionHandler?(error: NSError(domain: "Unknown User", code: 0, userInfo: nil))
+                    let error = NSError(domain: "Unknown User", code: 0, userInfo: nil)
+                    completionHandler?(error: error)
                 }
             } else {
                 DispatchQueue.main.async {

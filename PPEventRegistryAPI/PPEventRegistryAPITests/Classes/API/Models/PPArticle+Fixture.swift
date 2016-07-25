@@ -33,6 +33,31 @@ extension PPArticle {
         ]
     }
 
+    static func fixtureEmptyURLAndBrokenImage() -> [String: AnyObject] {
+        return [
+            "id" : "127827496",
+            "body" : "Tweet\n\nAstrazeneca PLC (NYSE:AZN) shares saw unusually-high trading volume on Tuesday . Approximately 5,276,985 shares were traded during trading, a decline of 23% from the previous session's volume of 6,868,391 shares.The stock last traded at $30.22 and had previously closed at $30.55.\n\nAZN has ...",
+            "sim" : 0,
+            "uri" : "476179196",
+            "eventUri" : NSNull(),
+            "time" : "01:06:00",
+            /*
+             Explicitly deleted key from the data structure.
+            "url" : "http://www.dailypolitical.com/2016/07/19/astrazeneca-plc-azn-sees-strong-trading-volume-2/",
+            */
+            "source" : [
+                "id" : "19852",
+                "uri" : "www.dailypolitical.com",
+                "title" : "Daily Political"
+            ],
+            "title" : "Astrazeneca PLC (AZN) Sees Strong Trading Volume",
+            "date" : "2016-07-20",
+            "lang" : "eng",
+            "image" : NSNull(),
+            "isDuplicate" : false
+        ]
+    }
+
     static func fixture2() -> [String: AnyObject] {
         return [
             "id" : "127827495",
