@@ -24,7 +24,6 @@ class PPEventRegistryAPISpec: QuickSpec {
         };
 
         afterEach {
-            api = nil
             OHHTTPStubs.removeAllStubs()
         };
 
