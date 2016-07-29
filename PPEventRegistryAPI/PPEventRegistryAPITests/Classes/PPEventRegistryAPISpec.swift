@@ -23,12 +23,9 @@ class PPEventRegistryAPISpec: QuickSpec {
             }
         };
 
-        afterEach {
-            OHHTTPStubs.removeAllStubs()
-        };
-
         it("Login returns nil error in case of success") {
             waitUntil(timeout: 3) { done in
+                OHHTTPStubs.removeAllStubs()
                 PPLoginOperation.stubSuccess()
                 api.login("email@email.com", password: "password") { error in
                     expect(Thread.current).to(equal(Thread.main))
@@ -40,6 +37,7 @@ class PPEventRegistryAPISpec: QuickSpec {
 
         it("Login returns an unknown user error in case of failure") {
             waitUntil(timeout: 3) { done in
+                OHHTTPStubs.removeAllStubs()
                 PPLoginOperation.stubUserNotFound()
                 api.login("email@email.com", password: "password") { error in
                     expect(Thread.current).to(equal(Thread.main))
@@ -53,6 +51,7 @@ class PPEventRegistryAPISpec: QuickSpec {
 
         it("Get Event returns an event object in case of success") {
             waitUntil(timeout: 3) { done in
+                OHHTTPStubs.removeAllStubs()
                 PPGetEventOperation.stubSuccess()
                 api.getEvent(withID: 123) { event, error in
                     expect(Thread.current).to(equal(Thread.main))
@@ -65,6 +64,7 @@ class PPEventRegistryAPISpec: QuickSpec {
 
         it("Get Event returns an error and no event object in case of event was not found") {
             waitUntil(timeout: 3) { done in
+                OHHTTPStubs.removeAllStubs()
                 PPGetEventOperation.stubEventNotFound()
                 api.getEvent(withID: 44808387) { event, error in
                     expect(Thread.current).to(equal(Thread.main))
@@ -79,6 +79,7 @@ class PPEventRegistryAPISpec: QuickSpec {
 
         it("Recent Articles return new articles in case of available") {
             waitUntil(timeout: 3) { done in
+                OHHTTPStubs.removeAllStubs()
                 PPGetRecentArticles.stubSuccess()
                 api.getRecentArticles{ articles, error in
                     expect(Thread.current).to(equal(Thread.main))
@@ -91,6 +92,7 @@ class PPEventRegistryAPISpec: QuickSpec {
 
         it("Recent Articles return empty array in case of no new articles") {
             waitUntil(timeout: 3) { done in
+                OHHTTPStubs.removeAllStubs()
                 PPGetRecentArticles.stubNoArticlesFound()
                 api.getRecentArticles{ articles, error in
                     expect(Thread.current).to(equal(Thread.main))
