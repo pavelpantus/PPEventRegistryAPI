@@ -49,8 +49,6 @@ class PPAsyncOperation: Operation {
     }
 
     override final func start() {
-        super.start()
-
         if isCancelled {
             completionHandler?(nil, NSError(domain: "Operation was cancelled", code: 0, userInfo: nil))
             isFinished = true
