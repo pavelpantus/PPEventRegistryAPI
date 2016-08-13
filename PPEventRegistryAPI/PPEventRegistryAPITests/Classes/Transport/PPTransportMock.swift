@@ -23,7 +23,7 @@ extension PPTransportMock: PPTransportProtocol {
             fatalError("Unexpected method was invoked")
         }
 
-        DispatchQueue.main.after(when: .now() + delay) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             if self.mockSuccess {
                 completionHandler(response: ["Result": "Success"], error: nil)
             } else {
