@@ -13,7 +13,7 @@ import OHHTTPStubs
 extension PPLoginOperation {
 
     class func stubSuccess() {
-        stub({ (request) -> Bool in
+        stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: AnyObject] = ["action": "success",
@@ -23,7 +23,7 @@ extension PPLoginOperation {
     }
 
     class func stubUserNotFound() {
-        stub({ (request) -> Bool in
+        stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: AnyObject] = ["action": "unknownUser",

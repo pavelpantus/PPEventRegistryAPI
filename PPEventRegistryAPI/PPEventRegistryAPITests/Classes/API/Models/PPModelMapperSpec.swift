@@ -33,12 +33,12 @@ class PPModelMapperSpec: QuickSpec {
 
             it("Create empty URL object in case of absence of the data") {
                 let article: PPArticle = modelMapper.mapDataToModelObject(PPArticle.fixtureEmptyURLAndBrokenImage())
-                expect(article.url).to(equal(URL(string: "")))
+                expect(article.url).to(beNil())
             }
 
             it("Create empty image object in case of nil data") {
                 let article: PPArticle = modelMapper.mapDataToModelObject(PPArticle.fixtureEmptyURLAndBrokenImage())
-                expect(article.image).to(equal(URL(string: "")))
+                expect(article.image).to(beNil())
             }
 
             it("Create empty article in case of an empty input") {
@@ -48,8 +48,8 @@ class PPModelMapperSpec: QuickSpec {
                 expect(article.date).to(equal(""))
                 expect(article.time).to(equal(""))
                 expect(article.uri).to(equal(""))
-                expect(article.url).to(equal(URL(string: "")))
-                expect(article.image).to(equal(URL(string: "")))
+                expect(article.url).to(beNil())
+                expect(article.image).to(beNil())
             }
 
             it("Maps events correctly") {

@@ -13,7 +13,7 @@ import OHHTTPStubs
 extension PPGetEventOperation {
 
     class func stubSuccess() {
-        stub({ (request) -> Bool in
+        stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: AnyObject] = [
@@ -24,7 +24,7 @@ extension PPGetEventOperation {
     }
 
     class func stubEventNotFound() {
-        stub({ (request) -> Bool in
+        stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: AnyObject] = [

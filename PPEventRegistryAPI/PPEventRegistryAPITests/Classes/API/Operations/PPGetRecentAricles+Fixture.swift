@@ -13,7 +13,7 @@ import OHHTTPStubs
 extension PPGetRecentArticles {
 
     class func stubSuccess() {
-        stub({ (request) -> Bool in
+        stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: AnyObject] = [
@@ -37,7 +37,7 @@ extension PPGetRecentArticles {
     }
 
     class func stubNoArticlesFound() {
-        stub({ (request) -> Bool in
+        stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: AnyObject] = [

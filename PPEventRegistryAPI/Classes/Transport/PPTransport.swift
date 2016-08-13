@@ -38,7 +38,7 @@ extension PPTransport: PPTransportProtocol {
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
-        let task = session.dataTask(with: request) { (data: Data?, response: URLResponse?, error: NSError?) in
+        let task = session.dataTask(with: request) { data, response, error in
             guard error == nil else {
                 completionHandler(response: nil, error: error)
                 return
@@ -60,7 +60,7 @@ extension PPTransport: PPTransportProtocol {
 // MARK: URLSessionDelegate
 
 extension PPTransport: URLSessionDelegate {
-    internal func urlSession(_ session: URLSession, didBecomeInvalidWithError error: NSError?) {
+    internal func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
         print("Session did become invalid with error: \(error)")
     }
 }
