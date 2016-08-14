@@ -81,6 +81,16 @@
 		E9ED06F21D3A70F90035CFD8 /* PPAsyncOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED06F11D3A70F90035CFD8 /* PPAsyncOperationSpec.swift */; };
 		E9EDB1D31D36F53A00CECCD9 /* PPLoginOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB1D21D36F53A00CECCD9 /* PPLoginOperationSpec.swift */; };
 		E9EDB1D51D36F96700CECCD9 /* PPLoginOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EDB1D41D36F96700CECCD9 /* PPLoginOperation+Fixture.swift */; };
+		E9EF48CD1D60B3CA00D4B165 /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
+		E9EF48CE1D60B3CA00D4B165 /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
+		E9EF48CF1D60B3CA00D4B165 /* PPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B0F1D33023B0032C030 /* PPEvent.swift */; };
+		E9EF48D01D60B3CA00D4B165 /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
+		E9EF48D11D60B3CA00D4B165 /* PPLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA061D1770EB00DBF268 /* PPLoginOperation.swift */; };
+		E9EF48D21D60B3CA00D4B165 /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
+		E9EF48D31D60B3CA00D4B165 /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
+		E9EF48D41D60B3CA00D4B165 /* PPEventRegistryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryAPI.swift */; };
+		E9EF48D51D60B3CA00D4B165 /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
+		E9EF48D61D60B3CA00D4B165 /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
 		E9F2E8E61D174BE400DBF268 /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
 		E9F2EA011D176E7800DBF268 /* PPEventRegistryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryAPI.swift */; };
 		E9F2EA051D176F1C00DBF268 /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
@@ -1550,6 +1560,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EF48CD1D60B3CA00D4B165 /* PPModelMapper.swift in Sources */,
+				E9EF48CE1D60B3CA00D4B165 /* PPArticle.swift in Sources */,
+				E9EF48CF1D60B3CA00D4B165 /* PPEvent.swift in Sources */,
+				E9EF48D01D60B3CA00D4B165 /* PPAsyncOperation.swift in Sources */,
+				E9EF48D11D60B3CA00D4B165 /* PPLoginOperation.swift in Sources */,
+				E9EF48D21D60B3CA00D4B165 /* PPGetEventOperation.swift in Sources */,
+				E9EF48D31D60B3CA00D4B165 /* PPGetRecentArticles.swift in Sources */,
+				E9EF48D41D60B3CA00D4B165 /* PPEventRegistryAPI.swift in Sources */,
+				E9EF48D51D60B3CA00D4B165 /* PPTransport.swift in Sources */,
+				E9EF48D61D60B3CA00D4B165 /* Dictionary+PPJoin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
