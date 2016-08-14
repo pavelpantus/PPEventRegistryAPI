@@ -8,18 +8,7 @@
 
 import Foundation
 
-class PPModelMapper: NSObject {
-
-    func mapDataToModelObject(_ data: [String: AnyObject]) -> PPModelType? {
-        return nil;
-    }
-
-    func mapDataToModelObjects(_ data: [String: AnyObject]) -> [PPModelType] {
-        let models: [PPModelType] = []
-        return models;
-    }
-
-}
+class PPModelMapper: NSObject { }
 
 // MARK: PPArticle
 

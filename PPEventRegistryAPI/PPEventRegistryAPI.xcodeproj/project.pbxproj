@@ -38,7 +38,6 @@
 		E9385AF01D17325C009716D1 /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */; };
 		E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
 		E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
-		E9584F891D2025D100B32570 /* PPModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F881D2025D100B32570 /* PPModelType.swift */; };
 		E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */; };
 		E9889B101D33023B0032C030 /* PPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B0F1D33023B0032C030 /* PPEvent.swift */; };
 		E9889B121D33087D0032C030 /* PPEventSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B111D33087D0032C030 /* PPEventSpec.swift */; };
@@ -53,7 +52,6 @@
 		E9EC45C51D4240E600D1A68F /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9EC45BC1D4240E600D1A68F /* PPEventRegistryAPI.framework */; };
 		E9EC45CC1D4240E600D1A68F /* PPEventRegistryAPI macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E9EC45BE1D4240E600D1A68F /* PPEventRegistryAPI macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9EC45D31D4240F500D1A68F /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
-		E9EC45D41D4240F500D1A68F /* PPModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F881D2025D100B32570 /* PPModelType.swift */; };
 		E9EC45D51D4240F500D1A68F /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
 		E9EC45D61D4240F500D1A68F /* PPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B0F1D33023B0032C030 /* PPEvent.swift */; };
 		E9EC45D71D4240F500D1A68F /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
@@ -90,7 +88,6 @@
 		E9F845151D3B286200F4E3D9 /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F8450C1D3B286200F4E3D9 /* PPEventRegistryAPI.framework */; };
 		E9F8451C1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E9F8450E1D3B286200F4E3D9 /* PPEventRegistryAPI tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E9F845231D3B288A00F4E3D9 /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
-		E9F845241D3B288A00F4E3D9 /* PPModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F881D2025D100B32570 /* PPModelType.swift */; };
 		E9F845251D3B288A00F4E3D9 /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
 		E9F845261D3B288A00F4E3D9 /* PPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B0F1D33023B0032C030 /* PPEvent.swift */; };
 		E9F845271D3B288A00F4E3D9 /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
@@ -270,7 +267,6 @@
 		E9385AF61D17325C009716D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9584F841D20196800B32570 /* PPModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelMapper.swift; path = Models/PPModelMapper.swift; sourceTree = "<group>"; };
 		E9584F861D201AAA00B32570 /* PPArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPArticle.swift; path = Models/PPArticle.swift; sourceTree = "<group>"; };
-		E9584F881D2025D100B32570 /* PPModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelType.swift; path = Models/PPModelType.swift; sourceTree = "<group>"; };
 		E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPArticleSpec.swift; sourceTree = "<group>"; };
 		E9889B0F1D33023B0032C030 /* PPEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPEvent.swift; path = Models/PPEvent.swift; sourceTree = "<group>"; };
 		E9889B111D33087D0032C030 /* PPEventSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPEventSpec.swift; sourceTree = "<group>"; };
@@ -585,7 +581,6 @@
 			isa = PBXGroup;
 			children = (
 				E9584F841D20196800B32570 /* PPModelMapper.swift */,
-				E9584F881D2025D100B32570 /* PPModelType.swift */,
 				E9584F861D201AAA00B32570 /* PPArticle.swift */,
 				E9889B0F1D33023B0032C030 /* PPEvent.swift */,
 			);
@@ -1567,7 +1562,6 @@
 				E9F2EA071D1770EB00DBF268 /* PPLoginOperation.swift in Sources */,
 				E9FB398A1D1A1F0B003E17EA /* PPGetEventOperation.swift in Sources */,
 				E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */,
-				E9584F891D2025D100B32570 /* PPModelType.swift in Sources */,
 				E9889B101D33023B0032C030 /* PPEvent.swift in Sources */,
 				E9F2EA051D176F1C00DBF268 /* PPAsyncOperation.swift in Sources */,
 				E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */,
@@ -1604,7 +1598,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC45D31D4240F500D1A68F /* PPModelMapper.swift in Sources */,
-				E9EC45D41D4240F500D1A68F /* PPModelType.swift in Sources */,
 				E9EC45D51D4240F500D1A68F /* PPArticle.swift in Sources */,
 				E9EC45D61D4240F500D1A68F /* PPEvent.swift in Sources */,
 				E9EC45D71D4240F500D1A68F /* PPAsyncOperation.swift in Sources */,
@@ -1644,7 +1637,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F845231D3B288A00F4E3D9 /* PPModelMapper.swift in Sources */,
-				E9F845241D3B288A00F4E3D9 /* PPModelType.swift in Sources */,
 				E9F845251D3B288A00F4E3D9 /* PPArticle.swift in Sources */,
 				E9F845261D3B288A00F4E3D9 /* PPEvent.swift in Sources */,
 				E9F845271D3B288A00F4E3D9 /* PPAsyncOperation.swift in Sources */,

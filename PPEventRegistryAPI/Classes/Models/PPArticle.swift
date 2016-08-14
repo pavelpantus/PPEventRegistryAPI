@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PPArticle: PPModelType {
+public struct PPArticle {
     let title: String
     let body: String
     let date: String

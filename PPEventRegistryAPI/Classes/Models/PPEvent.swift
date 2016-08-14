@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct PPEvent: PPModelType {
+public struct PPEvent {
     let title: String
     let summary: String
     let eventDate: String
