@@ -50,6 +50,10 @@ pod install
 open PPEventRegistryTest.xcworkspace
 ```
 
+## Code Style
+
+[The Official raywenderlich.com Swift Style Guide.](https://github.com/raywenderlich/swift-style-guide#the-official-raywenderlichcom-swift-style-guide)
+
 ## Author
 
 Pavel Pantus, pantusp@gmail.com
