@@ -9,13 +9,13 @@
 import Foundation
 
 final class PPGetEventOperation: PPAsyncOperation {
-    init(identifier: NSNumber, completionHandler: ((event: PPEvent?, error: NSError?) -> Void)?) {
+    init(identifier: NSNumber, completionHandler: ((_ event: PPEvent?, _ error: NSError?) -> Void)?) {
         let parameters = ["action": "getEvent",
                           "eventUri": identifier,
                           "infoConceptLang": "eng",
                           "infoEventImageCount": 1,
-                          "resultType": "info"]
-        super.init(controller: "event", httpMethod: "GET", parameters: parameters)
+                          "resultType": "info"] as [String : Any]
+        super.init(controller: "event", httpMethod: "GET", parameters: parameters as [String : AnyObject])
 
         let completion: ([String: AnyObject]?, NSError?) -> Void = { response, error in
             var events: [PPEvent] = []
@@ -30,7 +30,7 @@ final class PPGetEventOperation: PPAsyncOperation {
             }
 
             DispatchQueue.main.async {
-                completionHandler?(event: events.first, error: error)
+                completionHandler?(events.first, error)
             }
         }
 

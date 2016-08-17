@@ -9,17 +9,17 @@
 import Foundation
 
 final class PPGetRecentArticles: PPAsyncOperation {
-    init(completionHandler: ((events: [PPArticle], error: NSError?) -> Void)?) {
-        let parameters: [String: AnyObject] = ["action": "getRecentActivity",
-                                               "addEvents": false,
-                                               "addActivity": false,
-                                               "addArticles": true,
-                                               "recentActivityArticlesMaxArticleCount": 5,
-                                               "recentActivityArticlesMaxMinsBack": 10 * 60,
-                                               "recentActivityArticlesMandatorySourceLocation": false,
-                                               "recentActivityArticlesLastActivityId": 0]
+    init(completionHandler: ((_ events: [PPArticle], _ error: NSError?) -> Void)?) {
+        let parameters: [String: Any] = ["action": "getRecentActivity",
+                                         "addEvents": false,
+                                         "addActivity": false,
+                                         "addArticles": true,
+                                         "recentActivityArticlesMaxArticleCount": 5,
+                                         "recentActivityArticlesMaxMinsBack": 10 * 60,
+                                         "recentActivityArticlesMandatorySourceLocation": false,
+                                         "recentActivityArticlesLastActivityId": 0]
 
-        super.init(controller: "overview", httpMethod: "GET", parameters: parameters)
+        super.init(controller: "overview", httpMethod: "GET", parameters: parameters as [String : AnyObject])
 
         self.completionHandler = { response, error -> Void in
             var events: [PPArticle] = []
@@ -29,7 +29,7 @@ final class PPGetRecentArticles: PPAsyncOperation {
             }
 
             DispatchQueue.main.async {
-                completionHandler?(events: events, error: error)
+                completionHandler?(events, error)
             }
         }
     }

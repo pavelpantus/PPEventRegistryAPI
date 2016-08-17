@@ -9,22 +9,22 @@
 import Foundation
 
 final class PPLoginOperation: PPAsyncOperation {
-    init(email: String, password: String, completionHandler: ((error: NSError?) -> Void)?) {
+    init(email: String, password: String, completionHandler: ((_ error: NSError?) -> Void)?) {
         let parameters = ["email": email, "pass": password]
         let completion: ([String: AnyObject]?, NSError?) -> Void = { response, error in
             if let action = response?["action"] as? String, action == "unknownUser" {
                 DispatchQueue.main.async {
                     let error = NSError(domain: "Unknown User", code: 0, userInfo: nil)
-                    completionHandler?(error: error)
+                    completionHandler?(error)
                 }
             } else {
                 DispatchQueue.main.async {
-                    completionHandler?(error: error)
+                    completionHandler?(error)
                 }
             }
         }
 
-        super.init(controller: "login", httpMethod: "POST", parameters: parameters)
+        super.init(controller: "login", httpMethod: "POST", parameters: parameters as [String : AnyObject])
         self.completionHandler = completion
     }
 }

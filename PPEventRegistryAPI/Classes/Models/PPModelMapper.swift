@@ -50,7 +50,8 @@ extension PPModelMapper {
         let eventDate = eventInfo["eventDate"]      as? String   ?? ""
         let images    = eventInfo["images"]         as? [String] ?? []
         let image     = URL(string: images.first ?? "")
-        let location  = eventInfo["location"]?["label"]??[lang] as? String ?? ""
+        let locationLabel  = eventInfo["location"]?["label"] as? [String: AnyObject] ?? [:]
+        let location = locationLabel[lang] as? String ?? ""
 
         return PPEvent(title: title, summary: summary, eventDate: eventDate, location: location, image: image)
     }
