@@ -43,7 +43,7 @@ CHECKOUT OPTIONS:
     :commit: 220152be528dcc0537764c179c95b8174028c80c
     :git: https://github.com/Quick/Nimble.git
   OHHTTPStubs:
-    :commit: 1a6e3d994d7d7a1bae6ae3eb255fc34eb43025e1
+    :commit: d8596d5a9cd429d32077bbf30845f4e7a4bca0f8
     :git: https://github.com/AliSoftware/OHHTTPStubs.git
   Quick:
     :commit: 81d2a7bd95ef91e2604ee0431bba6fe59ad662dc
