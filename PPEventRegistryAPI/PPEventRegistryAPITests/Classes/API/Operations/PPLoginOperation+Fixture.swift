@@ -16,7 +16,7 @@ extension PPLoginOperation {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: AnyObject] = ["action": "success",
+            let responseData : [String: Any] = ["action": "success",
                                                       "desc": "Login successful"]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
             }.name = "Login Operation Stub: Success"
@@ -26,7 +26,7 @@ extension PPLoginOperation {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: AnyObject] = ["action": "unknownUser",
+            let responseData : [String: Any] = ["action": "unknownUser",
                                                       "desc": "User with specified email and password doesn't exist."]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
             }.name = "Login Operation Stub: Unknown User"

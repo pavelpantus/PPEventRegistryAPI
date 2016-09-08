@@ -40,11 +40,19 @@ class PPGetEventOperationSpec: QuickSpec {
         }
 
         it("configured with correct parameters") {
-            expect(getEventOperation.parameters).to(equal(["action": "getEvent",
-                                                           "eventUri": 123,
-                                                           "infoConceptLang": "eng",
-                                                           "infoEventImageCount": 1,
-                                                           "resultType": "info"] as NSDictionary))
+            // TODO: reconsider once Quick supports dictionaries comparison
+//            expect(getEventOperation.parameters).to(equal(["action": "getEvent",
+//                                                           "eventUri": 123,
+//                                                           "infoConceptLang": "eng",
+//                                                           "infoEventImageCount": 1,
+//                                                           "resultType": "info"]))
+            let params = getEventOperation?.parameters ?? [:]
+            expect(params).to(haveCount(5))
+            expect(params["action"] as? String).to(equal("getEvent"))
+            expect(params["eventUri"] as? Int).to(equal(123))
+            expect(params["infoConceptLang"] as? String).to(equal("eng"))
+            expect(params["infoEventImageCount"] as? Int).to(equal(1))
+            expect(params["resultType"] as? String).to(equal("info"))
         }
 
     }

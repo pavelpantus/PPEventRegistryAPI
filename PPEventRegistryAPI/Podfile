@@ -7,10 +7,10 @@ use_frameworks!
 
 def testing_pods
   pod 'PPEventRegistryAPI', :path => '../'
-  pod 'Quick', :git => 'https://github.com/norio-nomura/Quick.git', :branch => 'nn-swift-3-compatibility'
-  pod 'Nimble', :git => 'https://github.com/mokagio/Nimble.git', :branch => 'mokagio/xcode-8-beta-4'
-  pod 'OHHTTPStubs', :git => 'https://github.com/mxcl/OHHTTPStubs.git', :branch => 'swift-3.0'
-  pod 'OHHTTPStubs/Swift', :git => 'https://github.com/mxcl/OHHTTPStubs.git', :branch => 'swift-3.0'
+  pod 'Quick', :git => 'https://github.com/Quick/Quick.git', :branch => 'swift-3.0'
+  pod 'Nimble', :git => 'https://github.com/Quick/Nimble.git', :branch => 'swift-3.0'
+  pod 'OHHTTPStubs', :git => 'https://github.com/AliSoftware/OHHTTPStubs.git', :branch => 'xcode8-gm'
+  pod 'OHHTTPStubs/Swift', :git => 'https://github.com/AliSoftware/OHHTTPStubs.git', :branch => 'xcode8-gm'
 end
 
 target 'WatchHost watchOS Extension' do
@@ -55,10 +55,10 @@ abstract_target 'TestingPods' do
 end
 
 # [Xcode 8 beta 2]: CopySwiftLibs for Pods framework fails with Mach-O header error #5598
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
-        end
-    end
-end
+#post_install do |installer|
+#    installer.pods_project.targets.each do |target|
+#        target.build_configurations.each do |config|
+#            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
+#        end
+#    end
+#end

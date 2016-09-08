@@ -16,7 +16,7 @@ extension PPGetRecentArticles {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: AnyObject] = [
+            let responseData : [String: Any] = [
                 "recentActivity" : [
                     "articles" : [
                         "activity" : [
@@ -40,7 +40,7 @@ extension PPGetRecentArticles {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: AnyObject] = [
+            let responseData : [String: Any] = [
                 "recentActivity" : [
                     "articles" : [
                         "activity" : []

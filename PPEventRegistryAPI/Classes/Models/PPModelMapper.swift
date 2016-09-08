@@ -13,7 +13,7 @@ class PPModelMapper: NSObject { }
 // MARK: PPArticle
 
 extension PPModelMapper {
-    func mapDataToModelObject(_ data: [String: AnyObject]) -> PPArticle {
+    func mapDataToModelObject(_ data: [String: Any]) -> PPArticle {
         let title = data["title"] as? String ?? ""
         let body  = data["body"]  as? String ?? ""
         let date  = data["date"]  as? String ?? ""
@@ -25,11 +25,11 @@ extension PPModelMapper {
         return PPArticle(title: title, body: body, date: date, time: time, uri: uri, url: url, image: image)
     }
 
-    func mapDataToModelObjects(_ data: [String: AnyObject]) -> [PPArticle] {
+    func mapDataToModelObjects(_ data: [String: Any]) -> [PPArticle] {
         var articles: [PPArticle] = []
-        if let recentActivity = data["recentActivity"] as? [String: AnyObject] {
-            if let articlesData = recentActivity["articles"] as? [String: AnyObject] {
-                if let activity = articlesData["activity"] as? [[String: AnyObject]] {
+        if let recentActivity = data["recentActivity"] as? [String: Any] {
+            if let articlesData = recentActivity["articles"] as? [String: Any] {
+                if let activity = articlesData["activity"] as? [[String: Any]] {
                     activity.forEach { articles.append(mapDataToModelObject($0)) }
                 }
             }
@@ -41,24 +41,24 @@ extension PPModelMapper {
 // MARK: PPEvent
 
 extension PPModelMapper {
-    func mapDataToModelObject(_ data: [String: AnyObject]) -> PPEvent {
-        let eventInfo = data["info"] as? [String: AnyObject] ?? [:]
+    func mapDataToModelObject(_ data: [String: Any]) -> PPEvent {
+        let eventInfo = data["info"] as? [String: Any] ?? [:]
         let lang = "eng"
 
-        let title     = eventInfo["title"]?[lang]   as? String   ?? ""
-        let summary   = eventInfo["summary"]?[lang] as? String   ?? ""
-        let eventDate = eventInfo["eventDate"]      as? String   ?? ""
-        let images    = eventInfo["images"]         as? [String] ?? []
+        let title     = (eventInfo["title"]    as? [String: String] ?? [:])[lang] ?? ""
+        let summary   = (eventInfo["summary"]  as? [String: String] ?? [:])[lang] ?? ""
+        let eventDate = eventInfo["eventDate"] as? String   ?? ""
+        let images    = eventInfo["images"]    as? [String] ?? []
         let image     = URL(string: images.first ?? "")
-        let locationLabel  = eventInfo["location"]?["label"] as? [String: AnyObject] ?? [:]
-        let location = locationLabel[lang] as? String ?? ""
+        let locationLabel = (eventInfo["location"] as? [String: Any] ?? [:])["label"] as? [String: String] ?? [:]
+        let location = locationLabel[lang] ?? ""
 
         return PPEvent(title: title, summary: summary, eventDate: eventDate, location: location, image: image)
     }
 
-    func mapDataToModelObjects(_ data: [String: AnyObject]) -> [PPEvent] {
+    func mapDataToModelObjects(_ data: [String: Any]) -> [PPEvent] {
         var events: [PPEvent] = []
-        data.forEach { events.append(mapDataToModelObject($1 as? [String : AnyObject] ?? [:])) }
+        data.forEach { events.append(mapDataToModelObject($1 as? [String : Any] ?? [:])) }
         return events
     }
 }

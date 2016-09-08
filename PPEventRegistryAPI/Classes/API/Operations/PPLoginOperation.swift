@@ -11,7 +11,7 @@ import Foundation
 final class PPLoginOperation: PPAsyncOperation {
     init(email: String, password: String, completionHandler: ((_ error: NSError?) -> Void)?) {
         let parameters = ["email": email, "pass": password]
-        let completion: ([String: AnyObject]?, NSError?) -> Void = { response, error in
+        let completion: ([String: Any]?, NSError?) -> Void = { response, error in
             if let action = response?["action"] as? String, action == "unknownUser" {
                 DispatchQueue.main.async {
                     let error = NSError(domain: "Unknown User", code: 0, userInfo: nil)
@@ -24,7 +24,7 @@ final class PPLoginOperation: PPAsyncOperation {
             }
         }
 
-        super.init(controller: "login", httpMethod: "POST", parameters: parameters as [String : AnyObject])
+        super.init(controller: "login", httpMethod: "POST", parameters: parameters)
         self.completionHandler = completion
     }
 }

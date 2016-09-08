@@ -11,7 +11,7 @@ import Foundation
 
 extension PPEvent {
     
-    static func fixture1() -> [String: AnyObject] {
+    static func fixture1() -> [String: Any] {
         return [
             "info" : [
                 "summary" : [

@@ -19,7 +19,7 @@ final class PPGetRecentArticles: PPAsyncOperation {
                                          "recentActivityArticlesMandatorySourceLocation": false,
                                          "recentActivityArticlesLastActivityId": 0]
 
-        super.init(controller: "overview", httpMethod: "GET", parameters: parameters as [String : AnyObject])
+        super.init(controller: "overview", httpMethod: "GET", parameters: parameters as [String : Any])
 
         self.completionHandler = { response, error -> Void in
             var events: [PPArticle] = []

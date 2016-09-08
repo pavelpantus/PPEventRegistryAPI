@@ -777,13 +777,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E909C2361D3DBE4D00E0DDB6 /* Build configuration list for PBXNativeTarget "WatchHost iOS" */;
 			buildPhases = (
-				AB384B186A9B61A746FC81C4 /* [CP] Check Pods Manifest.lock */,
 				E909C2211D3DBE4D00E0DDB6 /* Sources */,
 				E909C2221D3DBE4D00E0DDB6 /* Frameworks */,
 				E909C2231D3DBE4D00E0DDB6 /* Resources */,
 				E909C25B1D3DBECB00E0DDB6 /* Embed Watch Content */,
-				7C0819839B815BB4A0CA8675 /* [CP] Embed Pods Frameworks */,
-				3D56981667D060E74D7B4677 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -799,11 +796,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E909C2581D3DBECB00E0DDB6 /* Build configuration list for PBXNativeTarget "WatchHost watchOS" */;
 			buildPhases = (
-				5440FE70FB01A1CEDCA25B6B /* [CP] Check Pods Manifest.lock */,
 				E909C2371D3DBECB00E0DDB6 /* Resources */,
 				E909C2571D3DBECB00E0DDB6 /* Embed App Extensions */,
 				B27434A3FF28302073DC28CA /* Frameworks */,
-				3519F8FA26369D69931C96D7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1220,21 +1215,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests macOS/Pods-TestingPods-PPEventRegistryAPITests macOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3519F8FA26369D69931C96D7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchHost watchOS/Pods-WatchHost watchOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		37CAC2AFBC9A053656F7A770 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1250,37 +1230,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests iOS/Pods-TestingPods-PPEventRegistryAPITests iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3D56981667D060E74D7B4677 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchHost iOS/Pods-WatchHost iOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		406B98C58E51BC51985544C1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5440FE70FB01A1CEDCA25B6B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1353,21 +1303,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		7C0819839B815BB4A0CA8675 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchHost iOS/Pods-WatchHost iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7F75ED35EB0D31DA3DF6DE90 /* [CP] Check Pods Manifest.lock */ = {
@@ -1443,21 +1378,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchHost watchOS Extension/Pods-WatchHost watchOS Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB384B186A9B61A746FC81C4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D9FA9C121EA007B3A0259263 /* [CP] Copy Pods Resources */ = {

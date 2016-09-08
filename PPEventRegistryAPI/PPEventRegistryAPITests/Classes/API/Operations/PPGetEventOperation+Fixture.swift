@@ -16,7 +16,7 @@ extension PPGetEventOperation {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: AnyObject] = [
+            let responseData : [String: Any] = [
                 "4480701" : PPEvent.fixture1()
             ]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
@@ -27,7 +27,7 @@ extension PPGetEventOperation {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: AnyObject] = [
+            let responseData : [String: Any] = [
                 "44808387" : [
                     "error" : "Provided event uri (44808387) is not a valid event uri"
                 ]

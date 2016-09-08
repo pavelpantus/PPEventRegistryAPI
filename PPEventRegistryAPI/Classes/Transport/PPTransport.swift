@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PPTransportProtocol {
-    func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: @escaping (_ response: [String: AnyObject]?, _ error: NSError?) -> Void)
+    func postRequest(controller: String, httpMethod: String, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void)
 }
 
 final class PPTransport: NSObject {
@@ -25,7 +25,7 @@ final class PPTransport: NSObject {
 // MARK: PPTransportProtocol
 
 extension PPTransport: PPTransportProtocol {
-    internal func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: @escaping (_ response: [String: AnyObject]?, _ error: NSError?) -> Void) {
+    internal func postRequest(controller: String, httpMethod: String, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
         var request: URLRequest!
         if httpMethod == "GET" {
             request = URLRequest(url: URL(string: baseURI + "/json/" + controller + "?" + parameters.pp_join())!)
@@ -46,7 +46,7 @@ extension PPTransport: PPTransportProtocol {
 
             guard let data = data,
                 let resultObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
-                let response = resultObject as? [String: AnyObject] else {
+                let response = resultObject as? [String: Any] else {
                     completionHandler(nil, NSError(domain: "Response Data is Corrupted", code: 0, userInfo: nil))
                     return
             }
