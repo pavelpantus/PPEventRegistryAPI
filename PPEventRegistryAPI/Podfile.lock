@@ -1,60 +1,60 @@
 PODS:
   - Nimble (5.0.0-alpha.30p1)
-  - OHHTTPStubs (5.1.0):
-    - OHHTTPStubs/Default (= 5.1.0)
-  - OHHTTPStubs/Core (5.1.0)
-  - OHHTTPStubs/Default (5.1.0):
+  - OHHTTPStubs (5.2.0):
+    - OHHTTPStubs/Default (= 5.2.0)
+  - OHHTTPStubs/Core (5.2.0)
+  - OHHTTPStubs/Default (5.2.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (5.1.0):
+  - OHHTTPStubs/JSON (5.2.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (5.1.0):
+  - OHHTTPStubs/NSURLSession (5.2.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (5.1.0)
-  - OHHTTPStubs/Swift (5.1.0):
+  - OHHTTPStubs/OHPathHelpers (5.2.0)
+  - OHHTTPStubs/Swift (5.2.0):
     - OHHTTPStubs/Core
   - PPEventRegistryAPI (0.0.1)
-  - Quick (0.9.2)
+  - Quick (0.9.3)
 
 DEPENDENCIES:
-  - Nimble (from `https://github.com/mokagio/Nimble.git`, branch `mokagio/xcode-8-beta-4`)
-  - OHHTTPStubs (from `https://github.com/mxcl/OHHTTPStubs.git`, branch `swift-3.0`)
-  - OHHTTPStubs/Swift (from `https://github.com/mxcl/OHHTTPStubs.git`, branch `swift-3.0`)
+  - Nimble (from `https://github.com/Quick/Nimble.git`, branch `swift-3.0`)
+  - OHHTTPStubs (from `https://github.com/AliSoftware/OHHTTPStubs.git`, branch `xcode8-gm`)
+  - OHHTTPStubs/Swift (from `https://github.com/AliSoftware/OHHTTPStubs.git`, branch `xcode8-gm`)
   - PPEventRegistryAPI (from `../`)
-  - Quick (from `https://github.com/norio-nomura/Quick.git`, branch `nn-swift-3-compatibility`)
+  - Quick (from `https://github.com/Quick/Quick.git`, branch `swift-3.0`)
 
 EXTERNAL SOURCES:
   Nimble:
-    :branch: mokagio/xcode-8-beta-4
-    :git: https://github.com/mokagio/Nimble.git
-  OHHTTPStubs:
     :branch: swift-3.0
-    :git: https://github.com/mxcl/OHHTTPStubs.git
+    :git: https://github.com/Quick/Nimble.git
+  OHHTTPStubs:
+    :branch: xcode8-gm
+    :git: https://github.com/AliSoftware/OHHTTPStubs.git
   PPEventRegistryAPI:
     :path: "../"
   Quick:
-    :branch: nn-swift-3-compatibility
-    :git: https://github.com/norio-nomura/Quick.git
+    :branch: swift-3.0
+    :git: https://github.com/Quick/Quick.git
 
 CHECKOUT OPTIONS:
   Nimble:
-    :commit: f22ff06ebb295d8c7aac9beeb3c3e60527d2e4c0
-    :git: https://github.com/mokagio/Nimble.git
+    :commit: 220152be528dcc0537764c179c95b8174028c80c
+    :git: https://github.com/Quick/Nimble.git
   OHHTTPStubs:
-    :commit: 3d09c099d3d89a70bbd4911533afc998fde6bd35
-    :git: https://github.com/mxcl/OHHTTPStubs.git
+    :commit: 1a6e3d994d7d7a1bae6ae3eb255fc34eb43025e1
+    :git: https://github.com/AliSoftware/OHHTTPStubs.git
   Quick:
-    :commit: 594479916dc6f87af514e3d64635a1358f3ae904
-    :git: https://github.com/norio-nomura/Quick.git
+    :commit: 81d2a7bd95ef91e2604ee0431bba6fe59ad662dc
+    :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
   Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
-  OHHTTPStubs: 592f74439d2d72615115cf99a954237a3fbe26e5
+  OHHTTPStubs: 29ae105797c3410112d10b217c8b7a55aab616b2
   PPEventRegistryAPI: 8d4edb4b1385cf6a99e28dd23301bdc1051f663a
-  Quick: 19b5d0e23c18c06741e4f4b21b00c3101c78eeca
+  Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
 
-PODFILE CHECKSUM: 7798d26a8dbb851bb2bab3de30d6452eb71e8e7c
+PODFILE CHECKSUM: 16eab693b15a348efa89008bce8baff68da5f05d
 
 COCOAPODS: 1.1.0.beta.1

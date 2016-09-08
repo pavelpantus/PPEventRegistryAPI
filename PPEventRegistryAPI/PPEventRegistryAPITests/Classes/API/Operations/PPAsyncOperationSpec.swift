@@ -17,9 +17,10 @@ class PPAsyncOperationSpec: QuickSpec {
         let transportMock = PPTransportMock()
 
         beforeEach {
+            let params: [String: Any] = ["key1": "arg1", "key2": "arg2"]
             asyncOperation = PPAsyncOperation(controller: "controller",
                                               httpMethod: "httpMethod",
-                                              parameters: ["key1": "arg1", "ke2": "arg2"])
+                                              parameters: params)
             asyncOperation.transport = transportMock
         }
 
@@ -49,7 +50,12 @@ class PPAsyncOperationSpec: QuickSpec {
         }
 
         it("correct parameters set") {
-            expect(asyncOperation.parameters).to(equal(["key1": "arg1", "ke2": "arg2"] as NSDictionary))
+            // TODO: reconsider once Quick supports dictionaries comparison
+//            expect(asyncOperation.parameters).to(equal(["key1": "arg1", "key2": "arg2"] as [String: Any]))
+            let params = asyncOperation.parameters as! [String: String]
+            expect(params).to(haveCount(2))
+            expect(params["key1"]).to(equal("arg1"))
+            expect(params["key2"]).to(equal("arg2"))
         }
 
         it("does not post request if cancelled") {

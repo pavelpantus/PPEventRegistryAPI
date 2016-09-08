@@ -40,8 +40,13 @@ class PPLoginOperationSpec: QuickSpec {
         }
 
         it("configured with correct parameters") {
-            expect(loginOperation.parameters).to(equal(["email": "email@email.com",
-                                                        "pass": "qwerty"] as NSDictionary))
+            // TODO: reconsider once Quick supports dictionaries comparison
+//            expect(loginOperation.parameters).to(equal(["email": "email@email.com",
+//                                                        "pass": "qwerty"]))
+            let params = loginOperation.parameters as! [String: String]
+            expect(params).to(haveCount(2))
+            expect(params["email"]).to(equal("email@email.com"))
+            expect(params["pass"]).to(equal("qwerty"))
         }
 
     }

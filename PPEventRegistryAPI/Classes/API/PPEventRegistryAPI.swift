@@ -15,7 +15,7 @@ public final class PPEventRegistryAPI {
 
     public init() {}
 
-    private func schedule(_ operation: PPAsyncOperation) {
+    internal func schedule(_ operation: PPAsyncOperation) {
         queue.addOperations([operation], waitUntilFinished: false)
         operation.transport = transport
         operation.modelMapper = modelMapper
@@ -26,21 +26,21 @@ public final class PPEventRegistryAPI {
 
 extension PPEventRegistryAPI {
 
-    public func login(_ email: String, password: String, completionHandler: ((error: NSError?) -> Void)?) {
+    public func login(_ email: String, password: String, completionHandler: ((_ error: NSError?) -> Void)?) {
         let login = PPLoginOperation(email: email, password: password) { error in
-            completionHandler?(error: error)
+            completionHandler?(error)
         }
         schedule(login)
     }
 
-    public func getEvent(withID id: NSNumber, completionHandler: ((event: PPEvent?, error: NSError?) -> Void)?) {
+    public func getEvent(withID id: NSNumber, completionHandler: ((_ event: PPEvent?, _ error: NSError?) -> Void)?) {
         let getEvent = PPGetEventOperation(identifier: id) { (event, error) in
-            completionHandler?(event: event, error: error)
+            completionHandler?(event, error)
         }
         schedule(getEvent)
     }
 
-    public func getRecentArticles(_ completionHandler: ((articles: [PPArticle], error: NSError?) -> Void)?) {
+    public func getRecentArticles(_ completionHandler: ((_ articles: [PPArticle], _ error: NSError?) -> Void)?) {
         let getRecentActivity = PPGetRecentArticles(completionHandler: completionHandler)
         schedule(getRecentActivity)
     }

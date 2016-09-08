@@ -18,16 +18,16 @@ class PPTransportMock {
 // MARK: PPTransportProtocol
 
 extension PPTransportMock: PPTransportProtocol {
-    internal func postRequest(to controller: String, httpMethod: String, parameters: [String: AnyObject], completionHandler: (response: [String: AnyObject]?, error: NSError?) -> Void) {
+    internal func postRequest(controller: String, httpMethod: String, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
         if (rejectInvocation) {
             fatalError("Unexpected method was invoked")
         }
 
         DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
             if self.mockSuccess {
-                completionHandler(response: ["Result": "Success"], error: nil)
+                completionHandler(["Result": "Success"], nil)
             } else {
-                completionHandler(response: ["Result": "Failure"], error: NSError(domain: "Mocked Transport Failure", code: 123, userInfo: nil))
+                completionHandler(["Result": "Failure"], NSError(domain: "Mocked Transport Failure", code: 123, userInfo: nil))
             }
         }
     }
