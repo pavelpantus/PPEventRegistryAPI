@@ -28,6 +28,7 @@
 		E909C2681D3DBEE800E0DDB6 /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E909C2611D3DBEE800E0DDB6 /* PPEventRegistryAPI.framework */; };
 		E909C2691D3DBEE800E0DDB6 /* PPEventRegistryAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E909C2611D3DBEE800E0DDB6 /* PPEventRegistryAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E910476C1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */; };
+		E91A97331D819FDC002C1BEF /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
 		E92194311D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */; };
 		E92194321D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */; };
 		E92194341D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
@@ -1561,6 +1562,7 @@
 				E9EC45E21D42410400D1A68F /* PPModelMapperSpec.swift in Sources */,
 				E9EC45E31D42410400D1A68F /* PPAsyncOperationSpec.swift in Sources */,
 				E9EC45E41D42410400D1A68F /* PPLoginOperationSpec.swift in Sources */,
+				E91A97331D819FDC002C1BEF /* PPEventRegistryAPISpec.swift in Sources */,
 				E9EC45E51D42410400D1A68F /* PPLoginOperation+Fixture.swift in Sources */,
 				E9EC45E61D42410400D1A68F /* PPGetEventOperationSpec.swift in Sources */,
 				E9EC45E71D42410400D1A68F /* PPGetEventOperation+Fixture.swift in Sources */,
