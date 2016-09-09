@@ -1,27 +1,27 @@
 PODS:
   - Nimble (5.0.0-alpha.30p1)
-  - OHHTTPStubs (5.2.0):
-    - OHHTTPStubs/Default (= 5.2.0)
-  - OHHTTPStubs/Core (5.2.0)
-  - OHHTTPStubs/Default (5.2.0):
+  - OHHTTPStubs (5.2.1):
+    - OHHTTPStubs/Default (= 5.2.1)
+  - OHHTTPStubs/Core (5.2.1)
+  - OHHTTPStubs/Default (5.2.1):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (5.2.0):
+  - OHHTTPStubs/JSON (5.2.1):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (5.2.0):
+  - OHHTTPStubs/NSURLSession (5.2.1):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (5.2.0)
-  - OHHTTPStubs/Swift (5.2.0):
+  - OHHTTPStubs/OHPathHelpers (5.2.1)
+  - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
   - PPEventRegistryAPI (0.0.1)
   - Quick (0.9.3)
 
 DEPENDENCIES:
   - Nimble (from `https://github.com/Quick/Nimble.git`, branch `swift-3.0`)
-  - OHHTTPStubs (from `https://github.com/AliSoftware/OHHTTPStubs.git`, branch `xcode8-gm`)
-  - OHHTTPStubs/Swift (from `https://github.com/AliSoftware/OHHTTPStubs.git`, branch `xcode8-gm`)
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
   - PPEventRegistryAPI (from `../`)
   - Quick (from `https://github.com/Quick/Quick.git`, branch `swift-3.0`)
 
@@ -29,9 +29,6 @@ EXTERNAL SOURCES:
   Nimble:
     :branch: swift-3.0
     :git: https://github.com/Quick/Nimble.git
-  OHHTTPStubs:
-    :branch: xcode8-gm
-    :git: https://github.com/AliSoftware/OHHTTPStubs.git
   PPEventRegistryAPI:
     :path: "../"
   Quick:
@@ -42,19 +39,16 @@ CHECKOUT OPTIONS:
   Nimble:
     :commit: 220152be528dcc0537764c179c95b8174028c80c
     :git: https://github.com/Quick/Nimble.git
-  OHHTTPStubs:
-    :commit: d8596d5a9cd429d32077bbf30845f4e7a4bca0f8
-    :git: https://github.com/AliSoftware/OHHTTPStubs.git
   Quick:
     :commit: 81d2a7bd95ef91e2604ee0431bba6fe59ad662dc
     :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
   Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
-  OHHTTPStubs: 29ae105797c3410112d10b217c8b7a55aab616b2
+  OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   PPEventRegistryAPI: 8d4edb4b1385cf6a99e28dd23301bdc1051f663a
   Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
 
-PODFILE CHECKSUM: 16eab693b15a348efa89008bce8baff68da5f05d
+PODFILE CHECKSUM: 709dd1668726200fcfdb79e6a5074cc43d847329
 
 COCOAPODS: 1.1.0.beta.1
