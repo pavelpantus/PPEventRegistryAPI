@@ -52,7 +52,8 @@ open PPEventRegistryTest.xcworkspace
 
 ## Code Style
 
-[The Official raywenderlich.com Swift Style Guide.](https://github.com/raywenderlich/swift-style-guide#the-official-raywenderlichcom-swift-style-guide)
+- [The Official raywenderlich.com Swift Style Guide.](https://github.com/raywenderlich/swift-style-guide#the-official-raywenderlichcom-swift-style-guide)
+- [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
 
 ## Author
 
