@@ -37,10 +37,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Nimble:
-    :commit: 220152be528dcc0537764c179c95b8174028c80c
+    :commit: 9dc342cdffef660414d17f27aec897d0cacfffea
     :git: https://github.com/Quick/Nimble.git
   Quick:
-    :commit: 81d2a7bd95ef91e2604ee0431bba6fe59ad662dc
+    :commit: 8f2bc636ecfa2cc20696f62548b38d4ab943e299
     :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
@@ -51,4 +51,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 709dd1668726200fcfdb79e6a5074cc43d847329
 
-COCOAPODS: 1.1.0.beta.2
+COCOAPODS: 1.1.0.rc.1
