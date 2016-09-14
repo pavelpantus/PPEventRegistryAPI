@@ -37,7 +37,8 @@ public final class PPEventRegistryAPI {
     public init() {}
 
     internal func schedule(_ operation: PPAsyncOperation) {
-        guard self.state != .loggedOut else {
+        guard self.state != .loggedOut
+            || operation.isKind(of: PPLoginOperation.self) else {
             DispatchQueue.main.async {
                 let error = NSError(domain: "Log in Needed", code: 100, userInfo: nil)
                 operation.completionHandler?(nil, error)
