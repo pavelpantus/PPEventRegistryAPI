@@ -16,9 +16,9 @@ public final class PPEventRegistryAPI {
     public init() {}
 
     internal func schedule(_ operation: PPAsyncOperation) {
-        queue.addOperations([operation], waitUntilFinished: false)
         operation.transport = transport
         operation.modelMapper = modelMapper
+        queue.addOperations([operation], waitUntilFinished: false)
     }
 }
 
