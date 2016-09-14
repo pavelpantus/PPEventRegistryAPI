@@ -13,14 +13,10 @@ import Nimble
 class PPGetRecentArticlesSpec: QuickSpec {
     override func spec() {
 
-        var getRecentArticles: PPGetRecentArticles?
+        var getRecentArticles = PPGetRecentArticles(completionHandler: nil)
 
         beforeEach {
             getRecentArticles = PPGetRecentArticles(completionHandler: nil)
-        }
-
-        afterEach {
-            getRecentArticles = nil
         }
 
         it("subclass of PPAsyncOperation") {
@@ -28,15 +24,15 @@ class PPGetRecentArticlesSpec: QuickSpec {
         }
 
         it("configured with correct httpMethod") {
-            expect(getRecentArticles!.httpMethod).to(equal("GET"))
+            expect(getRecentArticles.httpMethod).to(equal("GET"))
         }
 
         it("configured with correct controller") {
-            expect(getRecentArticles!.controller).to(equal("overview"))
+            expect(getRecentArticles.controller).to(equal("overview"))
         }
 
         it("configured with a completion") {
-            expect(getRecentArticles!.completionHandler).notTo(beNil())
+            expect(getRecentArticles.completionHandler).notTo(beNil())
         }
 
         it("configured with correct parameters") {
@@ -49,7 +45,7 @@ class PPGetRecentArticlesSpec: QuickSpec {
 //                                                            "recentActivityArticlesMaxMinsBack": 10 * 60,
 //                                                            "recentActivityArticlesMandatorySourceLocation": false,
 //                                                            "recentActivityArticlesLastActivityId": 0]))
-            let params = getRecentArticles?.parameters ?? [:]
+            let params = getRecentArticles.parameters
             expect(params).to(haveCount(8))
             expect(params["action"] as? String).to(equal("getRecentActivity"))
             expect(params["addEvents"] as? Bool).to(beFalsy())

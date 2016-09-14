@@ -13,14 +13,10 @@ import Nimble
 class PPGetEventOperationSpec: QuickSpec {
     override func spec() {
 
-        var getEventOperation: PPGetEventOperation!
+        var getEventOperation = PPGetEventOperation(identifier: 123, completionHandler: nil)
 
         beforeEach {
             getEventOperation = PPGetEventOperation(identifier: 123, completionHandler: nil)
-        }
-
-        afterEach {
-            getEventOperation = nil
         }
 
         it("subclass of PPAsyncOperation") {
@@ -46,7 +42,7 @@ class PPGetEventOperationSpec: QuickSpec {
 //                                                           "infoConceptLang": "eng",
 //                                                           "infoEventImageCount": 1,
 //                                                           "resultType": "info"]))
-            let params = getEventOperation?.parameters ?? [:]
+            let params = getEventOperation.parameters
             expect(params).to(haveCount(5))
             expect(params["action"] as? String).to(equal("getEvent"))
             expect(params["eventUri"] as? Int).to(equal(123))

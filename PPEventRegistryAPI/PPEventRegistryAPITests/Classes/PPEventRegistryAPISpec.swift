@@ -14,10 +14,11 @@ import OHHTTPStubs
 class PPEventRegistryAPISpec: QuickSpec {
     override func spec() {
 
-        var api: PPEventRegistryAPI?
+        var api = PPEventRegistryAPI()
 
         beforeEach {
             api = PPEventRegistryAPI()
+            api.state = .loggedIn(email: "a@b.com", password: "pwd")
             OHHTTPStubs.onStubActivation { request, stub, response in
                 print("[OHHTTPStubs] Request to \(request.url!) has been stubbed with \(stub.name)")
             }
@@ -31,7 +32,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPLoginOperation.stubSuccess()
 
             waitUntil { done in
-                api?.login("email@email.com", password: "password") { error in
+                api.login("email@email.com", password: "password") { error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(error).to(beNil())
                     done()
@@ -43,7 +44,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPLoginOperation.stubUserNotFound()
 
             waitUntil { done in
-                api?.login("email@email.com", password: "password") { error in
+                api.login("email@email.com", password: "password") { error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(error?.code).to(equal(0))
                     expect(error?.domain).to(equal("Unknown User"))
@@ -57,7 +58,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetEventOperation.stubSuccess()
 
             waitUntil { done in
-                api?.getEvent(withID: 123) { event, error in
+                api.getEvent(withID: 123) { event, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(event).toNot(beNil())
                     expect(error).to(beNil())
@@ -70,7 +71,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetEventOperation.stubEventNotFound()
 
             waitUntil { done in
-                api?.getEvent(withID: 44808387) { event, error in
+                api.getEvent(withID: 44808387) { event, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(event).to(beNil())
                     expect(error?.code).to(equal(0))
@@ -85,7 +86,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubSuccess()
 
             waitUntil { done in
-                api?.getRecentArticles{ articles, error in
+                api.getRecentArticles{ articles, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(articles).to(haveCount(3))
                     expect(error).to(beNil())
@@ -98,7 +99,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubNoArticlesFound()
 
             waitUntil { done in
-                api?.getRecentArticles{ articles, error in
+                api.getRecentArticles{ articles, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(articles).to(haveCount(0))
                     expect(error).to(beNil())

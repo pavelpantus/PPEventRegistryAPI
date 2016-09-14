@@ -14,7 +14,7 @@ class PPModelMapperSpec: QuickSpec {
     override func spec() {
         describe("Initialization") {
 
-            var modelMapper: PPModelMapper!
+            var modelMapper = PPModelMapper()
 
             beforeEach {
                 modelMapper = PPModelMapper()

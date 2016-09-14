@@ -13,11 +13,13 @@ import Nimble
 class PPAsyncOperationSpec: QuickSpec {
     override func spec() {
 
-        var asyncOperation: PPAsyncOperation!
+        let params: [String: Any] = ["key1": "arg1", "key2": "arg2"]
+        var asyncOperation = PPAsyncOperation(controller: "controller",
+                                              httpMethod: "httpMethod",
+                                              parameters: params)
         let transportMock = PPTransportMock()
 
         beforeEach {
-            let params: [String: Any] = ["key1": "arg1", "key2": "arg2"]
             asyncOperation = PPAsyncOperation(controller: "controller",
                                               httpMethod: "httpMethod",
                                               parameters: params)
@@ -26,7 +28,6 @@ class PPAsyncOperationSpec: QuickSpec {
 
         afterEach {
             transportMock.rejectInvocation = false
-            asyncOperation = nil
         }
 
         it("is not executing right after creation") {
