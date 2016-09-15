@@ -108,5 +108,40 @@ class PPEventRegistryAPISpec: QuickSpec {
             }
         }
 
+        describe("schedule") {
+
+            beforeEach {
+                api.state = .loggedOut
+            }
+
+            it("returns Log In Needed error in logged out state") {
+                waitUntil { done in
+                    let operation = PPAsyncOperation(controller: "c", httpMethod: "POST", parameters: [:])
+                    operation.completionHandler = { objects, error in
+                        expect(Thread.current).to(equal(Thread.main))
+                        expect(objects).to(beNil())
+                        expect(error?.code).to(equal(100))
+                        expect(error?.domain).to(equal("Log In Needed"))
+                        expect(error?.userInfo).to(haveCount(0))
+                        expect(operation.transport).to(beNil())
+                        expect(operation.modelMapper).to(beNil())
+                        done()
+                    }
+                    api.schedule(operation)
+                }
+            }
+
+            it("adds login operation in logged out state") {
+                PPLoginOperation.stubSuccess()
+
+                waitUntil { done in
+                    api.login("email@email.com", password: "password") { error in
+                        expect(Thread.current).to(equal(Thread.main))
+                        expect(error).to(beNil())
+                        done()
+                    }
+                }
+            }
+        }
     }
 }

@@ -40,7 +40,7 @@ public final class PPEventRegistryAPI {
         guard self.state != .loggedOut
             || operation.isKind(of: PPLoginOperation.self) else {
             DispatchQueue.main.async {
-                let error = NSError(domain: "Log in Needed", code: 100, userInfo: nil)
+                let error = NSError(domain: "Log In Needed", code: 100, userInfo: nil)
                 operation.completionHandler?(nil, error)
             }
             return
@@ -65,7 +65,7 @@ extension PPEventRegistryAPI {
     }
 
     public func getEvent(withID id: NSNumber, completionHandler: ((_ event: PPEvent?, _ error: NSError?) -> Void)?) {
-        let getEvent = PPGetEventOperation(identifier: id) { (event, error) in
+        let getEvent = PPGetEventOperation(identifier: id) { event, error in
             completionHandler?(event, error)
         }
         schedule(getEvent)
