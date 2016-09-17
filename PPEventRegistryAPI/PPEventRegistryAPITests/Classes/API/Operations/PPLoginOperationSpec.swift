@@ -13,14 +13,14 @@ import Nimble
 class PPLoginOperationSpec: QuickSpec {
     override func spec() {
 
-        var loginOperation: PPLoginOperation!
+        var loginOperation = PPLoginOperation(email: "a@b.c",
+                                              password: "q",
+                                              completionHandler: nil)
 
         beforeEach {
-            loginOperation = PPLoginOperation(email: "email@email.com", password: "qwerty", completionHandler: nil)
-        }
-
-        afterEach {
-            loginOperation = nil
+            loginOperation = PPLoginOperation(email: "email@email.com",
+                                              password: "qwerty",
+                                              completionHandler: nil)
         }
 
         it("subclass of PPAsyncOperation") {
