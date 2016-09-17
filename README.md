@@ -8,9 +8,6 @@ Swift framework for accessing data in Event Registry (http://eventregistry.org/)
 [![License](https://img.shields.io/cocoapods/l/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
 [![Platform](https://img.shields.io/cocoapods/p/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
 
-# Warning
-Pod is not released yet.
-
 ## Supported API calls
 
 - `Log In`
@@ -30,7 +27,7 @@ pod "PPEventRegistryAPI"
 
 ## Developer Setup
 
-*The following stuff needed:* Xcode 8 GM, [Bundler](http://bundler.io/), [CocoaPods](http://cocoapods.org/).
+*The following stuff needed:* Xcode 8, [Bundler](http://bundler.io/), [CocoaPods](http://cocoapods.org/).
 
 To open the project:
 ```bash
