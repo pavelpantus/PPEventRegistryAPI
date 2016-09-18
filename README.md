@@ -1,5 +1,5 @@
 # PPEventRegistryAPI
-Swift framework for accessing data in Event Registry (http://eventregistry.org/)
+Swift 3 framework for accessing data in Event Registry (http://eventregistry.org/)
 
 [![CI Status](http://img.shields.io/travis/pantuspavel/PPEventRegistryAPI.svg?style=flat)](https://travis-ci.org/pantuspavel/PPEventRegistryAPI)
 [![codecov.io](https://codecov.io/gh/pantuspavel/PPEventRegistryAPI/branch/master/graphs/badge.svg)](https://codecov.io/gh/pantuspavel/PPEventRegistryAPI/branch/master)
