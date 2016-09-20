@@ -1006,7 +1006,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 09A7B4E7B5B260F0EE4CF7B9 /* Pods-PPEventRegistryTest watchOS.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IBSC_MODULE = PPEventRegistryTest_watchOS_Extension;
 				INFOPLIST_FILE = "PPEventRegistryTest watchOS/Info.plist";
@@ -1024,7 +1023,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3AB3D14B2FDEB6E9CB0BD513 /* Pods-PPEventRegistryTest watchOS.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				IBSC_MODULE = PPEventRegistryTest_watchOS_Extension;
 				INFOPLIST_FILE = "PPEventRegistryTest watchOS/Info.plist";
