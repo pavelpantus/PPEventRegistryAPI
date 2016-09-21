@@ -16,23 +16,7 @@ extension PPGetRecentArticles {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: Any] = [
-                "recentActivity" : [
-                    "articles" : [
-                        "activity" : [
-                            PPArticle.fixture1(),
-                            PPArticle.fixture2(),
-                            PPArticle.fixture3()
-                        ],
-                        "lastActivityId" : "97623711",
-                        "oldActivityId" : "97623706",
-                        "oldUpdate" : "2016-07-20 03:10:43.440",
-                        "currTime" : "2016-07-20 03:11:16.531",
-                        "lastUpdate" : "2016-07-20 03:10:43.575"
-                    ]
-                ]
-            ]
-            return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
+            return OHHTTPStubsResponse(jsonObject: successResponseData(), statusCode: 200, headers: nil)
             }.name = "Get Recent Articles Operation Stub: Success"
     }
 
@@ -49,6 +33,25 @@ extension PPGetRecentArticles {
             ]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
             }.name = "Get Recent Articles Operation Stub: No new articles"
+    }
+
+    class func successResponseData() -> [String: Any] {
+        return [
+            "recentActivity" : [
+                "articles" : [
+                    "activity" : [
+                        PPArticle.fixture1(),
+                        PPArticle.fixture2(),
+                        PPArticle.fixture3()
+                    ],
+                    "lastActivityId" : "97623711",
+                    "oldActivityId" : "97623706",
+                    "oldUpdate" : "2016-07-20 03:10:43.440",
+                    "currTime" : "2016-07-20 03:11:16.531",
+                    "lastUpdate" : "2016-07-20 03:10:43.575"
+                ]
+            ]
+        ]
     }
 
 }
