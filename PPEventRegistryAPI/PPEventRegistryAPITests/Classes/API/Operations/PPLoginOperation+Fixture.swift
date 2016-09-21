@@ -17,7 +17,7 @@ extension PPLoginOperation {
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: Any] = ["action": "success",
-                                                      "desc": "Login successful"]
+                                                "desc": "Login successful"]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
             }.name = "Login Operation Stub: Success"
     }
@@ -27,7 +27,7 @@ extension PPLoginOperation {
             true
         }) { (response) -> OHHTTPStubsResponse in
             let responseData : [String: Any] = ["action": "unknownUser",
-                                                      "desc": "User with specified email and password doesn't exist."]
+                                                "desc": "User with specified email and password doesn't exist."]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
             }.name = "Login Operation Stub: Unknown User"
     }

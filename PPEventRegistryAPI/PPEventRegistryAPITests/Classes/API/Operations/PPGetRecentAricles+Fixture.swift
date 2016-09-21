@@ -33,7 +33,7 @@ extension PPGetRecentArticles {
                 ]
             ]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
-            }.name = "Login Operation Stub: Success"
+            }.name = "Get Recent Articles Operation Stub: Success"
     }
 
     class func stubNoArticlesFound() {
@@ -48,7 +48,7 @@ extension PPGetRecentArticles {
                 ]
             ]
             return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
-            }.name = "Login Operation Stub: No new articles"
+            }.name = "Get Recent Articles Operation Stub: No new articles"
     }
 
 }
