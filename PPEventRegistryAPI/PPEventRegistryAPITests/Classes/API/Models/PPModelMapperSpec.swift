@@ -20,7 +20,7 @@ class PPModelMapperSpec: QuickSpec {
                 modelMapper = PPModelMapper()
             }
 
-            it("Maps articls correctly") {
+            it("Maps article correctly") {
                 let article: PPArticle = modelMapper.mapDataToModelObject(PPArticle.fixture1())
                 expect(article.title).to(equal("Astrazeneca PLC (AZN) Sees Strong Trading Volume"))
                 expect(article.body).to(equal("Tweet\n\nAstrazeneca PLC (NYSE:AZN) shares saw unusually-high trading volume on Tuesday . Approximately 5,276,985 shares were traded during trading, a decline of 23% from the previous session's volume of 6,868,391 shares.The stock last traded at $30.22 and had previously closed at $30.55.\n\nAZN has ..."))
@@ -31,17 +31,22 @@ class PPModelMapperSpec: QuickSpec {
                 expect(article.image).to(equal(URL(string: "www.image.com/image")))
             }
 
-            it("Create empty URL object in case of absence of the data") {
+            it("Maps articles correctly") {
+                let articles: [PPArticle] = modelMapper.mapDataToModelObjects(PPGetRecentArticles.successResponseData())
+                expect(articles).to(haveCount(3))
+            }
+
+            it("Creates an empty URL object in case of absence of the data") {
                 let article: PPArticle = modelMapper.mapDataToModelObject(PPArticle.fixtureEmptyURLAndBrokenImage())
                 expect(article.url).to(beNil())
             }
 
-            it("Create empty image object in case of nil data") {
+            it("Creates an empty image object in case of nil data") {
                 let article: PPArticle = modelMapper.mapDataToModelObject(PPArticle.fixtureEmptyURLAndBrokenImage())
                 expect(article.image).to(beNil())
             }
 
-            it("Create empty article in case of an empty input") {
+            it("Creates an empty article in case of an empty input") {
                 let article: PPArticle = modelMapper.mapDataToModelObject([:])
                 expect(article.title).to(equal(""))
                 expect(article.body).to(equal(""))
@@ -52,13 +57,18 @@ class PPModelMapperSpec: QuickSpec {
                 expect(article.image).to(beNil())
             }
 
-            it("Maps events correctly") {
+            it("Maps event correctly") {
                 let event: PPEvent = modelMapper.mapDataToModelObject(PPEvent.fixture1())
                 expect(event.title).to(equal("Exxon Mobil struggles to run California plant long enough to dump it"))
                 expect(event.summary).to(equal("All Exxon Mobil Corp. had to do is run its Los Angeles-area refinery for 15 days before handing the keys to new owner PBF Energy.\n\nThat's turning into a struggle. More than a month after Exxon Mobil restarted a key gasoline-making unit that was damaged in a blast last year, PBF still hasn't taken control of the Torrance plant. In the latest snag, a crane fell over Monday. While Exxon says it had no effect on production and the handover to PBF is still scheduled for mid year, the incident highligh"))
                 expect(event.eventDate).to(equal("2016-06-20"))
                 expect(event.location).to(equal("Torrance, California"))
                 expect(event.image).to(equal(URL(string: "https://assets.bwbx.io/business/public/images/social_fallbacks/bloomberg_default-a4f15fa7ee.jpg")))
+            }
+
+            it("Maps events correctly") {
+                let events: [PPEvent] = modelMapper.mapDataToModelObjects(PPGetEventOperation.successResponseData())
+                expect(events).to(haveCount(1))
             }
 
         }

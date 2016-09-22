@@ -16,10 +16,7 @@ extension PPGetEventOperation {
         stub(condition: { (request) -> Bool in
             true
         }) { (response) -> OHHTTPStubsResponse in
-            let responseData : [String: Any] = [
-                "4480701" : PPEvent.fixture1()
-            ]
-            return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
+            return OHHTTPStubsResponse(jsonObject: successResponseData(), statusCode: 200, headers: nil)
             }.name = "Get Event Operation Stub: Success"
     }
 
@@ -36,5 +33,8 @@ extension PPGetEventOperation {
             }.name = "Get Event Operation Stub: Event was not found"
     }
 
+    class func successResponseData() -> [String: Any] {
+        return [ "4480701" : PPEvent.fixture1() ]
+    }
 
 }

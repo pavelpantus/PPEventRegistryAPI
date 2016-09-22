@@ -30,7 +30,7 @@ extension PPModelMapper {
         if let recentActivity = data["recentActivity"] as? [String: Any] {
             if let articlesData = recentActivity["articles"] as? [String: Any] {
                 if let activity = articlesData["activity"] as? [[String: Any]] {
-                    activity.forEach { articles.append(mapDataToModelObject($0)) }
+                    articles = activity.flatMap { mapDataToModelObject($0) }
                 }
             }
         }
@@ -58,7 +58,9 @@ extension PPModelMapper {
 
     func mapDataToModelObjects(_ data: [String: Any]) -> [PPEvent] {
         var events: [PPEvent] = []
-        data.forEach { events.append(mapDataToModelObject($1 as? [String : Any] ?? [:])) }
+        if let data = data as? [String: [String: Any]] {
+            events = data.flatMap { mapDataToModelObject($1) }
+        }
         return events
     }
 }
