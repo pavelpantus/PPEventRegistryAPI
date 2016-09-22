@@ -71,6 +71,14 @@ class PPModelMapperSpec: QuickSpec {
                 expect(events).to(haveCount(1))
             }
 
+            it("Creates an empty event in case of an empty input") {
+                let event: PPEvent = modelMapper.mapDataToModelObject([:])
+                expect(event.title).to(equal(""))
+                expect(event.summary).to(equal(""))
+                expect(event.eventDate).to(equal(""))
+                expect(event.location).to(equal(""))
+                expect(event.image).to(beNil())
+            }
         }
     }
 }
