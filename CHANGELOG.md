@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.2
+* Enforce completion closures for operations (Public API change)  
+  [Pavel Pantus](https://github.com/pantuspavel), [#60](https://github.com/pantuspavel/PPEventRegistryAPI/pull/60)
 * flatMap instead of forEach  
   [Pavel Pantus](https://github.com/pantuspavel), [#59](https://github.com/pantuspavel/PPEventRegistryAPI/pull/59)
 * Minor stubs naming and style corrections  

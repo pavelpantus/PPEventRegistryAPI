@@ -45,7 +45,6 @@
 		E9C3362B1D399A160021E933 /* PPGetRecentAriclesSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3362A1D399A160021E933 /* PPGetRecentAriclesSpec.swift */; };
 		E9CB7B491D37C43B001BBEDB /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
 		E9CB7B4B1D37C69C001BBEDB /* PPGetEventOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B4A1D37C69C001BBEDB /* PPGetEventOperationSpec.swift */; };
-		E9DF7B941D92C72E00F5B8EA /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = E9DF7B931D92C72E00F5B8EA /* CHANGELOG.md */; };
 		E9E0B73A1D18CAD300702E4E /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
 		E9E9CBC61D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
 		E9E9CBC71D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
@@ -1503,7 +1502,6 @@
 			files = (
 				E9E0B73A1D18CAD300702E4E /* Dictionary+PPJoin.swift in Sources */,
 				E9F2EA011D176E7800DBF268 /* PPEventRegistryAPI.swift in Sources */,
-				E9DF7B941D92C72E00F5B8EA /* CHANGELOG.md in Sources */,
 				E9F2EA071D1770EB00DBF268 /* PPLoginOperation.swift in Sources */,
 				E9FB398A1D1A1F0B003E17EA /* PPGetEventOperation.swift in Sources */,
 				E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */,

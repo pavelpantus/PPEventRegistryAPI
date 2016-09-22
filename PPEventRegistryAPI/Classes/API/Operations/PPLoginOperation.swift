@@ -9,17 +9,17 @@
 import Foundation
 
 final class PPLoginOperation: PPAsyncOperation {
-    init(email: String, password: String, completionHandler: ((_ error: NSError?) -> Void)?) {
+    init(email: String, password: String, completionHandler: @escaping (_ error: NSError?) -> Void) {
         let parameters = ["email": email, "pass": password]
         let completion: ([String: Any]?, NSError?) -> Void = { response, error in
             if let action = response?["action"] as? String, action == "unknownUser" {
                 DispatchQueue.main.async {
                     let error = NSError(domain: "Unknown User", code: 0, userInfo: nil)
-                    completionHandler?(error)
+                    completionHandler(error)
                 }
             } else {
                 DispatchQueue.main.async {
-                    completionHandler?(error)
+                    completionHandler(error)
                 }
             }
         }
