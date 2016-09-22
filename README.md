@@ -27,7 +27,7 @@ pod "PPEventRegistryAPI"
 
 ## Developer Setup
 
-*The following stuff needed:* Xcode 8, [Bundler](http://bundler.io/), [CocoaPods](http://cocoapods.org/).
+*The following stuff needed:* [Xcode 8](https://developer.apple.com/download/), [Bundler](http://bundler.io/), [CocoaPods](http://cocoapods.org/).
 
 To open the project:
 ```bash
