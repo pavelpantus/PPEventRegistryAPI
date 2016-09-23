@@ -9,7 +9,7 @@
 import Foundation
 
 final class PPGetEventOperation: PPAsyncOperation {
-    init(identifier: NSNumber, completionHandler: ((_ event: PPEvent?, _ error: NSError?) -> Void)?) {
+    init(identifier: NSNumber, completionHandler: @escaping (_ event: PPEvent?, _ error: NSError?) -> Void) {
         let parameters: [String : Any] = ["action": "getEvent",
                                           "eventUri": identifier,
                                           "infoConceptLang": "eng",
@@ -30,7 +30,7 @@ final class PPGetEventOperation: PPAsyncOperation {
             }
 
             DispatchQueue.main.async {
-                completionHandler?(events.first, error)
+                completionHandler(events.first, error)
             }
         }
 

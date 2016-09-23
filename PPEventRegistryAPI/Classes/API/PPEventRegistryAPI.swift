@@ -41,7 +41,7 @@ public final class PPEventRegistryAPI {
             || operation.isKind(of: PPLoginOperation.self) else {
             DispatchQueue.main.async {
                 let error = NSError(domain: "Log In Needed", code: 100, userInfo: nil)
-                operation.completionHandler?(nil, error)
+                operation.completionHandler(nil, error)
             }
             return
         }
@@ -56,22 +56,22 @@ public final class PPEventRegistryAPI {
 
 extension PPEventRegistryAPI {
 
-    public func login(_ email: String, password: String, completionHandler: ((_ error: NSError?) -> Void)?) {
+    public func login(_ email: String, password: String, completionHandler: @escaping (_ error: NSError?) -> Void) {
         let login = PPLoginOperation(email: email, password: password) { error in
             self.state = error == nil ? .loggedIn(email: email, password: password) : .loggedOut
-            completionHandler?(error)
+            completionHandler(error)
         }
         schedule(login)
     }
 
-    public func getEvent(withID id: NSNumber, completionHandler: ((_ event: PPEvent?, _ error: NSError?) -> Void)?) {
+    public func getEvent(withID id: NSNumber, completionHandler: @escaping (_ event: PPEvent?, _ error: NSError?) -> Void) {
         let getEvent = PPGetEventOperation(identifier: id) { event, error in
-            completionHandler?(event, error)
+            completionHandler(event, error)
         }
         schedule(getEvent)
     }
 
-    public func getRecentArticles(_ completionHandler: ((_ articles: [PPArticle], _ error: NSError?) -> Void)?) {
+    public func getRecentArticles(_ completionHandler: @escaping (_ articles: [PPArticle], _ error: NSError?) -> Void) {
         let getRecentActivity = PPGetRecentArticles(completionHandler: completionHandler)
         schedule(getRecentActivity)
     }

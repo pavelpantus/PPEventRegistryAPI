@@ -13,10 +13,10 @@ import Nimble
 class PPGetRecentArticlesSpec: QuickSpec {
     override func spec() {
 
-        var getRecentArticles = PPGetRecentArticles(completionHandler: nil)
+        var getRecentArticles = PPGetRecentArticles(completionHandler: {_,_ in})
 
         beforeEach {
-            getRecentArticles = PPGetRecentArticles(completionHandler: nil)
+            getRecentArticles = PPGetRecentArticles(completionHandler: {_,_ in})
         }
 
         it("subclass of PPAsyncOperation") {

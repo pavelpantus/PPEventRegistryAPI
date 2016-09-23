@@ -9,7 +9,7 @@
 import Foundation
 
 final class PPGetRecentArticles: PPAsyncOperation {
-    init(completionHandler: ((_ events: [PPArticle], _ error: NSError?) -> Void)?) {
+    init(completionHandler: @escaping (_ events: [PPArticle], _ error: NSError?) -> Void) {
         let parameters: [String: Any] = ["action": "getRecentActivity",
                                          "addEvents": false,
                                          "addActivity": false,
@@ -29,7 +29,7 @@ final class PPGetRecentArticles: PPAsyncOperation {
             }
 
             DispatchQueue.main.async {
-                completionHandler?(events, error)
+                completionHandler(events, error)
             }
         }
     }

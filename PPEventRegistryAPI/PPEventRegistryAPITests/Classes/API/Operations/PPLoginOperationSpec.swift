@@ -15,12 +15,12 @@ class PPLoginOperationSpec: QuickSpec {
 
         var loginOperation = PPLoginOperation(email: "a@b.c",
                                               password: "q",
-                                              completionHandler: nil)
+                                              completionHandler: {_ in})
 
         beforeEach {
             loginOperation = PPLoginOperation(email: "email@email.com",
                                               password: "qwerty",
-                                              completionHandler: nil)
+                                              completionHandler: {_ in})
         }
 
         it("subclass of PPAsyncOperation") {
