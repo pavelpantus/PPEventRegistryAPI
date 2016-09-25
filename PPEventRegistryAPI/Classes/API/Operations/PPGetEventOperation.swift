@@ -17,7 +17,7 @@ final class PPGetEventOperation: PPAsyncOperation {
                                           "resultType": "info"]
         super.init(controller: "event", httpMethod: "GET", parameters: parameters)
 
-        let completion: ([String: Any]?, NSError?) -> Void = { response, error in
+        self.completionHandler = { response, error in
             var events: [PPEvent] = []
             var error: NSError?
 
@@ -33,7 +33,5 @@ final class PPGetEventOperation: PPAsyncOperation {
                 completionHandler(events.first, error)
             }
         }
-
-        self.completionHandler = completion
     }
 }
