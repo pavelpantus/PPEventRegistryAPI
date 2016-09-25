@@ -9,7 +9,18 @@
 import Foundation
 
 protocol PPTransportProtocol {
-    func postRequest(controller: String, httpMethod: String, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void)
+    func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void)
+}
+
+enum HttpMethod: String {
+    case Get
+    case Post
+}
+
+enum Controller: String {
+    case Login
+    case Event
+    case Overview
 }
 
 final class PPTransport: NSObject {
@@ -25,16 +36,16 @@ final class PPTransport: NSObject {
 // MARK: PPTransportProtocol
 
 extension PPTransport: PPTransportProtocol {
-    internal func postRequest(controller: String, httpMethod: String, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
+    internal func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
         var request: URLRequest!
-        if httpMethod == "GET" {
-            request = URLRequest(url: URL(string: baseURI + "/json/" + controller + "?" + parameters.pp_join())!)
+        if method == .Get {
+            request = URLRequest(url: URL(string: baseURI + "/json/" + controller.rawValue.lowercased() + "?" + parameters.pp_join())!)
         } else {
-            request = URLRequest(url: URL(string: baseURI + "/" + controller)!)
+            request = URLRequest(url: URL(string: baseURI + "/" + controller.rawValue.lowercased())!)
             request.httpBody = parameters.pp_join().data(using: .utf8)
         }
 
-        request.httpMethod = httpMethod
+        request.httpMethod = method.rawValue.uppercased()
         request.addValue("application/json", forHTTPHeaderField: "Accept")
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 

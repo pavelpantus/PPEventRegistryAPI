@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.2
+* Replace HTTP methods strings with enums  
+  [Pavel Pantus](https://github.com/pantuspavel), [#66](https://github.com/pantuspavel/PPEventRegistryAPI/pull/66)
 * Minor code style corrections in operations  
   [Pavel Pantus](https://github.com/pantuspavel), [#64](https://github.com/pantuspavel/PPEventRegistryAPI/pull/64)
 * Enforce completion closures for operations (Public API change)  

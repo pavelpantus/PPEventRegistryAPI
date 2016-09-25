@@ -18,7 +18,7 @@ class PPTransportMock {
 // MARK: PPTransportProtocol
 
 extension PPTransportMock: PPTransportProtocol {
-    internal func postRequest(controller: String, httpMethod: String, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
+    internal func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
         if (rejectInvocation) {
             fatalError("Unexpected method was invoked")
         }

@@ -28,11 +28,11 @@ class PPLoginOperationSpec: QuickSpec {
         }
 
         it("configured with correct httpMethod") {
-            expect(loginOperation.httpMethod).to(equal("POST"))
+            expect(loginOperation.method).to(equal(HttpMethod.Post))
         }
 
         it("configured with correct controller") {
-            expect(loginOperation.controller).to(equal("login"))
+            expect(loginOperation.controller).to(equal(Controller.Login))
         }
 
         it("configured with a completion") {

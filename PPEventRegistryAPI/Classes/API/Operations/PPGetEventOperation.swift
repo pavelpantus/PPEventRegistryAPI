@@ -15,7 +15,7 @@ final class PPGetEventOperation: PPAsyncOperation {
                                           "infoConceptLang": "eng",
                                           "infoEventImageCount": 1,
                                           "resultType": "info"]
-        super.init(controller: "event", httpMethod: "GET", parameters: parameters)
+        super.init(controller: .Event, method: .Get, parameters: parameters)
 
         self.completionHandler = { response, error in
             var events: [PPEvent] = []

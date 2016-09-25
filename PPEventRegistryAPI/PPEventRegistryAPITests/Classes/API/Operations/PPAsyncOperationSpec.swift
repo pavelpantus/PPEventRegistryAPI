@@ -14,14 +14,14 @@ class PPAsyncOperationSpec: QuickSpec {
     override func spec() {
 
         let params: [String: Any] = ["key1": "arg1", "key2": "arg2"]
-        var asyncOperation = PPAsyncOperation(controller: "controller",
-                                              httpMethod: "httpMethod",
+        var asyncOperation = PPAsyncOperation(controller: .Login,
+                                              method: .Get,
                                               parameters: params)
         let transportMock = PPTransportMock()
 
         beforeEach {
-            asyncOperation = PPAsyncOperation(controller: "controller",
-                                              httpMethod: "httpMethod",
+            asyncOperation = PPAsyncOperation(controller: .Login,
+                                              method: .Get,
                                               parameters: params)
             asyncOperation.transport = transportMock
         }
@@ -43,11 +43,11 @@ class PPAsyncOperationSpec: QuickSpec {
         }
 
         it("correct controller set") {
-            expect(asyncOperation.controller).to(equal("controller"))
+            expect(asyncOperation.controller).to(equal(Controller.Login))
         }
 
         it("correct httpMethod set") {
-            expect(asyncOperation.httpMethod).to(equal("httpMethod"))
+            expect(asyncOperation.method).to(equal(HttpMethod.Get))
         }
 
         it("correct parameters set") {
