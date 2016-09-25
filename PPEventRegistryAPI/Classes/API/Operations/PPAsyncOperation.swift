@@ -11,16 +11,16 @@ import Foundation
 class PPAsyncOperation: Operation {
     private var _executing = false
     private var _finished = false
-    internal let controller: String
+    internal let controller: Controller
     internal let parameters: [String: Any]
-    internal let httpMethod: String
+    internal let method: HttpMethod
     internal var transport: PPTransportProtocol!
     internal var modelMapper: PPModelMapper!
     internal var completionHandler: ([String: Any]?, NSError?) -> Void = {_,_ in }
 
-    init(controller: String, httpMethod: String, parameters: [String: Any]) {
+    init(controller: Controller, method: HttpMethod, parameters: [String: Any]) {
         self.controller = controller
-        self.httpMethod = httpMethod
+        self.method = method
         self.parameters = parameters
 
         super.init()
@@ -57,7 +57,7 @@ class PPAsyncOperation: Operation {
 
         isExecuting = true
 
-        transport.postRequest(controller: controller, httpMethod: httpMethod, parameters: parameters) { response, error -> Void in
+        transport.postRequest(controller: controller, method: method, parameters: parameters) { response, error -> Void in
             if self.isCancelled {
                 self.completionHandler(response, NSError(domain: "Operation was cancelled", code: 0, userInfo: nil))
             } else {

@@ -116,7 +116,7 @@ class PPEventRegistryAPISpec: QuickSpec {
 
             it("returns Log In Needed error in logged out state") {
                 waitUntil { done in
-                    let operation = PPAsyncOperation(controller: "c", httpMethod: "POST", parameters: [:])
+                    let operation = PPAsyncOperation(controller: .Event, method: .Post, parameters: [:])
                     operation.completionHandler = { objects, error in
                         expect(Thread.current).to(equal(Thread.main))
                         expect(objects).to(beNil())

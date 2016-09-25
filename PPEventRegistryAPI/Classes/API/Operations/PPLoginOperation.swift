@@ -11,7 +11,7 @@ import Foundation
 final class PPLoginOperation: PPAsyncOperation {
     init(email: String, password: String, completionHandler: @escaping (_ error: NSError?) -> Void) {
         let parameters = ["email": email, "pass": password]
-        super.init(controller: "login", httpMethod: "POST", parameters: parameters)
+        super.init(controller: .Login, method: .Post, parameters: parameters)
 
         self.completionHandler = { response, error in
             if let action = response?["action"] as? String, action == "unknownUser" {
