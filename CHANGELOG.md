@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.2
+* [WIP] Add pagination to Get Recent Articles API call  
+  [Pavel Pantus](https://github.com/pantuspavel), [#xx](https://github.com/pantuspavel/PPEventRegistryAPI/pull/xx)
 * Enforce completion closures for operations (Public API change)  
   [Pavel Pantus](https://github.com/pantuspavel), [#60](https://github.com/pantuspavel/PPEventRegistryAPI/pull/60)
 * flatMap instead of forEach  

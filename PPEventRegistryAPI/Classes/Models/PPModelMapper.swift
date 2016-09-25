@@ -25,16 +25,18 @@ extension PPModelMapper {
         return PPArticle(title: title, body: body, date: date, time: time, uri: uri, url: url, image: image)
     }
 
-    func mapDataToModelObjects(_ data: [String: Any]) -> [PPArticle] {
+    func mapDataToModelObjects(_ data: [String: Any]) -> ([PPArticle], PPFetchMarker?) {
         var articles: [PPArticle] = []
+        var marker: PPFetchMarker?
         if let recentActivity = data["recentActivity"] as? [String: Any] {
             if let articlesData = recentActivity["articles"] as? [String: Any] {
+                marker = PPFetchMarker(id: articlesData["lastActivityId"] as? String ?? "")
                 if let activity = articlesData["activity"] as? [[String: Any]] {
                     articles = activity.flatMap { mapDataToModelObject($0) }
                 }
             }
         }
-        return articles
+        return (articles, marker)
     }
 }
 

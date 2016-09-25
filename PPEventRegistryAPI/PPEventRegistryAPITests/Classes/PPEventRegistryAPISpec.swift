@@ -86,10 +86,11 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubSuccess()
 
             waitUntil { done in
-                api.getRecentArticles{ articles, error in
+                api.getRecentArticles(marker: nil) { marker, articles, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(articles).to(haveCount(3))
                     expect(error).to(beNil())
+                    expect(marker?.id).to(equal("97623711"))
                     done()
                 }
             }
@@ -99,7 +100,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubNoArticlesFound()
 
             waitUntil { done in
-                api.getRecentArticles{ articles, error in
+                api.getRecentArticles(marker: nil) { marker, articles, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(articles).to(haveCount(0))
                     expect(error).to(beNil())

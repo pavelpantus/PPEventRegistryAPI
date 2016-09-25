@@ -39,6 +39,10 @@
 		E9385AF01D17325C009716D1 /* PPEventRegistryAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */; };
 		E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
 		E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
+		E970FFB51D94CBD800A630E9 /* PPFetchMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970FFB41D94CBD800A630E9 /* PPFetchMarker.swift */; };
+		E970FFBC1D957BDE00A630E9 /* PPFetchMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970FFB41D94CBD800A630E9 /* PPFetchMarker.swift */; };
+		E970FFBD1D957BE000A630E9 /* PPFetchMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970FFB41D94CBD800A630E9 /* PPFetchMarker.swift */; };
+		E970FFBE1D957BE000A630E9 /* PPFetchMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E970FFB41D94CBD800A630E9 /* PPFetchMarker.swift */; };
 		E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */; };
 		E9889B101D33023B0032C030 /* PPEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B0F1D33023B0032C030 /* PPEvent.swift */; };
 		E9889B121D33087D0032C030 /* PPEventSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9889B111D33087D0032C030 /* PPEventSpec.swift */; };
@@ -46,6 +50,9 @@
 		E9CB7B491D37C43B001BBEDB /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
 		E9CB7B4B1D37C69C001BBEDB /* PPGetEventOperationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B4A1D37C69C001BBEDB /* PPGetEventOperationSpec.swift */; };
 		E9E0B73A1D18CAD300702E4E /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
+		E9E898B71D9619BA002D4EC6 /* PPFetchMargerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E898B61D9619BA002D4EC6 /* PPFetchMargerSpec.swift */; };
+		E9E898B81D9619BA002D4EC6 /* PPFetchMargerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E898B61D9619BA002D4EC6 /* PPFetchMargerSpec.swift */; };
+		E9E898B91D9619BA002D4EC6 /* PPFetchMargerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E898B61D9619BA002D4EC6 /* PPFetchMargerSpec.swift */; };
 		E9E9CBC61D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
 		E9E9CBC71D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */; };
 		E9E9CBC91D40FC7C00EE5F0C /* PPArticle+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */; };
@@ -278,6 +285,7 @@
 		E9385AF61D17325C009716D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9584F841D20196800B32570 /* PPModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelMapper.swift; path = Models/PPModelMapper.swift; sourceTree = "<group>"; };
 		E9584F861D201AAA00B32570 /* PPArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPArticle.swift; path = Models/PPArticle.swift; sourceTree = "<group>"; };
+		E970FFB41D94CBD800A630E9 /* PPFetchMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPFetchMarker.swift; path = Utility/PPFetchMarker.swift; sourceTree = "<group>"; };
 		E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPArticleSpec.swift; sourceTree = "<group>"; };
 		E9889B0F1D33023B0032C030 /* PPEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPEvent.swift; path = Models/PPEvent.swift; sourceTree = "<group>"; };
 		E9889B111D33087D0032C030 /* PPEventSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPEventSpec.swift; sourceTree = "<group>"; };
@@ -287,6 +295,7 @@
 		E9D9F38A1D172C52007267AD /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		E9DF7B931D92C72E00F5B8EA /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = CHANGELOG.md; path = ../CHANGELOG.md; sourceTree = "<group>"; };
 		E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Dictionary+PPJoin.swift"; path = "Utility/Dictionary+PPJoin.swift"; sourceTree = "<group>"; };
+		E9E898B61D9619BA002D4EC6 /* PPFetchMargerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPFetchMargerSpec.swift; sourceTree = "<group>"; };
 		E9E9CBC51D40FB8100EE5F0C /* PPModelMapperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPModelMapperSpec.swift; sourceTree = "<group>"; };
 		E9E9CBC81D40FC7C00EE5F0C /* PPArticle+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPArticle+Fixture.swift"; sourceTree = "<group>"; };
 		E9EC45BC1D4240E600D1A68F /* PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -563,6 +572,7 @@
 			isa = PBXGroup;
 			children = (
 				E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */,
+				E9E898B61D9619BA002D4EC6 /* PPFetchMargerSpec.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -645,6 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */,
+				E970FFB41D94CBD800A630E9 /* PPFetchMarker.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -1488,6 +1499,7 @@
 				E9EF48CF1D60B3CA00D4B165 /* PPEvent.swift in Sources */,
 				E9EF48D01D60B3CA00D4B165 /* PPAsyncOperation.swift in Sources */,
 				E9EF48D11D60B3CA00D4B165 /* PPLoginOperation.swift in Sources */,
+				E970FFBD1D957BE000A630E9 /* PPFetchMarker.swift in Sources */,
 				E9EF48D21D60B3CA00D4B165 /* PPGetEventOperation.swift in Sources */,
 				E9EF48D31D60B3CA00D4B165 /* PPGetRecentArticles.swift in Sources */,
 				E9EF48D41D60B3CA00D4B165 /* PPEventRegistryAPI.swift in Sources */,
@@ -1506,6 +1518,7 @@
 				E9FB398A1D1A1F0B003E17EA /* PPGetEventOperation.swift in Sources */,
 				E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */,
 				E9889B101D33023B0032C030 /* PPEvent.swift in Sources */,
+				E970FFB51D94CBD800A630E9 /* PPFetchMarker.swift in Sources */,
 				E9F2EA051D176F1C00DBF268 /* PPAsyncOperation.swift in Sources */,
 				E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */,
 				E9F2E8E61D174BE400DBF268 /* PPTransport.swift in Sources */,
@@ -1517,6 +1530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E898B71D9619BA002D4EC6 /* PPFetchMargerSpec.swift in Sources */,
 				E9ED06F21D3A70F90035CFD8 /* PPAsyncOperationSpec.swift in Sources */,
 				E9E9CBC61D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */,
 				E9CB7B491D37C43B001BBEDB /* PPEventRegistryAPISpec.swift in Sources */,
@@ -1545,6 +1559,7 @@
 				E9EC45D61D4240F500D1A68F /* PPEvent.swift in Sources */,
 				E9EC45D71D4240F500D1A68F /* PPAsyncOperation.swift in Sources */,
 				E9EC45D81D4240F500D1A68F /* PPLoginOperation.swift in Sources */,
+				E970FFBE1D957BE000A630E9 /* PPFetchMarker.swift in Sources */,
 				E9EC45D91D4240F500D1A68F /* PPGetEventOperation.swift in Sources */,
 				E9EC45DA1D4240F500D1A68F /* PPGetRecentArticles.swift in Sources */,
 				E9EC45DB1D4240F500D1A68F /* PPEventRegistryAPI.swift in Sources */,
@@ -1557,6 +1572,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E898B91D9619BA002D4EC6 /* PPFetchMargerSpec.swift in Sources */,
 				E9EC45DE1D42410400D1A68F /* PPArticleSpec.swift in Sources */,
 				E9EC45DF1D42410400D1A68F /* PPArticle+Fixture.swift in Sources */,
 				E9EC45E01D42410400D1A68F /* PPEventSpec.swift in Sources */,
@@ -1585,6 +1601,7 @@
 				E9F845261D3B288A00F4E3D9 /* PPEvent.swift in Sources */,
 				E9F845271D3B288A00F4E3D9 /* PPAsyncOperation.swift in Sources */,
 				E9F845281D3B288A00F4E3D9 /* PPLoginOperation.swift in Sources */,
+				E970FFBC1D957BDE00A630E9 /* PPFetchMarker.swift in Sources */,
 				E9F845291D3B288A00F4E3D9 /* PPGetEventOperation.swift in Sources */,
 				E9F8452A1D3B288A00F4E3D9 /* PPGetRecentArticles.swift in Sources */,
 				E9F8452B1D3B288A00F4E3D9 /* PPEventRegistryAPI.swift in Sources */,
@@ -1597,6 +1614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E898B81D9619BA002D4EC6 /* PPFetchMargerSpec.swift in Sources */,
 				E9F8452E1D3B28AB00F4E3D9 /* PPArticleSpec.swift in Sources */,
 				E9E9CBC71D40FB8100EE5F0C /* PPModelMapperSpec.swift in Sources */,
 				E9F8452F1D3B28AB00F4E3D9 /* PPEventSpec.swift in Sources */,

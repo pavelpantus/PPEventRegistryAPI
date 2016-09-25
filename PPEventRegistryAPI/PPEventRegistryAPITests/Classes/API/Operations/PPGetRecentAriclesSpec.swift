@@ -13,10 +13,10 @@ import Nimble
 class PPGetRecentArticlesSpec: QuickSpec {
     override func spec() {
 
-        var getRecentArticles = PPGetRecentArticles(completionHandler: {_,_ in})
+        var getRecentArticles = PPGetRecentArticles(marker: nil) {_,_,_ in}
 
         beforeEach {
-            getRecentArticles = PPGetRecentArticles(completionHandler: {_,_ in})
+            getRecentArticles = PPGetRecentArticles(marker: nil) {_,_,_ in}
         }
 
         it("subclass of PPAsyncOperation") {
@@ -46,16 +46,23 @@ class PPGetRecentArticlesSpec: QuickSpec {
 //                                                            "recentActivityArticlesMandatorySourceLocation": false,
 //                                                            "recentActivityArticlesLastActivityId": 0]))
             let params = getRecentArticles.parameters
-            expect(params).to(haveCount(8))
+            expect(params).to(haveCount(7))
             expect(params["action"] as? String).to(equal("getRecentActivity"))
             expect(params["addEvents"] as? Bool).to(beFalsy())
             expect(params["addActivity"] as? Bool).to(beFalsy())
             expect(params["addArticles"] as? Bool).to(beTruthy())
             expect(params["recentActivityArticlesMaxArticleCount"] as? Int).to(equal(5))
-            expect(params["recentActivityArticlesMaxMinsBack"] as? Int).to(equal(600))
+            expect(params["recentActivityArticlesMaxMinsBack"] as? Int).to(equal(7 * 24 * 60 * 60))
             expect(params["recentActivityArticlesMandatorySourceLocation"]  as? Bool).to(beFalsy())
-            expect(params["recentActivityArticlesLastActivityId"] as? Int).to(equal(0))
-            
+            expect(params["recentActivityArticlesLastActivityId"] as? String).to(equal("0"))
+            expect(params["recentActivityEventsLastActivityId"]).to(beNil())
+        }
+
+        it("adds a recent activity id if marker was provided") {
+            let marker = PPFetchMarker(id: "123")
+            getRecentArticles = PPGetRecentArticles(marker: marker) {_,_,_ in}
+            let params = getRecentArticles.parameters
+            expect(params["recentActivityArticlesLastActivityId"] as? String).to(equal("123"))
         }
 
     }

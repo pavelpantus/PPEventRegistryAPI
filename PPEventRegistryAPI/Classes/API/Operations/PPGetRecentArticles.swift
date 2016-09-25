@@ -9,27 +9,21 @@
 import Foundation
 
 final class PPGetRecentArticles: PPAsyncOperation {
-    init(completionHandler: @escaping (_ events: [PPArticle], _ error: NSError?) -> Void) {
+    init(marker: PPFetchMarker?, completionHandler: @escaping (_ marker: PPFetchMarker?, _ events: [PPArticle], _ error: NSError?) -> Void) {
         let parameters: [String: Any] = ["action": "getRecentActivity",
                                          "addEvents": false,
-                                         "addActivity": false,
                                          "addArticles": true,
-                                         "recentActivityArticlesMaxArticleCount": 5,
-                                         "recentActivityArticlesMaxMinsBack": 10 * 60,
+                                         "recentActivityArticlesMaxArticleCount": 1,
+                                         "recentActivityArticlesMaxMinsBack": 7 * 24 * 60 * 60,
                                          "recentActivityArticlesMandatorySourceLocation": false,
-                                         "recentActivityArticlesLastActivityId": 0]
+                                         "recentActivityArticlesLastActivityId": marker?.id ?? "0"]
 
-        super.init(controller: "overview", httpMethod: "GET", parameters: parameters as [String : Any])
+        super.init(controller: "overview", httpMethod: "GET", parameters: parameters)
 
         self.completionHandler = { response, error -> Void in
-            var events: [PPArticle] = []
-
-            if let response = response {
-                events = self.modelMapper.mapDataToModelObjects(response)
-            }
-
+            let (events, marker) = self.modelMapper.mapDataToModelObjects(response ?? [:])
             DispatchQueue.main.async {
-                completionHandler(events, error)
+                completionHandler(marker, events, error)
             }
         }
     }

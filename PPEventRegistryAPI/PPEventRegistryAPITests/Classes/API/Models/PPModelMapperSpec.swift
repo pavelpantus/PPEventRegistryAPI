@@ -31,9 +31,16 @@ class PPModelMapperSpec: QuickSpec {
                 expect(article.image).to(equal(URL(string: "www.image.com/image")))
             }
 
-            it("Maps articles correctly") {
-                let articles: [PPArticle] = modelMapper.mapDataToModelObjects(PPGetRecentArticles.successResponseData())
+            it("Maps articles and marker correctly") {
+                let (articles, marker) = modelMapper.mapDataToModelObjects(PPGetRecentArticles.successResponseData())
                 expect(articles).to(haveCount(3))
+                expect(marker?.id).to(equal("97623711"))
+            }
+
+            it("Returns an empty marker if last activity id is nil") {
+                let (articles, marker) = modelMapper.mapDataToModelObjects(PPGetRecentArticles.successDataNoLastActivity())
+                expect(articles).to(haveCount(1))
+                expect(marker).to(beNil())
             }
 
             it("Creates an empty URL object in case of absence of the data") {

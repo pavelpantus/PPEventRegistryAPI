@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B83278335C08DA99353783AC72451E4742CEB336",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B83278335C08DA99353783AC72451E4742CEB336" : 9223372036854775807,
+    "19F1392C1BA3EA9AC8A333C417FC60647BE94CA3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "AE406115-2CE0-4DF7-9404-804174D3C20D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B83278335C08DA99353783AC72451E4742CEB336" : "PPEventRegistryAPI\/",
+    "19F1392C1BA3EA9AC8A333C417FC60647BE94CA3" : "..\/button-repos\/DeepLinkKit"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "PPEventRegistryTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/PPEventRegistryTest.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:button\/DeepLinkKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "19F1392C1BA3EA9AC8A333C417FC60647BE94CA3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:pantuspavel\/PPEventRegistryAPI.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B83278335C08DA99353783AC72451E4742CEB336"
+    }
+  ]
+}

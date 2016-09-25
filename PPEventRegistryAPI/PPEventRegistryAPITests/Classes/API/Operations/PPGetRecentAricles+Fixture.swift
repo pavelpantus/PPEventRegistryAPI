@@ -54,4 +54,20 @@ extension PPGetRecentArticles {
         ]
     }
 
+    class func successDataNoLastActivity() -> [String: Any] {
+        return [
+            "recentActivity" : [
+                "articles" : [
+                    "activity" : [
+                        PPArticle.fixture1(),
+                    ],
+                    "oldActivityId" : "97623706",
+                    "oldUpdate" : "2016-07-20 03:10:43.440",
+                    "currTime" : "2016-07-20 03:11:16.531",
+                    "lastUpdate" : "2016-07-20 03:10:43.575"
+                ]
+            ]
+        ]
+    }
+
 }
