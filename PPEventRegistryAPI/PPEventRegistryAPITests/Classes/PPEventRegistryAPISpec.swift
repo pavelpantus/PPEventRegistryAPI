@@ -47,7 +47,21 @@ class PPEventRegistryAPISpec: QuickSpec {
                 api.login("email@email.com", password: "password") { error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(error?.code).to(equal(0))
-                    expect(error?.domain).to(equal("Unknown User"))
+                    expect(error?.domain).to(equal("unknownUser"))
+                    expect(error?.userInfo).to(haveCount(0))
+                    done()
+                }
+            }
+        }
+
+        it("Login returns a missing data error in case of an empty input") {
+            PPLoginOperation.stubUserMissingData()
+
+            waitUntil { done in
+                api.login("", password: "") { error in
+                    expect(Thread.current).to(equal(Thread.main))
+                    expect(error?.code).to(equal(0))
+                    expect(error?.domain).to(equal("missingData"))
                     expect(error?.userInfo).to(haveCount(0))
                     done()
                 }
