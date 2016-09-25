@@ -54,7 +54,7 @@ open Example/PPEventRegistryTest.xcworkspace
 
 ## Author
 
-Pavel Pantus, pantusp@gmail.com
+Pavel Pantus, [@pantusp](https://twitter.com/pantusp), pantusp@gmail.com
 
 ## License
 
