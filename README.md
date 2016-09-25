@@ -35,7 +35,7 @@ git clone git@github.com:pantuspavel/PPEventRegistryAPI.git
 cd PPEventRegistryAPI
 bundle
 pod install
-open PPEventRegistryAPI.xcworkspace
+open PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace
 ```
 
 To open an example project:
@@ -44,7 +44,7 @@ git clone git@github.com:pantuspavel/PPEventRegistryAPI.git
 cd PPEventRegistryAPI/Example
 bundle
 pod install
-open PPEventRegistryTest.xcworkspace
+open Example/PPEventRegistryTest.xcworkspace
 ```
 
 ## Code Style
@@ -54,7 +54,7 @@ open PPEventRegistryTest.xcworkspace
 
 ## Author
 
-Pavel Pantus, pantusp@gmail.com
+Pavel Pantus, [@pantusp](https://twitter.com/pantusp), pantusp@gmail.com
 
 ## License
 
