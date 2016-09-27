@@ -37,19 +37,10 @@ final class PPTransport: NSObject {
 
 extension PPTransport: PPTransportProtocol {
     internal func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
-        var request: URLRequest!
-        if method == .Get {
-            request = URLRequest(url: URL(string: baseURI + "/json/" + controller.rawValue.lowercased() + "?" + parameters.pp_join())!)
-        } else {
-            request = URLRequest(url: URL(string: baseURI + "/" + controller.rawValue.lowercased())!)
-            request.httpBody = parameters.pp_join().data(using: .utf8)
-        }
 
-        request.httpMethod = method.rawValue.uppercased()
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        let urlRequest = request(with: controller, method: method, parameters: parameters)
 
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: urlRequest) { data, response, error in
             guard error == nil else {
                 completionHandler(nil, error as NSError?)
                 return
@@ -65,6 +56,23 @@ extension PPTransport: PPTransportProtocol {
             completionHandler(response, nil)
         }
         task.resume()
+    }
+
+    internal func request(with controller: Controller, method: HttpMethod, parameters: [String: Any]) -> URLRequest {
+        var request: URLRequest
+
+        if method == .Get {
+            request = URLRequest(url: URL(string: baseURI + "/json/" + controller.rawValue.lowercased() + "?" + parameters.pp_join())!)
+        } else {
+            request = URLRequest(url: URL(string: baseURI + "/" + controller.rawValue.lowercased())!)
+            request.httpBody = parameters.pp_join().data(using: .utf8)
+        }
+
+        request.httpMethod = method.rawValue.uppercased()
+        request.addValue("application/json", forHTTPHeaderField: "Accept")
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        return request
     }
 }
 
