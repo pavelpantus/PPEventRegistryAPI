@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.2
+* Cover PPTransport with tests  
+  [Pavel Pantus](https://github.com/pantuspavel), [#68](https://github.com/pantuspavel/PPEventRegistryAPI/pull/68)
 * Replace HTTP methods strings with enums  
   [Pavel Pantus](https://github.com/pantuspavel), [#66](https://github.com/pantuspavel/PPEventRegistryAPI/pull/66)
 * Minor code style corrections in operations  
