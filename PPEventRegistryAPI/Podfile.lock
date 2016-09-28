@@ -1,5 +1,5 @@
 PODS:
-  - Nimble (5.0.0-alpha.30p1)
+  - Nimble (5.0.0)
   - OHHTTPStubs (5.2.1):
     - OHHTTPStubs/Default (= 5.2.1)
   - OHHTTPStubs/Core (5.2.1)
@@ -16,39 +16,25 @@ PODS:
   - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
   - PPEventRegistryAPI (0.0.1)
-  - Quick (0.9.3)
+  - Quick (0.10.0)
 
 DEPENDENCIES:
-  - Nimble (from `https://github.com/Quick/Nimble.git`, branch `swift-3.0`)
+  - Nimble
   - OHHTTPStubs
   - OHHTTPStubs/Swift
   - PPEventRegistryAPI (from `../`)
-  - Quick (from `https://github.com/Quick/Quick.git`, branch `swift-3.0`)
+  - Quick
 
 EXTERNAL SOURCES:
-  Nimble:
-    :branch: swift-3.0
-    :git: https://github.com/Quick/Nimble.git
   PPEventRegistryAPI:
     :path: "../"
-  Quick:
-    :branch: swift-3.0
-    :git: https://github.com/Quick/Quick.git
-
-CHECKOUT OPTIONS:
-  Nimble:
-    :commit: 9dc342cdffef660414d17f27aec897d0cacfffea
-    :git: https://github.com/Quick/Nimble.git
-  Quick:
-    :commit: 8f2bc636ecfa2cc20696f62548b38d4ab943e299
-    :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
-  Nimble: c5b995b4cd57789ec44b0cfb79640fc00e61a8c7
+  Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
   PPEventRegistryAPI: 8d4edb4b1385cf6a99e28dd23301bdc1051f663a
-  Quick: 31fb576b6cbb6b028cc5e0016e4366accbb346f5
+  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
-PODFILE CHECKSUM: 709dd1668726200fcfdb79e6a5074cc43d847329
+PODFILE CHECKSUM: 05c47dfc213977515db8fdc61a98212410c98088
 
 COCOAPODS: 1.1.0.rc.2
