@@ -32,4 +32,14 @@ extension PPLoginOperation {
             }.name = "Login Operation Stub: Unknown User"
     }
 
+    class func stubUserMissingData() {
+        stub(condition: { (request) -> Bool in
+            true
+        }) { (response) -> OHHTTPStubsResponse in
+            let responseData : [String: Any] = ["action": "missingData",
+                                                "desc": "Email or password was not specified."]
+            return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
+            }.name = "Login Operation Stub: Missing Data"
+    }
+
 }
