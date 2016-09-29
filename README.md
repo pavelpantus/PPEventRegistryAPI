@@ -27,6 +27,13 @@ it, simply add the following line to your Podfile:
 pod "PPEventRegistryAPI"
 ```
 
+PPEventRegistryAPI is also available through [Carthage](https://github.com/Carthage/Carthage).
+Add the following line to your Cartfile:
+
+```ruby
+github "pantuspavel/PPEventRegistryAPI"
+```
+
 ## Developer Setup
 
 *The following stuff needed:* [Xcode 8](https://developer.apple.com/download/), [Bundler](http://bundler.io/), [CocoaPods](http://cocoapods.org/).
