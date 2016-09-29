@@ -30,6 +30,9 @@
 		E92194321D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */; };
 		E92194341D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
 		E92194351D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
+		E929E9C51D9DA2EE00C93E7E /* .coverage.sh in Resources */ = {isa = PBXBuildFile; fileRef = E929E9C21D9DA2EE00C93E7E /* .coverage.sh */; };
+		E929E9C61D9DA2EE00C93E7E /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = E929E9C31D9DA2EE00C93E7E /* .swift-version */; };
+		E929E9C71D9DA2EE00C93E7E /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = E929E9C41D9DA2EE00C93E7E /* .travis.yml */; };
 		E9367DDB1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */; };
 		E9367DDC1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */; };
 		E9385AE91D17325C009716D1 /* PPEventRegistryAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -259,6 +262,9 @@
 		E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary_PPJoinSpec.swift; sourceTree = "<group>"; };
 		E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPGetEventOperation+Fixture.swift"; sourceTree = "<group>"; };
 		E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPGetRecentAricles+Fixture.swift"; sourceTree = "<group>"; };
+		E929E9C21D9DA2EE00C93E7E /* .coverage.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = .coverage.sh; path = ../.coverage.sh; sourceTree = "<group>"; };
+		E929E9C31D9DA2EE00C93E7E /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
+		E929E9C41D9DA2EE00C93E7E /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPEvent+Fixture.swift"; sourceTree = "<group>"; };
 		E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventRegistryAPI.h; sourceTree = "<group>"; };
@@ -411,7 +417,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACF51AFB993E008FA782 /* Metadata */,
 				E9385AE71D17325C009716D1 /* PPEventRegistryAPI */,
 				E9385AF31D17325C009716D1 /* PPEventRegistryAPITests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -437,16 +443,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+		607FACF51AFB993E008FA782 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				E929E9C21D9DA2EE00C93E7E /* .coverage.sh */,
+				E929E9C31D9DA2EE00C93E7E /* .swift-version */,
+				E929E9C41D9DA2EE00C93E7E /* .travis.yml */,
 				E9DF7B931D92C72E00F5B8EA /* CHANGELOG.md */,
 				E9F845391D3B28DC00F4E3D9 /* Podfile */,
 				B3036A14D51BDBE6BAC008E6 /* PPEventRegistryAPI.podspec */,
 				C51BC68B16698CC6F8A1BAE3 /* README.md */,
 				59F250622E0A45CF7BE7175C /* LICENSE */,
 			);
-			name = "Podspec Metadata";
+			name = Metadata;
 			sourceTree = "<group>";
 		};
 		BDE6ED17B81C713DBE5000B2 /* Frameworks */ = {
@@ -1081,6 +1090,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E929E9C71D9DA2EE00C93E7E /* .travis.yml in Resources */,
+				E929E9C61D9DA2EE00C93E7E /* .swift-version in Resources */,
+				E929E9C51D9DA2EE00C93E7E /* .coverage.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

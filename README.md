@@ -8,6 +8,7 @@ Swift 3 framework for accessing data in Event Registry (http://eventregistry.org
 [![License](https://img.shields.io/cocoapods/l/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
 [![Platform](https://img.shields.io/cocoapods/p/PPEventRegistryAPI.svg?style=flat)](http://cocoapods.org/pods/PPEventRegistryAPI)
 [![Swift Version](https://img.shields.io/badge/Swift-3.0-F16D39.svg?style=flat)](https://developer.apple.com/swift)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 ## Supported API calls
 

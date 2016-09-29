@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.2
+* Carthage support  
+  [Pavel Pantus](https://github.com/pantuspavel), [#77](https://github.com/pantuspavel/PPEventRegistryAPI/pull/77)
 * Login operation does not return error in case of missingData error  
   [Pavel Pantus](https://github.com/pantuspavel), [#65](https://github.com/pantuspavel/PPEventRegistryAPI/pull/65)
 * Add pod lint as a step of the build script  
