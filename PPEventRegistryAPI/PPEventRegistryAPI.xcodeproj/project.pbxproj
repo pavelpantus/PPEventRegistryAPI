@@ -121,7 +121,6 @@
 		E9F845381D3B28AB00F4E3D9 /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
 		E9FB398A1D1A1F0B003E17EA /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
 		E9FB398C1D1B6164003E17EA /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
-		EBFA2B323C329E0E8E911F2B /* Pods_WatchHost_watchOS_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54F91F8C17CAE99DF591FA37 /* Pods_WatchHost_watchOS_Extension.framework */; };
 		FB890A46D1BE37DC04C3D4F9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8721F8E719CE364E0F55E9D9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -209,17 +208,13 @@
 /* Begin PBXFileReference section */
 		02B97C09BF3F3D316E53238C /* Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests macOS/Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig"; sourceTree = "<group>"; };
 		283AD8E303897A2723DC5E57 /* Pods-PPEventRegistryAPITests tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests tvOS/Pods-PPEventRegistryAPITests tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		2D60B7BE5DF1EF38FB8F1975 /* Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI watchOS/Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig"; sourceTree = "<group>"; };
 		31EB3E9FE75FD391B8AAC763 /* Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests macOS/Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		33261A2B8922DC9A26EA357A /* Pods_WatchHost_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchHost_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DBAB495C1A590C8C14E5732 /* Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig"; sourceTree = "<group>"; };
 		50160434A929064878939946 /* Pods-PPEventRegistryAPITests iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests iOS/Pods-PPEventRegistryAPITests iOS.release.xcconfig"; sourceTree = "<group>"; };
 		524A7C4356A9669B36DBCF25 /* Pods_PPEventRegistryAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		536C02D58C72390C871531E8 /* Pods-PPEventRegistryAPITests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests iOS/Pods-PPEventRegistryAPITests iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		54F91F8C17CAE99DF591FA37 /* Pods_WatchHost_watchOS_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchHost_watchOS_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		570F952FE8D361BFFFB49CB7 /* Pods-TestingPods-PPEventRegistryAPITests iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests iOS/Pods-TestingPods-PPEventRegistryAPITests iOS.debug.xcconfig"; sourceTree = "<group>"; };
-		57F0B9091531B40DDA061C8B /* Pods-TargetPods-PPEventRegistryAPI tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI tvOS/Pods-TargetPods-PPEventRegistryAPI tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		581BAF57923196E413FB6A48 /* Pods-TargetPods-PPEventRegistryAPI watchOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI watchOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI watchOS/Pods-TargetPods-PPEventRegistryAPI watchOS.release.xcconfig"; sourceTree = "<group>"; };
 		59590F10D365E86913934C1B /* Pods-TestingPods-PPEventRegistryAPITests tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestingPods-PPEventRegistryAPITests tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestingPods-PPEventRegistryAPITests tvOS/Pods-TestingPods-PPEventRegistryAPITests tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		59F250622E0A45CF7BE7175C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		679EED4FDA62E1F2A6C4A746 /* Pods_WatchHost_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchHost_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,7 +224,6 @@
 		9D24D13708DA6EA9B4B29D6B /* Pods-PPEventRegistryAPI iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI iOS/Pods-PPEventRegistryAPI iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		9F0CFD44FDA0F83ADAC7D917 /* Pods_TargetPods_PPEventRegistryAPI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetPods_PPEventRegistryAPI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CBCCF328C181B89CEB907E /* Pods_TestingPods_PPEventRegistryAPITests_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A713EDFB66C593CFC7467BF3 /* Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI macOS/Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		ACE8701A7142E3CA4EFCF42A /* Pods-PPEventRegistryAPI tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI tvOS/Pods-PPEventRegistryAPI tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AE603137954FB8FC7B07ECCC /* Pods_PPEventRegistryAPI_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13A8D6E94A41493FAE0749A /* Pods-PPEventRegistryAPI tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI tvOS/Pods-PPEventRegistryAPI tvOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -242,11 +236,7 @@
 		C74997A0A5A759FBE4097DE4 /* Pods_TargetPods_PPEventRegistryAPI_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TargetPods_PPEventRegistryAPI_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB42BCBCCACF71DF48426F0A /* Pods-PPEventRegistryAPI iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPI iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPI iOS/Pods-PPEventRegistryAPI iOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB52D9C8EE8E45DE1DE9354D /* Pods_PPEventRegistryAPITests_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPITests_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD40B4698F8A0B477B0EFC7F /* Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI tvOS/Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		CE6B4AA13F230A22FAB04E07 /* Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI macOS/Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig"; sourceTree = "<group>"; };
-		CEC087AFA702259AE3B9C69A /* Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TargetPods-PPEventRegistryAPI iOS/Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		D32B34E2F5FA4828F44031B2 /* Pods_PPEventRegistryAPI_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E06FE44D02704E4A19070471 /* Pods-WatchHost watchOS Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchHost watchOS Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchHost watchOS Extension/Pods-WatchHost watchOS Extension.release.xcconfig"; sourceTree = "<group>"; };
 		E909C2251D3DBE4D00E0DDB6 /* WatchHost iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchHost iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E909C2271D3DBE4D00E0DDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E909C2291D3DBE4D00E0DDB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -314,7 +304,6 @@
 		EF9B939C9F4F1A971968DC33 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F253ACCC3B82FDA39C367315 /* Pods-PPEventRegistryAPITests tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests tvOS/Pods-PPEventRegistryAPITests tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F3F2ABBDC75A19713A2EE2D2 /* Pods_PPEventRegistryAPI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F57579D9A4B2EE24204EE5CF /* Pods-WatchHost watchOS Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchHost watchOS Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchHost watchOS Extension/Pods-WatchHost watchOS Extension.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,7 +326,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E909C2681D3DBEE800E0DDB6 /* PPEventRegistryAPI.framework in Frameworks */,
-				EBFA2B323C329E0E8E911F2B /* Pods_WatchHost_watchOS_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,20 +398,10 @@
 				B13A8D6E94A41493FAE0749A /* Pods-PPEventRegistryAPI tvOS.release.xcconfig */,
 				283AD8E303897A2723DC5E57 /* Pods-PPEventRegistryAPITests tvOS.debug.xcconfig */,
 				F253ACCC3B82FDA39C367315 /* Pods-PPEventRegistryAPITests tvOS.release.xcconfig */,
-				CEC087AFA702259AE3B9C69A /* Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig */,
-				4DBAB495C1A590C8C14E5732 /* Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig */,
-				CD40B4698F8A0B477B0EFC7F /* Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig */,
-				57F0B9091531B40DDA061C8B /* Pods-TargetPods-PPEventRegistryAPI tvOS.release.xcconfig */,
 				570F952FE8D361BFFFB49CB7 /* Pods-TestingPods-PPEventRegistryAPITests iOS.debug.xcconfig */,
 				83406C153D323D28C795746A /* Pods-TestingPods-PPEventRegistryAPITests iOS.release.xcconfig */,
 				86692FA7A40988A5D04EC7E0 /* Pods-TestingPods-PPEventRegistryAPITests tvOS.debug.xcconfig */,
 				59590F10D365E86913934C1B /* Pods-TestingPods-PPEventRegistryAPITests tvOS.release.xcconfig */,
-				2D60B7BE5DF1EF38FB8F1975 /* Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig */,
-				581BAF57923196E413FB6A48 /* Pods-TargetPods-PPEventRegistryAPI watchOS.release.xcconfig */,
-				F57579D9A4B2EE24204EE5CF /* Pods-WatchHost watchOS Extension.debug.xcconfig */,
-				E06FE44D02704E4A19070471 /* Pods-WatchHost watchOS Extension.release.xcconfig */,
-				A713EDFB66C593CFC7467BF3 /* Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig */,
-				CE6B4AA13F230A22FAB04E07 /* Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig */,
 				31EB3E9FE75FD391B8AAC763 /* Pods-TestingPods-PPEventRegistryAPITests macOS.debug.xcconfig */,
 				02B97C09BF3F3D316E53238C /* Pods-TestingPods-PPEventRegistryAPITests macOS.release.xcconfig */,
 			);
@@ -814,13 +792,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E909C2541D3DBECB00E0DDB6 /* Build configuration list for PBXNativeTarget "WatchHost watchOS Extension" */;
 			buildPhases = (
-				7F75ED35EB0D31DA3DF6DE90 /* [CP] Check Pods Manifest.lock */,
 				E909C2411D3DBECB00E0DDB6 /* Sources */,
 				E909C2421D3DBECB00E0DDB6 /* Frameworks */,
 				E909C2431D3DBECB00E0DDB6 /* Resources */,
 				E909C26D1D3DBEE800E0DDB6 /* Embed Frameworks */,
-				A375EDF99C9A39F5F92AD142 /* [CP] Embed Pods Frameworks */,
-				92857CC550A204D05B301CA2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1222,21 +1197,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		7F75ED35EB0D31DA3DF6DE90 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		81985BFA6991E06EEC3C3206 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1250,36 +1210,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		92857CC550A204D05B301CA2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchHost watchOS Extension/Pods-WatchHost watchOS Extension-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A375EDF99C9A39F5F92AD142 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchHost watchOS Extension/Pods-WatchHost watchOS Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9FA9C121EA007B3A0259263 /* [CP] Copy Pods Resources */ = {
@@ -1674,7 +1604,6 @@
 		};
 		E909C2551D3DBECB00E0DDB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F57579D9A4B2EE24204EE5CF /* Pods-WatchHost watchOS Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1695,7 +1624,6 @@
 		};
 		E909C2561D3DBECB00E0DDB6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E06FE44D02704E4A19070471 /* Pods-WatchHost watchOS Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1754,7 +1682,6 @@
 		};
 		E909C26B1D3DBEE800E0DDB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D60B7BE5DF1EF38FB8F1975 /* Pods-TargetPods-PPEventRegistryAPI watchOS.debug.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1784,7 +1711,6 @@
 		};
 		E909C26C1D3DBEE800E0DDB6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 581BAF57923196E413FB6A48 /* Pods-TargetPods-PPEventRegistryAPI watchOS.release.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1813,7 +1739,6 @@
 		};
 		E9385AF81D17325C009716D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CEC087AFA702259AE3B9C69A /* Pods-TargetPods-PPEventRegistryAPI iOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1846,7 +1771,6 @@
 		};
 		E9385AF91D17325C009716D1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DBAB495C1A590C8C14E5732 /* Pods-TargetPods-PPEventRegistryAPI iOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1921,7 +1845,6 @@
 		};
 		E9EC45CD1D4240E600D1A68F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A713EDFB66C593CFC7467BF3 /* Pods-TargetPods-PPEventRegistryAPI macOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1951,7 +1874,6 @@
 		};
 		E9EC45CE1D4240E600D1A68F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE6B4AA13F230A22FAB04E07 /* Pods-TargetPods-PPEventRegistryAPI macOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2019,7 +1941,6 @@
 		};
 		E9F8451D1D3B286200F4E3D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD40B4698F8A0B477B0EFC7F /* Pods-TargetPods-PPEventRegistryAPI tvOS.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -2048,7 +1969,6 @@
 		};
 		E9F8451E1D3B286200F4E3D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57F0B9091531B40DDA061C8B /* Pods-TargetPods-PPEventRegistryAPI tvOS.release.xcconfig */;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
