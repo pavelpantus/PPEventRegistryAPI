@@ -7,11 +7,24 @@
 //
 
 import WatchKit
+import PPEventRegistryAPI
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
+    let api = PPEventRegistryAPI()
+    
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
+        
+        api.login("", password: "") { error in
+            print("login with error: \(error)")
+            self.api.getEvent(withID: 4488701) { event, error in
+                print("get event error \(event)")
+            }
+            self.api.getRecentArticles(count: 10) { aricles, error in
+                print("articles \(aricles), error \(error)")
+            }
+        }
     }
 
     func applicationDidBecomeActive() {

@@ -105,15 +105,19 @@ class PPTransportSpec: QuickSpec {
 
             it("returns correct request for .Overview and .Get") {
                 let urlRequest = transport.request(with: .Overview, method: .Get, parameters: ["key1":"value1"])
-                expect(urlRequest.url).to(equal(URL(string: "http://eventregistry.org/json/overview?key1=value1")!))
+                expect(urlRequest.url).to(equal(URL(string: "https://eventregistry.org/json/overview?key1=value1")!))
                 expect(urlRequest.httpMethod).to(equal("GET"))
+                expect(urlRequest.value(forHTTPHeaderField: "Content-Type")).to(equal("application/json"))
+                expect(urlRequest.value(forHTTPHeaderField: "Accept")).to(equal("application/json"))
             }
 
             it("returns correct request for .Login and .Post") {
-                let urlRequest = transport.request(with: .Login, method: .Post, parameters: ["key1":"value1"])
-                expect(urlRequest.url).to(equal(URL(string: "http://eventregistry.org/login")!))
-                expect(urlRequest.httpBody).to(equal(["key1":"value1"].pp_join().data(using: .utf8)))
+                let urlRequest = transport.request(with: .Login, method: .Post, parameters: ["key1@":"value1"])
+                expect(urlRequest.url).to(equal(URL(string: "https://eventregistry.org/login")!))
+                expect(urlRequest.httpBody).to(equal(["key1@":"value1"].pp_join().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)?.data(using: .utf8)))
                 expect(urlRequest.httpMethod).to(equal("POST"))
+                expect(urlRequest.value(forHTTPHeaderField: "Content-Type")).to(equal("application/x-www-form-urlencoded"))
+                expect(urlRequest.value(forHTTPHeaderField: "Accept")).to(equal("application/json"))
             }
 
         }

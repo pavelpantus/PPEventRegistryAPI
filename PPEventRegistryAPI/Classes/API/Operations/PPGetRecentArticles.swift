@@ -9,7 +9,7 @@
 import Foundation
 
 final class PPGetRecentArticles: PPAsyncOperation {
-    init(count: Int, completionHandler: @escaping (_ events: [PPArticle], _ error: NSError?) -> Void) {
+    init(count: Int = 5, completionHandler: @escaping (_ events: [PPArticle], _ error: NSError?) -> Void) {
         let parameters: [String: Any] = ["action": "getRecentActivity",
                                          "addEvents": false,
                                          "addActivity": false,
