@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.2
+* Carthage support  
+  [Pavel Pantus](https://github.com/pantuspavel), [#77](https://github.com/pantuspavel/PPEventRegistryAPI/pull/77)
 * Support for older platforms  
   [Pavel Pantus](https://github.com/pantuspavel), [#81](https://github.com/pantuspavel/PPEventRegistryAPI/pull/81)
 * Login operation does not return error in case of missingData error  

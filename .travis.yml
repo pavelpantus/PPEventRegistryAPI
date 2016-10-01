@@ -6,6 +6,7 @@ before_install:
 - bundle
 - pod repo update --silent
 - pod install --project-directory=PPEventRegistryAPI
+- pod install --project-directory=Example
 
 branches:
   only:
@@ -17,19 +18,36 @@ notifications:
 env:
   global:
   - WORKSPACE=PPEventRegistryAPI/PPEventRegistryAPI.xcworkspace
+  - WORKSPACE_EXAMPLE=Example/PPEventRegistryTest.xcworkspace
+  - EXAMPLE_IOS="PPEventRegistryTest"
+  - EXAMPLE_TVOS="PPEventRegistryTest tvOS"
+  - EXAMPLE_WATCHOS="PPEventRegistryTest watchOS"
+  - EXAMPLE_MACOS="PPEventRegistryTest macOS"
   - SCHEME_IOS="PPEventRegistryAPI iOS"
   - SCHEME_TVOS="PPEventRegistryAPI tvOS"
   - SCHEME_WATCHOS="PPEventRegistryAPI watchOS"
   - SCHEME_MACOS="PPEventRegistryAPI macOS"
-  - IOS_SDK=iphonesimulator10.0
-  - WATCHOS_SDK=watchsimulator3.0
-  - TVOS_SDK=appletvsimulator10.0
-  - MACOS_SDK=macosx10.12
+  - SDK_IOS=iphonesimulator10.0
+  - SDK_WATCHOS=watchsimulator3.0
+  - SDK_TVOS=appletvsimulator10.0
+  - SDK_MACOS=macosx10.12
+  - DEST_IOS10="name=iPhone 7,OS=10.0"
+  - DEST_IOS9="name=iPhone 5,OS=9.3"
+  - DEST_IOS8="name=iPhone 5,OS=8.4"
+  - DEST_WATCHOS3="name=Apple Watch - 42mm,OS=3.0"
+  - DEST_WATCHOS2="name=Apple Watch - 42mm,OS=2.2"
+  - DEST_TVOS10="name=Apple TV 1080p,OS=10.0"
+  - DEST_TVOS9="name=Apple TV 1080p,OS=9.2"
+  - DEST_MACOS="arch=x86_64"
   matrix:
-    - DESTINATION="name=iPhone 6s,OS=10.0"         SDK="$IOS_SDK"     SCHEME="$SCHEME_IOS"     RUN_TESTS="YES" SEND_COVERAGE="YES" POD_LINT="YES"
-    - DESTINATION="name=Apple Watch - 42mm,OS=3.0" SDK="$WATCHOS_SDK" SCHEME="$SCHEME_WATCHOS" RUN_TESTS="NO"  SEND_COVERAGE="NO"  POD_LINT="NO"
-    - DESTINATION="name=Apple TV 1080p,OS=10.0"    SDK="$TVOS_SDK"    SCHEME="$SCHEME_TVOS"    RUN_TESTS="YES" SEND_COVERAGE="NO"  POD_LINT="NO"
-    - DESTINATION="arch=x86_64"                    SDK="$MACOS_SDK"   SCHEME="$SCHEME_MACOS"   RUN_TESTS="YES" SEND_COVERAGE="NO"  POD_LINT="NO"
+  - DESTINATION="$DEST_IOS10"    SDK="$SDK_IOS"     SCHEME="$SCHEME_IOS"     RUN_TESTS="YES" SEND_COVERAGE="YES" POD_LINT="NO"  CARTHAGE="NO"  SCHEME_EXAMPLE="$EXAMPLE_IOS"     DEST_EXAMPLE="$DEST_IOS10"
+  - DESTINATION="$DEST_IOS9"     SDK="$SDK_IOS"     SCHEME="$SCHEME_IOS"     RUN_TESTS="YES" SEND_COVERAGE="NO"  POD_LINT="NO"  CARTHAGE="NO"  SCHEME_EXAMPLE="$EXAMPLE_IOS"     DEST_EXAMPLE="$DEST_IOS9"
+  - DESTINATION="$DEST_IOS8"     SDK="$SDK_IOS"     SCHEME="$SCHEME_IOS"     RUN_TESTS="NO"  SEND_COVERAGE="NO"  POD_LINT="NO"  CARTHAGE="NO"  SCHEME_EXAMPLE="$EXAMPLE_IOS"     DEST_EXAMPLE="$DEST_IOS8"
+  - DESTINATION="$DEST_WATCHOS3" SDK="$SDK_WATCHOS" SCHEME="$SCHEME_WATCHOS" RUN_TESTS="NO"  SEND_COVERAGE="NO"  POD_LINT="YES" CARTHAGE="NO"  SCHEME_EXAMPLE="$EXAMPLE_WATCHOS" DEST_EXAMPLE="$DEST_IOS10"
+  - DESTINATION="$DEST_WATCHOS2" SDK="$SDK_WATCHOS" SCHEME="$SCHEME_WATCHOS" RUN_TESTS="NO"  SEND_COVERAGE="NO"  POD_LINT="NO"  CARTHAGE="YES" SCHEME_EXAMPLE="$EXAMPLE_WATCHOS" DEST_EXAMPLE="$DEST_IOS10"
+  - DESTINATION="$DEST_TVOS10"   SDK="$SDK_TVOS"    SCHEME="$SCHEME_TVOS"    RUN_TESTS="YES" SEND_COVERAGE="NO"  POD_LINT="NO"  CARTHAGE="NO"  SCHEME_EXAMPLE="$EXAMPLE_TVOS"    DEST_EXAMPLE="$DEST_TVOS10"
+  - DESTINATION="$DEST_TVOS9"    SDK="$SDK_TVOS"    SCHEME="$SCHEME_TVOS"    RUN_TESTS="YES" SEND_COVERAGE="NO"  POD_LINT="NO"  CARTHAGE="NO"  SCHEME_EXAMPLE="$EXAMPLE_TVOS"    DEST_EXAMPLE="$DEST_TVOS9"
+  - DESTINATION="$DEST_MACOS"    SDK="$SDK_MACOS"   SCHEME="$SCHEME_MACOS"   RUN_TESTS="YES" SEND_COVERAGE="NO"  POD_LINT="NO"  CARTHAGE="NO"  SCHEME_EXAMPLE="$EXAMPLE_MACOS"   DEST_EXAMPLE="$DEST_MACOS"
 
 script:
 - set -o pipefail
@@ -40,8 +58,14 @@ script:
     xcodebuild build -workspace "$WORKSPACE" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=YES | xcpretty -c;
   fi
 
+- xcodebuild build -workspace "$WORKSPACE_EXAMPLE" -scheme "$SCHEME_EXAMPLE" -destination "$DEST_EXAMPLE" ONLY_ACTIVE_ARCH=YES | xcpretty -c;
+
 - if [ $POD_LINT == "YES" ]; then
     pod lib lint;
+  fi
+
+- if [ $CARTHAGE == "YES" ]; then
+    carthage build --no-skip-current;
   fi
 
 after_success:

@@ -14,7 +14,11 @@ class ViewController: NSViewController {
     let eventRegistryAPI = PPEventRegistryAPI()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
+        if #available(OSX 10.10, *) {
+            super.viewDidLoad()
+        } else {
+            // Fallback on earlier versions
+        }
 
         eventRegistryAPI.login("", password: "") { (error) in
             print("login with error: \(error)")
@@ -27,7 +31,7 @@ class ViewController: NSViewController {
         }
     }
 
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
