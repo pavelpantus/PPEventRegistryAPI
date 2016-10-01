@@ -11,7 +11,7 @@ import PPEventRegistryAPI
 
 class ViewController: NSViewController {
 
-    let eventRegistryAPI = PPEventRegistryAPI()
+    let api = PPEventRegistryAPI()
 
     override func viewDidLoad() {
         if #available(OSX 10.10, *) {
@@ -20,14 +20,14 @@ class ViewController: NSViewController {
             // Fallback on earlier versions
         }
 
-        eventRegistryAPI.login("", password: "") { (error) in
+        api.login("", password: "") { error in
             print("login with error: \(error)")
-            self.eventRegistryAPI.getEvent(withID: 4480838701, completionHandler: { (event, error) in
+            self.api.getEvent(withID: 4480838701) { event, error in
                 print("get event error \(event)")
-            })
-            self.eventRegistryAPI.getRecentArticles({ (aricles, error) in
+            }
+            self.api.getRecentArticles(count: 10) { aricles, error in
                 print("articles \(aricles), error \(error)")
-            })
+            }
         }
     }
 

@@ -100,7 +100,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubSuccess()
 
             waitUntil { done in
-                api.getRecentArticles{ articles, error in
+                api.getRecentArticles(count: 3) { articles, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(articles).to(haveCount(3))
                     expect(error).to(beNil())
@@ -113,7 +113,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubNoArticlesFound()
 
             waitUntil { done in
-                api.getRecentArticles{ articles, error in
+                api.getRecentArticles(count: 10) { articles, error in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(articles).to(haveCount(0))
                     expect(error).to(beNil())

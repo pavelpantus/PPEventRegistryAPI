@@ -11,19 +11,19 @@ import PPEventRegistryAPI
 
 class ViewController: UIViewController {
 
-    let eventRegistryAPI = PPEventRegistryAPI()
+    let api = PPEventRegistryAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        eventRegistryAPI.login("", password: "") { (error) in
+        api.login("", password: "") { error in
             print("login with error: \(error)")
-            self.eventRegistryAPI.getEvent(withID: 4488701, completionHandler: { (event, error) in
+            self.api.getEvent(withID: 4488701) { event, error in
                 print("get event error \(event)")
-            })
-            self.eventRegistryAPI.getRecentArticles({ (aricles, error) in
+            }
+            self.api.getRecentArticles(count: 10) { aricles, error in
                 print("articles \(aricles), error \(error)")
-            })
+            }
         }
     }
 

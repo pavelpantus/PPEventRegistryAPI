@@ -9,12 +9,12 @@
 import Foundation
 
 final class PPGetRecentArticles: PPAsyncOperation {
-    init(completionHandler: @escaping (_ events: [PPArticle], _ error: NSError?) -> Void) {
+    init(count: Int = 5, completionHandler: @escaping (_ events: [PPArticle], _ error: NSError?) -> Void) {
         let parameters: [String: Any] = ["action": "getRecentActivity",
                                          "addEvents": false,
                                          "addActivity": false,
                                          "addArticles": true,
-                                         "recentActivityArticlesMaxArticleCount": 5,
+                                         "recentActivityArticlesMaxArticleCount": 1 ... 100 ~= count ? count : 5,
                                          "recentActivityArticlesMaxMinsBack": 10 * 60,
                                          "recentActivityArticlesMandatorySourceLocation": false,
                                          "recentActivityArticlesLastActivityId": 0]

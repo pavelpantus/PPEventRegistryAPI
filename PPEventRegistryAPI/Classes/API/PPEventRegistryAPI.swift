@@ -71,8 +71,8 @@ extension PPEventRegistryAPI {
         schedule(getEvent)
     }
 
-    public func getRecentArticles(_ completionHandler: @escaping (_ articles: [PPArticle], _ error: NSError?) -> Void) {
-        let getRecentActivity = PPGetRecentArticles(completionHandler: completionHandler)
+    public func getRecentArticles(count: Int = 5, _ completionHandler: @escaping (_ articles: [PPArticle], _ error: NSError?) -> Void) {
+        let getRecentActivity = PPGetRecentArticles(count: count, completionHandler: completionHandler)
         schedule(getRecentActivity)
     }
 

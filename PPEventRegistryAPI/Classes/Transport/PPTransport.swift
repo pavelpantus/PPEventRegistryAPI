@@ -25,7 +25,7 @@ enum Controller: String {
 
 final class PPTransport: NSObject {
     internal var session: URLSession!
-    internal let baseURI = "http://eventregistry.org"
+    internal let baseURI = "https://eventregistry.org"
 
     internal override init() {
         super.init()
@@ -63,14 +63,16 @@ extension PPTransport: PPTransportProtocol {
 
         if method == .Get {
             request = URLRequest(url: URL(string: baseURI + "/json/" + controller.rawValue.lowercased() + "?" + parameters.pp_join())!)
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         } else {
             request = URLRequest(url: URL(string: baseURI + "/" + controller.rawValue.lowercased())!)
-            request.httpBody = parameters.pp_join().data(using: .utf8)
+            request.httpBody = parameters.pp_join().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)?.data(using: .utf8)
+            request.addValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
         }
 
         request.httpMethod = method.rawValue.uppercased()
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
 
         return request
     }
