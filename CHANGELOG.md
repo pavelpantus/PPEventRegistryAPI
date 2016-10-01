@@ -1,6 +1,6 @@
 # PPEventRegistryAPI — CHANGELOG
 
-##0.0.2
+##[0.0.2](https://github.com/pantuspavel/PPEventRegistryAPI/releases/tag/0.0.2)
 * Configurable maxArticleCount in Get articles operation  
   [Pavel Pantus](https://github.com/pantuspavel), [#84](https://github.com/pantuspavel/PPEventRegistryAPI/pull/84)
 * Carthage support  
