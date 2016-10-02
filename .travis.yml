@@ -69,4 +69,18 @@ script:
   fi
 
 after_success:
-- test $SEND_COVERAGE = "YES" && ./.coverage.sh
+  - test $SEND_COVERAGE = "YES" && ./.coverage.sh
+
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive PPEventRegistryAPI
+
+deploy:
+  provider: releases
+  api_key:
+    secure: t4AYoNzPnEe/OiZsBV1bk8fJD0JS+iYmmnE/Ui1iTGYvp5zlDBrhxvOj3v0j91Dm11ahLqo2FZRjemu4TAylrZ58sCYa/5yciF7/XNcZEQamcEFCjSeuYchB4AZ+8sOLOx23vMxiSxovhlS/+aS/60iRR4t1mv82hMr2dlAiHYRQP683AmxcRxCqX2AGcAurYeBtqBw11tM73HvQ/xxx3eNdnp13FX2wwu4P9/BWJuSAwKfIrMAPr7QIbzmpCUzm00pfqOqM2O6elAPakPcNgcE0gqMOnZBYoPsrB/KZagmG/aFVrJa7lvA9f8E4FCVJAoVTTmtzVuthIKZ1a/OF0Lw/gk5JCwXdMcP6qEkDaIaARvv9HQXMpuhxVHO4CG/PQpraOfsdZBhQFcXeSBpqKLq3BYMkmOlU3h3UZjmOAZeRep0HRS3R3hVF+0C8bDwAfA8VqhbMUz0n7VYTaGdCNxM5pkvqrEwv4R76iRJGxj4tla5LgaGB8QNyXiTQ0TL/B1SSSc92eMLG1QS46CQ1F7COdEeNJ1VyVAvWxbXrtHo+ebAWE3vZVfkv6eMi1VkTYKryw/kB5ggf/8LBiwshqtCrD65CWknFU86f7RFNGk1U8jOycfmCKIBA0SMtoG4rMuaAyuiXd/Q2nlGdNXAz+OTY/WppiSSyKIqXDWOLUWE=
+  file: PPEventRegistryAPI.framework.zip
+  skip_cleanup: true
+  on:
+    repo: pantuspavel/PPEventRegistryAPI
+    tags: true
