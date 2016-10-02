@@ -8,10 +8,6 @@ before_install:
 - pod install --project-directory=PPEventRegistryAPI
 - pod install --project-directory=Example
 
-branches:
-  only:
-    - master
-
 notifications:
   email: false
 
