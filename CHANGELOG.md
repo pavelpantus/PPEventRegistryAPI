@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.3
+* Introduce travis cache  
+  [Pavel Pantus](https://github.com/pantuspavel), [#86](https://github.com/pantuspavel/PPEventRegistryAPI/pull/86)
 * Add framework deploy step to travis file  
   [Pavel Pantus](https://github.com/pantuspavel), [#87](https://github.com/pantuspavel/PPEventRegistryAPI/pull/87)
 

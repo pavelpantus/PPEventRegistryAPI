@@ -1,5 +1,11 @@
 language: Objective-C
 
+cache:
+- bundler
+- cocoapods
+
+podfile: ./PPEventRegistryAPI
+
 osx_image: xcode8
 
 before_install:
