@@ -80,7 +80,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: y2mzME6iUEon78DwJnp6IXYIixF7voRD1todBK39DVIYYMoA2LwwA0R/L4xKC5JITapqRA/RorAuNHjb99Ps4NvtpFrZ35UeXspRKa2ekoRoX0w6YQ7ieumSBlRErq0aJ7uCYphfLUE6VeAO+hB9moSRs0YoxVIKFkHOjtvqqDJ5YZvezau29uhkR23rnVyay2AXtVgDiQMetwveenh98hC8q4ytMT5o4ndZ6ruTMgc+elfl8EJj0VQTvjGagLWaiEidvyLzWbvSNM2Hh/hMMTDUQCXMdrtipuV+Qu53avHMoxLksRNz/c35DjVBLqVXgEaoytAT9lrsD1CwtHtv0TsXRuIGpXI5mMv3JpZtWSrFPVtytjK8kn/n7crisluTjuL9ILrE4zSndoEm3K5XL4lrqLWQ/fgwT0ag8SRw88/dzQsselpTzceb8bbFaat/qS3dMoWmDRmLU83YyI2oDrXkAObWz9//ffHMJj3RZ6jocwQ6Pd4HgDSBHfrVUG8MBQ1S+d5GAaEAsO0mKVQQRYkQGVZMfVdQa8BfSuMtHlcsB0Qt50n/INVkk+oYgJd3r+eOvuYxtk/G9LHdB2kaEZlTCsE1XX8GsAqPaVTYb4f8/CODGfyBa6JKmShEj0U2gNX+s4zuNs4E+R3aGhx3kXC1B3Yv97h4mWTh0qiZ4qw=
+    secure: "$API_KEY"
   file: PPEventRegistryAPI.framework.zip
   skip_cleanup: true
   on:
