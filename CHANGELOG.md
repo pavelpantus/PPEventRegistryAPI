@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.3
+* Create test event registry account for Example projects  
+  [Pavel Pantus](https://github.com/pantuspavel), [#88](https://github.com/pantuspavel/PPEventRegistryAPI/pull/88)
 * Introduce travis cache  
   [Pavel Pantus](https://github.com/pantuspavel), [#86](https://github.com/pantuspavel/PPEventRegistryAPI/pull/86)
 * Add framework deploy step to travis file  
