@@ -15,7 +15,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
     
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
-        
+        api.setTransferProtocol(.http)
         api.login("testeventregistry@gmail.com", password: "cDWTgGpJ4Ny") { error in
             print("login with error: \(error)")
             self.api.getEvent(withID: 5077276) { event, error in

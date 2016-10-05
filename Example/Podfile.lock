@@ -1,5 +1,5 @@
 PODS:
-  - PPEventRegistryAPI (0.0.1)
+  - PPEventRegistryAPI (0.0.2)
 
 DEPENDENCIES:
   - PPEventRegistryAPI (from `..`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ".."
 
 SPEC CHECKSUMS:
-  PPEventRegistryAPI: b8958f3b29aecdd7717667c21d88e92af1c2811a
+  PPEventRegistryAPI: 3701e93fb4619a6296179ad42d5410fed0aa870b
 
 PODFILE CHECKSUM: 1ad8927a3a8e3df5094e2a02038f9bb838fcf9c0
 

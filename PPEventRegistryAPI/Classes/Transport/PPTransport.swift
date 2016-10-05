@@ -23,9 +23,17 @@ enum Controller: String {
     case Overview
 }
 
+public enum PPTransferProtocol: String {
+    case http
+    case https
+}
+
 final class PPTransport: NSObject {
     internal var session: URLSession!
-    internal let baseURI = "https://eventregistry.org"
+    internal var transferProtocol: PPTransferProtocol = .http
+    internal var baseURI: String {
+        return transferProtocol.rawValue + "://eventregistry.org"
+    }
 
     internal override init() {
         super.init()

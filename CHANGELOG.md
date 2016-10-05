@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.3
+* Introduce method to select http vs https  
+  [Pavel Pantus](https://github.com/pantuspavel), [#96](https://github.com/pantuspavel/PPEventRegistryAPI/pull/96)
 * Create test event registry account for Example projects  
   [Pavel Pantus](https://github.com/pantuspavel), [#88](https://github.com/pantuspavel/PPEventRegistryAPI/pull/88)
 * Introduce travis cache  
