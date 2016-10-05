@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        api.setTransferProtocol(.https)
         api.login("testeventregistry@gmail.com", password: "cDWTgGpJ4Ny") { error in
             print("login with error: \(error)")
             self.api.getEvent(withID: 5077276) { event, error in

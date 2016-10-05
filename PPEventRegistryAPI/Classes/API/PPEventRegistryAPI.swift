@@ -30,7 +30,7 @@ extension AuthState: Equatable {
 
 public final class PPEventRegistryAPI {
     private let queue = OperationQueue()
-    private let transport = PPTransport()
+    fileprivate let transport = PPTransport()
     private let modelMapper = PPModelMapper()
     internal var state = AuthState.loggedOut
 
@@ -50,6 +50,16 @@ public final class PPEventRegistryAPI {
         operation.modelMapper = modelMapper
         queue.addOperations([operation], waitUntilFinished: false)
     }
+}
+
+// MARK: Transfer Protocol
+
+extension PPEventRegistryAPI {
+
+    public func setTransferProtocol(_ transferProtocol: PPTransferProtocol) {
+        transport.transferProtocol = transferProtocol
+    }
+
 }
 
 // MARK: Public API Methods
