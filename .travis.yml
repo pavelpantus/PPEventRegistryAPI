@@ -86,3 +86,4 @@ deploy:
   on:
     repo: pantuspavel/PPEventRegistryAPI
     tags: true
+    condition: $DESTINATION = "$DEST_IOS10"
