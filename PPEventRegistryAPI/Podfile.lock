@@ -15,7 +15,7 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (5.2.1)
   - OHHTTPStubs/Swift (5.2.1):
     - OHHTTPStubs/Core
-  - PPEventRegistryAPI (0.0.1)
+  - PPEventRegistryAPI (0.0.2)
   - Quick (0.10.0)
 
 DEPENDENCIES:
@@ -32,7 +32,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
   OHHTTPStubs: 3a42f25c00563b71355ac73112ba2324e9e6cef4
-  PPEventRegistryAPI: b8958f3b29aecdd7717667c21d88e92af1c2811a
+  PPEventRegistryAPI: 3701e93fb4619a6296179ad42d5410fed0aa870b
   Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
 
 PODFILE CHECKSUM: f71af154420a34fa0f3ca7598b9c0510b5f09c7c
