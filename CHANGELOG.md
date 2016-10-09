@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.3
+* Break API class in domain specific extensions  
+  [Pavel Pantus](https://github.com/pantuspavel), [#99](https://github.com/pantuspavel/PPEventRegistryAPI/pull/99)
 * Introduce method to select http vs https  
   [Pavel Pantus](https://github.com/pantuspavel), [#96](https://github.com/pantuspavel/PPEventRegistryAPI/pull/96)
 * Create test event registry account for Example projects  

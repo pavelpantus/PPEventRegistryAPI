@@ -52,9 +52,8 @@ public final class PPEventRegistryAPI {
     }
 }
 
-// MARK: Transfer Protocol
-
-extension PPEventRegistryAPI {
+private typealias TransferProtocolAPI = PPEventRegistryAPI
+extension TransferProtocolAPI {
 
     public func setTransferProtocol(_ transferProtocol: PPTransferProtocol) {
         transport.transferProtocol = transferProtocol
@@ -62,9 +61,8 @@ extension PPEventRegistryAPI {
 
 }
 
-// MARK: Public API Methods
-
-extension PPEventRegistryAPI {
+private typealias LoginAPI = PPEventRegistryAPI
+extension LoginAPI {
 
     public func login(_ email: String, password: String, completionHandler: @escaping (_ error: NSError?) -> Void) {
         let login = PPLoginOperation(email: email, password: password) { error in
@@ -74,12 +72,22 @@ extension PPEventRegistryAPI {
         schedule(login)
     }
 
+}
+
+private typealias EventsAPI = PPEventRegistryAPI
+extension EventsAPI {
+
     public func getEvent(withID id: NSNumber, completionHandler: @escaping (_ event: PPEvent?, _ error: NSError?) -> Void) {
         let getEvent = PPGetEventOperation(identifier: id) { event, error in
             completionHandler(event, error)
         }
         schedule(getEvent)
     }
+
+}
+
+private typealias ArticlesAPI = PPEventRegistryAPI
+extension ArticlesAPI {
 
     public func getRecentArticles(count: Int = 5, _ completionHandler: @escaping (_ articles: [PPArticle], _ error: NSError?) -> Void) {
         let getRecentActivity = PPGetRecentArticles(count: count, completionHandler: completionHandler)
