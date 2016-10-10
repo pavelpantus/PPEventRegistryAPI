@@ -15,7 +15,7 @@ class PPArticleSpec: QuickSpec {
         describe("Initialization") {
 
             it("contains correct data after initialization without url and image"){
-                let article = PPArticle(title: "title", body: "body", date: "date", time: "time", uri: "123", url: nil, image: nil)
+                let article = PPArticle(title: "title", body: "body", date: "date", time: "time", uri: "123", url: nil, image: nil, concepts: [])
 
                 expect(article.title).to(equal("title"))
                 expect(article.body).to(equal("body"))
@@ -26,7 +26,7 @@ class PPArticleSpec: QuickSpec {
             }
 
             it("contains correct data after initialization with url and image"){
-                let article = PPArticle(title: "title", body: "body", date: "date", time: "time", uri: "123", url: URL(string: "https://www.google.com"), image: URL(string: "https://www.yahoo.com"))
+                let article = PPArticle(title: "title", body: "body", date: "date", time: "time", uri: "123", url: URL(string: "https://www.google.com"), image: URL(string: "https://www.yahoo.com"), concepts: [])
 
                 expect(article.title).to(equal("title"))
                 expect(article.body).to(equal("body"))
