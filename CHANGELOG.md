@@ -2,7 +2,7 @@
 
 ##0.0.3
 * Introduce Concept data model  
-  [Pavel Pantus](https://github.com/pantuspavel), [#100](https://github.com/pantuspavel/PPEventRegistryAPI/pull/100)
+  [Pavel Pantus](https://github.com/pantuspavel), [#101](https://github.com/pantuspavel/PPEventRegistryAPI/pull/101)
 * Break API class in domain specific extensions  
   [Pavel Pantus](https://github.com/pantuspavel), [#99](https://github.com/pantuspavel/PPEventRegistryAPI/pull/99)
 * Introduce method to select http vs https  
