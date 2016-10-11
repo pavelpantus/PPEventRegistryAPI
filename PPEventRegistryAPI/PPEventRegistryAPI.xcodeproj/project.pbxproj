@@ -15,9 +15,6 @@
 		E92194321D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */; };
 		E92194341D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
 		E92194351D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */; };
-		E929E9C51D9DA2EE00C93E7E /* .coverage.sh in Resources */ = {isa = PBXBuildFile; fileRef = E929E9C21D9DA2EE00C93E7E /* .coverage.sh */; };
-		E929E9C61D9DA2EE00C93E7E /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = E929E9C31D9DA2EE00C93E7E /* .swift-version */; };
-		E929E9C71D9DA2EE00C93E7E /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = E929E9C41D9DA2EE00C93E7E /* .travis.yml */; };
 		E9367DDB1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */; };
 		E9367DDC1D41009700EFA694 /* PPEvent+Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */; };
 		E9385AE91D17325C009716D1 /* PPEventRegistryAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = E9385AE81D17325C009716D1 /* PPEventRegistryAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -190,6 +187,7 @@
 		E9385AEF1D17325C009716D1 /* PPEventRegistryAPITests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PPEventRegistryAPITests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9385AF61D17325C009716D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E951D2DF1DAC7FA000B3A230 /* PPConcept.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPConcept.swift; path = Models/PPConcept.swift; sourceTree = "<group>"; };
+		E951D2E41DAD23D500B3A230 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../Package.swift; sourceTree = "<group>"; };
 		E9584F841D20196800B32570 /* PPModelMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPModelMapper.swift; path = Models/PPModelMapper.swift; sourceTree = "<group>"; };
 		E9584F861D201AAA00B32570 /* PPArticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPArticle.swift; path = Models/PPArticle.swift; sourceTree = "<group>"; };
 		E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPArticleSpec.swift; sourceTree = "<group>"; };
@@ -336,6 +334,7 @@
 		607FACF51AFB993E008FA782 /* Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				E951D2E41DAD23D500B3A230 /* Package.swift */,
 				E929E9C21D9DA2EE00C93E7E /* .coverage.sh */,
 				E929E9C31D9DA2EE00C93E7E /* .swift-version */,
 				E929E9C41D9DA2EE00C93E7E /* .travis.yml */,
@@ -787,9 +786,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E929E9C71D9DA2EE00C93E7E /* .travis.yml in Resources */,
-				E929E9C61D9DA2EE00C93E7E /* .swift-version in Resources */,
-				E929E9C51D9DA2EE00C93E7E /* .coverage.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,1 @@
+../PPEventRegistryAPI/Classes/Models/PPArticle.swift
