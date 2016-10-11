@@ -16,4 +16,5 @@ public struct PPArticle {
     let uri: String
     let url: URL?
     let image: URL?
+    let concepts: [PPConcept]
 }

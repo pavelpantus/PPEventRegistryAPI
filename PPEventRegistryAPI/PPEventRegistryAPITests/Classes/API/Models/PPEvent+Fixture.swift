@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import PPEventRegistryAPI
+import PPEventRegistryAPI
 
 extension PPEvent {
     
@@ -16,6 +16,10 @@ extension PPEvent {
             "info" : [
                 "summary" : [
                     "eng" : "All Exxon Mobil Corp. had to do is run its Los Angeles-area refinery for 15 days before handing the keys to new owner PBF Energy.\n\nThat's turning into a struggle. More than a month after Exxon Mobil restarted a key gasoline-making unit that was damaged in a blast last year, PBF still hasn't taken control of the Torrance plant. In the latest snag, a crane fell over Monday. While Exxon says it had no effect on production and the handover to PBF is still scheduled for mid year, the incident highligh"
+                ],
+                "concepts": [
+                    PPConcept.fixture1(),
+                    PPConcept.fixture2()
                 ],
                 "location" : [
                     "type" : "place",
@@ -48,18 +52,7 @@ extension PPEvent {
                 "articleCounts" : [
                     "eng" : 7
                 ],
-                "uri" : "4480701",
-                "concepts" : [
-                    [
-                        "id" : "174535",
-                        "score" : 9,
-                        "label" : [
-                            "eng" : "Maxine Waters"
-                        ],
-                        "type" : "person",
-                        "uri" : "http://en.wikipedia.org/wiki/Maxine_Waters"
-                    ]
-                ]
+                "uri" : "4480701"
             ]
         ]
     }

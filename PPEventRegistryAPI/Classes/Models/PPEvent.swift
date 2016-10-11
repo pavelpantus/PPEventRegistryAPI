@@ -14,4 +14,5 @@ public struct PPEvent {
     let eventDate: String
     let location: String
     let image: URL?
+    let concepts: [PPConcept]
 }

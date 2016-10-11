@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import PPEventRegistryAPI
+import PPEventRegistryAPI
 
 extension PPArticle {
 

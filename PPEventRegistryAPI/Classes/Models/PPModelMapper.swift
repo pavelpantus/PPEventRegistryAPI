@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PPModelMapper: NSObject { }
+class PPModelMapper { }
 
 // MARK: PPArticle
 
@@ -21,8 +21,9 @@ extension PPModelMapper {
         let uri   = data["uri"]   as? String ?? ""
         let url   = URL(string: data["url"] as? String ?? "")
         let image = URL(string: data["image"] as? String ?? "")
+        let concepts: [PPConcept] = mapDataToModelObjects(data["concepts"] as? [Any] ?? [])
 
-        return PPArticle(title: title, body: body, date: date, time: time, uri: uri, url: url, image: image)
+        return PPArticle(title: title, body: body, date: date, time: time, uri: uri, url: url, image: image, concepts: concepts)
     }
 
     func mapDataToModelObjects(_ data: [String: Any]) -> [PPArticle] {
@@ -52,8 +53,9 @@ extension PPModelMapper {
         let image     = URL(string: images.first ?? "")
         let locationLabel = (eventInfo["location"] as? [String: Any] ?? [:])["label"] as? [String: String] ?? [:]
         let location = locationLabel[lang] ?? ""
+        let concepts: [PPConcept] = mapDataToModelObjects(eventInfo["concepts"] as? [Any] ?? [])
 
-        return PPEvent(title: title, summary: summary, eventDate: eventDate, location: location, image: image)
+        return PPEvent(title: title, summary: summary, eventDate: eventDate, location: location, image: image, concepts: concepts)
     }
 
     func mapDataToModelObjects(_ data: [String: Any]) -> [PPEvent] {
@@ -62,5 +64,24 @@ extension PPModelMapper {
             events = data.flatMap { mapDataToModelObject($1) }
         }
         return events
+    }
+}
+
+// MARK: PPConcept
+
+extension PPModelMapper {
+    func mapDataToModelObject(_ data: [String: Any]) -> PPConcept {
+        let identifier  = data["id"] as? String ?? ""
+        let description = data["description"] as? String ?? ""
+        let uri         = URL(string: data["uri"] as? String ?? "")
+        let image       = URL(string: data["image"] as? String ?? "")
+        let score       = data["score"] as? Int ?? 0
+        return PPConcept(identifier: identifier, description: description, uri: uri, image: image, score: score)
+    }
+
+    func mapDataToModelObjects(_ data: [Any]) -> [PPConcept] {
+        var concepts: [PPConcept] = []
+        concepts = data.flatMap { mapDataToModelObject($0 as? [String: Any] ?? [:]) }
+        return concepts
     }
 }
