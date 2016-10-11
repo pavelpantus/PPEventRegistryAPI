@@ -1,6 +1,8 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.3
+* Add Swift Package Manager Support  
+  [Pavel Pantus](https://github.com/pantuspavel), [#102](https://github.com/pantuspavel/PPEventRegistryAPI/pull/102)
 * Introduce Concept data model  
   [Pavel Pantus](https://github.com/pantuspavel), [#101](https://github.com/pantuspavel/PPEventRegistryAPI/pull/101)
 * Break API class in domain specific extensions  
