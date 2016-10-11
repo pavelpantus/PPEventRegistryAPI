@@ -23,7 +23,6 @@
 		E951D2E11DAC7FB400B3A230 /* PPConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951D2DF1DAC7FA000B3A230 /* PPConcept.swift */; };
 		E951D2E21DAC7FB600B3A230 /* PPConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951D2DF1DAC7FA000B3A230 /* PPConcept.swift */; };
 		E951D2E31DAC7FB700B3A230 /* PPConcept.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951D2DF1DAC7FA000B3A230 /* PPConcept.swift */; };
-		E951D2E51DAD23D500B3A230 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = E951D2E41DAD23D500B3A230 /* Package.swift */; };
 		E9584F851D20196800B32570 /* PPModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F841D20196800B32570 /* PPModelMapper.swift */; };
 		E9584F871D201AAA00B32570 /* PPArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9584F861D201AAA00B32570 /* PPArticle.swift */; };
 		E97669B21D32FB5E00AD40B7 /* PPArticleSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97669B11D32FB5E00AD40B7 /* PPArticleSpec.swift */; };
@@ -988,7 +987,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E951D2E51DAD23D500B3A230 /* Package.swift in Sources */,
 				E9E0B73A1D18CAD300702E4E /* Dictionary+PPJoin.swift in Sources */,
 				E9F2EA011D176E7800DBF268 /* PPEventRegistryAPI.swift in Sources */,
 				E9F2EA071D1770EB00DBF268 /* PPLoginOperation.swift in Sources */,
