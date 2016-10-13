@@ -2,7 +2,7 @@
 
 ##0.0.3
 * Turn on 'treat warnings as errors' flag for every target  
-  [Pavel Pantus](https://github.com/pantuspavel), [#109](https://github.com/pantuspavel/PPEventRegistryAPI/pull/109)
+  [Pavel Pantus](https://github.com/pantuspavel), [#112](https://github.com/pantuspavel/PPEventRegistryAPI/pull/112)
 * Add Swift Package Manager Support  
   [Pavel Pantus](https://github.com/pantuspavel), [#102](https://github.com/pantuspavel/PPEventRegistryAPI/pull/102)
 * Introduce Concept data model  
