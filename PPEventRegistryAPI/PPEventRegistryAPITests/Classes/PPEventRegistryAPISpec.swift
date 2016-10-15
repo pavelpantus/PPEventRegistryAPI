@@ -46,9 +46,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             waitUntil { done in
                 api.login("email@email.com", password: "password") { error in
                     expect(Thread.current).to(equal(Thread.main))
-                    expect(error?.code).to(equal(0))
-                    expect(error?.domain).to(equal("unknownUser"))
-                    expect(error?.userInfo).to(haveCount(0))
+                    expect(error).to(equal(PPError.UnknownUser))
                     done()
                 }
             }
@@ -60,9 +58,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             waitUntil { done in
                 api.login("", password: "") { error in
                     expect(Thread.current).to(equal(Thread.main))
-                    expect(error?.code).to(equal(0))
-                    expect(error?.domain).to(equal("missingData"))
-                    expect(error?.userInfo).to(haveCount(0))
+                    expect(error).to(equal(PPError.MissingData))
                     done()
                 }
             }
@@ -72,10 +68,9 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetEventOperation.stubSuccess()
 
             waitUntil { done in
-                api.getEvent(withID: 123) { event, error in
+                api.getEvent(withID: 123) { result in
                     expect(Thread.current).to(equal(Thread.main))
-                    expect(event).toNot(beNil())
-                    expect(error).to(beNil())
+                    expect(result.value).toNot(beNil())
                     done()
                 }
             }
@@ -85,12 +80,9 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetEventOperation.stubEventNotFound()
 
             waitUntil { done in
-                api.getEvent(withID: 44808387) { event, error in
+                api.getEvent(withID: 44808387) { result in
                     expect(Thread.current).to(equal(Thread.main))
-                    expect(event).to(beNil())
-                    expect(error?.code).to(equal(0))
-                    expect(error?.domain).to(equal("Provided event uri (44808387) is not a valid event uri"))
-                    expect(error?.userInfo).to(haveCount(0))
+                    expect(result.error!.debugDescription).to(equal("Error Provided event uri (44808387) is not a valid event uri"))
                     done()
                 }
             }
@@ -100,10 +92,9 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubSuccess()
 
             waitUntil { done in
-                api.getRecentArticles(count: 3) { articles, error in
+                api.getRecentArticles(count: 3) { result in
                     expect(Thread.current).to(equal(Thread.main))
-                    expect(articles).to(haveCount(3))
-                    expect(error).to(beNil())
+                    expect(result.value).to(haveCount(3))
                     done()
                 }
             }
@@ -113,10 +104,9 @@ class PPEventRegistryAPISpec: QuickSpec {
             PPGetRecentArticles.stubNoArticlesFound()
 
             waitUntil { done in
-                api.getRecentArticles(count: 10) { articles, error in
+                api.getRecentArticles(count: 10) { result in
                     expect(Thread.current).to(equal(Thread.main))
-                    expect(articles).to(haveCount(0))
-                    expect(error).to(beNil())
+                    expect(result.value).to(haveCount(0))
                     done()
                 }
             }
@@ -131,12 +121,9 @@ class PPEventRegistryAPISpec: QuickSpec {
             it("returns Log In Needed error in logged out state") {
                 waitUntil { done in
                     let operation = PPAsyncOperation(controller: .Event, method: .Post, parameters: [:])
-                    operation.completionHandler = { objects, error in
+                    operation.completionHandler = { result in
                         expect(Thread.current).to(equal(Thread.main))
-                        expect(objects).to(beNil())
-                        expect(error?.code).to(equal(100))
-                        expect(error?.domain).to(equal("Log In Needed"))
-                        expect(error?.userInfo).to(haveCount(0))
+                        expect(result.error!.debugDescription).to(equal("LogInNeeded"))
                         expect(operation.transport).to(beNil())
                         expect(operation.modelMapper).to(beNil())
                         done()

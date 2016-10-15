@@ -1,6 +1,10 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.3
+* Introduce generic Return type, that incapsulates returned object and error (Public API change)  
+  [Pavel Pantus](https://github.com/pantuspavel), [#114](https://github.com/pantuspavel/PPEventRegistryAPI/pull/114)
+* Introduce PPError enum and return it instead of NSError (Public API change)  
+  [Pavel Pantus](https://github.com/pantuspavel), [#114](https://github.com/pantuspavel/PPEventRegistryAPI/pull/114)
 * Turn on 'treat warnings as errors' flag for every target  
   [Pavel Pantus](https://github.com/pantuspavel), [#112](https://github.com/pantuspavel/PPEventRegistryAPI/pull/112)
 * Add Swift Package Manager Support  

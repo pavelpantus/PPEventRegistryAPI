@@ -64,10 +64,8 @@ class PPAsyncOperationSpec: QuickSpec {
             asyncOperation.cancel()
 
             waitUntil { done in
-                asyncOperation.completionHandler = { json, error in
-                    expect(json).to(beNil())
-                    expect(error!.domain).to(equal("Operation was cancelled"))
-                    expect(error!.code).to(equal(0))
+                asyncOperation.completionHandler = { result in
+                    expect(result.debugDescription).to(equal("Failure: OperationCancelled"))
                     done()
                 }
                 asyncOperation.start()
@@ -78,7 +76,7 @@ class PPAsyncOperationSpec: QuickSpec {
 
         it("executes completion handler") {
             waitUntil { done in
-                asyncOperation.completionHandler = { json, error in
+                asyncOperation.completionHandler = { result in
                     done()
                 }
                 asyncOperation.start()
@@ -89,10 +87,8 @@ class PPAsyncOperationSpec: QuickSpec {
 
         it("returns appropriate error is cancelled after request was posted") {
             waitUntil { done in
-                asyncOperation.completionHandler = { json, error in
-                    expect(json).toNot(beNil())
-                    expect(error!.domain).to(equal("Operation was cancelled"))
-                    expect(error!.code).to(equal(0))
+                asyncOperation.completionHandler = { result in
+                    expect(result.debugDescription).to(equal("Failure: OperationCancelled"))
                     done()
                 }
                 asyncOperation.start()

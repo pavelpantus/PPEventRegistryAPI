@@ -13,10 +13,10 @@ import Nimble
 class PPGetEventOperationSpec: QuickSpec {
     override func spec() {
 
-        var getEventOperation = PPGetEventOperation(identifier: 123, completionHandler: {_,_ in})
+        var getEventOperation = PPGetEventOperation(identifier: 123, completionHandler: {_ in})
 
         beforeEach {
-            getEventOperation = PPGetEventOperation(identifier: 123, completionHandler: {_,_ in})
+            getEventOperation = PPGetEventOperation(identifier: 123, completionHandler: {_ in})
         }
 
         it("subclass of PPAsyncOperation") {
