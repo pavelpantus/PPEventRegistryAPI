@@ -95,6 +95,15 @@ class PPTransportSpec: QuickSpec {
                 }
             }
 
+            it("calls back with 'Network Error' in case of network error") {
+                PPTransport.stubErrorResponse()
+                waitUntil { done in
+                    transport.postRequest(controller: .Login, method: .Post, parameters: [:], completionHandler: { result in
+                        expect(result.error!).to(equal(PPError.NetworkError("The operation couldn’t be completed. (NSURLErrorDomain error -1009.)")))
+                        done()
+                    })
+                }
+            }
         }
 
         describe("request(with: method: parameters:)") {

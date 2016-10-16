@@ -30,4 +30,12 @@ extension PPTransport {
             }.name = "PPTransport Stub: Invalid Response"
     }
 
+    class func stubErrorResponse() {
+        stub(condition: { request -> Bool in
+            true
+        }) { response -> OHHTTPStubsResponse in
+            let error = NSError(domain: NSURLErrorDomain, code: NSURLErrorNotConnectedToInternet, userInfo: nil)
+            return OHHTTPStubsResponse(error: error)
+        }.name = "PPTransport Stub: Error Response"
+    }
 }

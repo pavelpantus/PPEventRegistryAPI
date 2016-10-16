@@ -64,6 +64,17 @@ class PPEventRegistryAPISpec: QuickSpec {
             }
         }
 
+        it("Login returns an appropriate error in case of transport error") {
+            PPTransport.stubErrorResponse()
+
+            waitUntil { done in
+                api.login("", password: "") { error in
+                    expect(error!).to(equal(PPError.NetworkError("The operation couldn’t be completed. (NSURLErrorDomain error -1009.)")))
+                    done()
+                }
+            }
+        }
+
         it("Get Event returns an event object in case of success") {
             PPGetEventOperation.stubSuccess()
 
@@ -88,6 +99,28 @@ class PPEventRegistryAPISpec: QuickSpec {
             }
         }
 
+        it("Get Event returns an appropriate error in case of transport error") {
+            PPTransport.stubErrorResponse()
+            
+            waitUntil { done in
+                api.getEvent(withID: 44808387) { result in
+                    expect(result.error!).to(equal(PPError.NetworkError("The operation couldn’t be completed. (NSURLErrorDomain error -1009.)")))
+                    done()
+                }
+            }
+        }
+
+        it("Get Event returns an appropriate error in case of an empty response") {
+            PPGetEventOperation.stubEmptyResponse()
+            
+            waitUntil { done in
+                api.getEvent(withID: 44808387) { result in
+                    expect(result.error!).to(equal(PPError.Error("Event Not Found")))
+                    done()
+                }
+            }
+        }
+
         it("Recent Articles return new articles in case of available") {
             PPGetRecentArticles.stubSuccess()
 
@@ -107,6 +140,17 @@ class PPEventRegistryAPISpec: QuickSpec {
                 api.getRecentArticles(count: 10) { result in
                     expect(Thread.current).to(equal(Thread.main))
                     expect(result.value).to(haveCount(0))
+                    done()
+                }
+            }
+        }
+
+        it("Recent Articles return an appropriate error in case of transport error") {
+            PPTransport.stubErrorResponse()
+            
+            waitUntil { done in
+                api.getRecentArticles(count: 10) { result in
+                    expect(result.error!).to(equal(PPError.NetworkError("The operation couldn’t be completed. (NSURLErrorDomain error -1009.)")))
                     done()
                 }
             }

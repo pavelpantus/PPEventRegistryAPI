@@ -20,18 +20,18 @@ final class PPLoginOperation: PPAsyncOperation {
                     completionHandler(error)
                 }
             case let .Success(response):
-                var credsError: PPError?
+                var error: PPError?
                 switch response["action"] as? String ?? "" {
                 case "unknownUser":
-                    credsError = .UnknownUser
+                    error = .UnknownUser
                 case "missingData":
-                    credsError = .MissingData
+                    error = .MissingData
                 default:
-                    credsError = nil
+                    error = nil
                 }
 
                 DispatchQueue.main.async {
-                    completionHandler(credsError)
+                    completionHandler(error)
                 }
             }
         }
