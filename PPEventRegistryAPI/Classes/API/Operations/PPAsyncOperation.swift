@@ -16,7 +16,7 @@ class PPAsyncOperation: Operation {
     internal let method: HttpMethod
     internal var transport: PPTransportProtocol!
     internal var modelMapper: PPModelMapper!
-    internal var completionHandler: ([String: Any]?, NSError?) -> Void = {_,_ in }
+    internal var completionHandler: ((PPResult<[String: Any], PPError>) -> ())?
 
     init(controller: Controller, method: HttpMethod, parameters: [String: Any]) {
         self.controller = controller
@@ -50,18 +50,18 @@ class PPAsyncOperation: Operation {
 
     override final func start() {
         if isCancelled {
-            completionHandler(nil, NSError(domain: "Operation was cancelled", code: 0, userInfo: nil))
+            completionHandler?(.Failure(.OperationCancelled))
             isFinished = true
             return
         }
 
         isExecuting = true
 
-        transport.postRequest(controller: controller, method: method, parameters: parameters) { response, error -> Void in
+        transport.postRequest(controller: controller, method: method, parameters: parameters) { result in
             if self.isCancelled {
-                self.completionHandler(response, NSError(domain: "Operation was cancelled", code: 0, userInfo: nil))
+                self.completionHandler?(.Failure(.OperationCancelled))
             } else {
-                self.completionHandler(response, error)
+                self.completionHandler?(result)
             }
 
             self.isExecuting = false

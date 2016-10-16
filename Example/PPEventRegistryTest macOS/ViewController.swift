@@ -19,14 +19,24 @@ class ViewController: NSViewController {
         } else {
             // Fallback on earlier versions
         }
-        api.setTransferProtocol(.https)
+        api.setTransferProtocol(.http)
         api.login("testeventregistry@gmail.com", password: "cDWTgGpJ4Ny") { error in
             print("login with error: \(error)")
-            self.api.getEvent(withID: 5077276) { event, error in
-                print("get event error \(event)")
+            self.api.getEvent(withID: 5077276) { result in
+                switch result {
+                case .Success(let event):
+                    print("get event: success \(event)")
+                case .Failure(let error):
+                    print("get event: error \(error)")
+                }
             }
-            self.api.getRecentArticles(count: 10) { aricles, error in
-                print("articles \(aricles), error \(error)")
+            self.api.getRecentArticles(count: 10) { result in
+                switch result {
+                case .Success(let articles):
+                    print("get aricles: success \(articles)")
+                case .Failure(let error):
+                    print("get aricles: error \(error)")
+                }
             }
         }
     }

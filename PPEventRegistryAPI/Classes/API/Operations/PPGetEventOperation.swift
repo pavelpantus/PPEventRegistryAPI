@@ -9,7 +9,7 @@
 import Foundation
 
 final class PPGetEventOperation: PPAsyncOperation {
-    init(identifier: NSNumber, completionHandler: @escaping (_ event: PPEvent?, _ error: NSError?) -> Void) {
+    init(identifier: NSNumber, completionHandler: @escaping (_ result: PPResult<PPEvent, PPError>) -> ()) {
         let parameters: [String : Any] = ["action": "getEvent",
                                           "eventUri": identifier,
                                           "infoConceptLang": "eng",
@@ -17,20 +17,29 @@ final class PPGetEventOperation: PPAsyncOperation {
                                           "resultType": "info"]
         super.init(controller: .Event, method: .Get, parameters: parameters)
 
-        self.completionHandler = { response, error in
-            var events: [PPEvent] = []
-            var error: NSError?
+        self.completionHandler = { result in
+            switch result {
+            case let .Success(response):
+                let eventData = response[identifier.stringValue] as? [String: Any]
 
-            let eventData = response?[identifier.stringValue] as? [String: Any]
-
-            if let errorDescription = eventData?["error"] as? String {
-                error = NSError(domain: errorDescription, code: 0, userInfo: nil)
-            } else if let responseData = response {
-                events = self.modelMapper.mapDataToModelObjects(responseData)
-            }
-
-            DispatchQueue.main.async {
-                completionHandler(events.first, error)
+                if let errorDescription = eventData?["error"] as? String {
+                    DispatchQueue.main.async {
+                        completionHandler(.Failure(.Error(errorDescription)))
+                    }
+                } else {
+                    let events: [PPEvent] = self.modelMapper.mapDataToModelObjects(response)
+                    DispatchQueue.main.async {
+                        if let event = events.first {
+                            completionHandler(.Success(event))
+                        } else {
+                            completionHandler(.Failure(.Error("Event Not Found")))
+                        }
+                    }
+                }
+            case let .Failure(error):
+                DispatchQueue.main.async {
+                    completionHandler(.Failure(error))
+                }
             }
         }
     }

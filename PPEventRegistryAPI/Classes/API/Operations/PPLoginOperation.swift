@@ -9,26 +9,30 @@
 import Foundation
 
 final class PPLoginOperation: PPAsyncOperation {
-    init(email: String, password: String, completionHandler: @escaping (_ error: NSError?) -> Void) {
+    init(email: String, password: String, completionHandler: @escaping (_ error: PPError?) -> ()) {
         let parameters = ["email": email, "pass": password]
         super.init(controller: .Login, method: .Post, parameters: parameters)
-
-        self.completionHandler = { response, error in
-            guard error == nil else {
+        
+        self.completionHandler = { result in
+            switch result {
+            case let .Failure(error):
                 DispatchQueue.main.async {
                     completionHandler(error)
                 }
-                return
-            }
+            case let .Success(response):
+                var error: PPError?
+                switch response["action"] as? String ?? "" {
+                case "unknownUser":
+                    error = .UnknownUser
+                case "missingData":
+                    error = .MissingData
+                default:
+                    error = nil
+                }
 
-            var credsError: NSError?
-            if let action = response?["action"] as? String,
-                action == "unknownUser" || action == "missingData" {
-                credsError = NSError(domain: action, code: 0, userInfo: nil)
-            }
-
-            DispatchQueue.main.async {
-                completionHandler(credsError)
+                DispatchQueue.main.async {
+                    completionHandler(error)
+                }
             }
         }
     }

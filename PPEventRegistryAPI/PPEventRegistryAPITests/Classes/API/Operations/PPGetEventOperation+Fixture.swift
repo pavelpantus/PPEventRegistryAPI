@@ -33,6 +33,15 @@ extension PPGetEventOperation {
             }.name = "Get Event Operation Stub: Event was not found"
     }
 
+    class func stubEmptyResponse() {
+        stub(condition: { (request) -> Bool in
+            true
+        }) { (response) -> OHHTTPStubsResponse in
+            let responseData : [String: Any] = [:]
+            return OHHTTPStubsResponse(jsonObject: responseData, statusCode: 200, headers: nil)
+            }.name = "Get Event Operation Stub: Empty Response"
+    }
+
     class func successResponseData() -> [String: Any] {
         return [ "4480701" : PPEvent.fixture1() ]
     }

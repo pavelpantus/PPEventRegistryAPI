@@ -9,7 +9,7 @@
 import Foundation
 
 final class PPGetRecentArticles: PPAsyncOperation {
-    init(count: Int = 5, completionHandler: @escaping (_ events: [PPArticle], _ error: NSError?) -> Void) {
+    init(count: Int = 5, completionHandler: @escaping (_ result: PPResult<[PPArticle], PPError>) -> ()) {
         let parameters: [String: Any] = ["action": "getRecentActivity",
                                          "addEvents": false,
                                          "addActivity": false,
@@ -21,15 +21,17 @@ final class PPGetRecentArticles: PPAsyncOperation {
 
         super.init(controller: .Overview, method: .Get, parameters: parameters as [String : Any])
 
-        self.completionHandler = { response, error -> Void in
-            var events: [PPArticle] = []
-
-            if let response = response {
-                events = self.modelMapper.mapDataToModelObjects(response)
-            }
-
-            DispatchQueue.main.async {
-                completionHandler(events, error)
+        self.completionHandler = { result in
+            switch result {
+            case let .Success(response):
+                let events: [PPArticle] = self.modelMapper.mapDataToModelObjects(response)
+                DispatchQueue.main.async {
+                    completionHandler(.Success(events))
+                }
+            case let .Failure(error):
+                DispatchQueue.main.async {
+                    completionHandler(.Failure(error))
+                }
             }
         }
     }

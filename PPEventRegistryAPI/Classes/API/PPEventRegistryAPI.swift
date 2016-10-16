@@ -40,8 +40,7 @@ public final class PPEventRegistryAPI {
         guard self.state != .loggedOut
             || operation.isKind(of: PPLoginOperation.self) else {
             DispatchQueue.main.async {
-                let error = NSError(domain: "Log In Needed", code: 100, userInfo: nil)
-                operation.completionHandler(nil, error)
+                operation.completionHandler?(.Failure(.LogInNeeded))
             }
             return
         }
@@ -64,7 +63,7 @@ extension TransferProtocolAPI {
 private typealias LoginAPI = PPEventRegistryAPI
 extension LoginAPI {
 
-    public func login(_ email: String, password: String, completionHandler: @escaping (_ error: NSError?) -> Void) {
+    public func login(_ email: String, password: String, completionHandler: @escaping (_ error: PPError?) -> ()) {
         let login = PPLoginOperation(email: email, password: password) { error in
             self.state = error == nil ? .loggedIn(email: email, password: password) : .loggedOut
             completionHandler(error)
@@ -77,9 +76,9 @@ extension LoginAPI {
 private typealias EventsAPI = PPEventRegistryAPI
 extension EventsAPI {
 
-    public func getEvent(withID id: NSNumber, completionHandler: @escaping (_ event: PPEvent?, _ error: NSError?) -> Void) {
-        let getEvent = PPGetEventOperation(identifier: id) { event, error in
-            completionHandler(event, error)
+    public func getEvent(withID id: NSNumber, completionHandler: @escaping (_ result: PPResult<PPEvent, PPError>) -> ()) {
+        let getEvent = PPGetEventOperation(identifier: id) { result in
+            completionHandler(result)
         }
         schedule(getEvent)
     }
@@ -89,7 +88,7 @@ extension EventsAPI {
 private typealias ArticlesAPI = PPEventRegistryAPI
 extension ArticlesAPI {
 
-    public func getRecentArticles(count: Int = 5, _ completionHandler: @escaping (_ articles: [PPArticle], _ error: NSError?) -> Void) {
+    public func getRecentArticles(count: Int = 5, _ completionHandler: @escaping (_ result: PPResult<[PPArticle], PPError>) -> ()) {
         let getRecentActivity = PPGetRecentArticles(count: count, completionHandler: completionHandler)
         schedule(getRecentActivity)
     }

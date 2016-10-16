@@ -9,7 +9,7 @@
 import Foundation
 
 protocol PPTransportProtocol {
-    func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void)
+    func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ result: PPResult<[String: Any], PPError>) -> ())
 }
 
 enum HttpMethod: String {
@@ -44,24 +44,24 @@ final class PPTransport: NSObject {
 // MARK: PPTransportProtocol
 
 extension PPTransport: PPTransportProtocol {
-    internal func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ response: [String: Any]?, _ error: NSError?) -> Void) {
+    internal func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ result: PPResult<[String: Any], PPError>) -> ()) {
 
         let urlRequest = request(with: controller, method: method, parameters: parameters)
 
         let task = session.dataTask(with: urlRequest) { data, response, error in
             guard error == nil else {
-                completionHandler(nil, error as NSError?)
+                completionHandler(.Failure(.NetworkError(error?.localizedDescription ?? "")))
                 return
             }
 
             guard let data = data,
                 let resultObject = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers),
                 let response = resultObject as? [String: Any] else {
-                    completionHandler(nil, NSError(domain: "Response Data is Corrupted", code: 0, userInfo: nil))
+                    completionHandler(.Failure(.CorruptedResponse))
                     return
             }
 
-            completionHandler(response, nil)
+            completionHandler(.Success(response))
         }
         task.resume()
     }
