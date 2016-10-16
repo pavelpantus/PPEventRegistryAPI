@@ -60,9 +60,9 @@ extension PPError: CustomDebugStringConvertible {
         case .CorruptedResponse:
             return "CorruptedResponse"
         case let .NetworkError(e):
-            return "NetworkError \(e)"
+            return "NetworkError: \(e)"
         case let .Error(e):
-            return "Error \(e)"
+            return "Error: \(e)"
         }
     }
 

@@ -82,7 +82,7 @@ class PPEventRegistryAPISpec: QuickSpec {
             waitUntil { done in
                 api.getEvent(withID: 44808387) { result in
                     expect(Thread.current).to(equal(Thread.main))
-                    expect(result.error!.debugDescription).to(equal("Error Provided event uri (44808387) is not a valid event uri"))
+                    expect(result.error!.debugDescription).to(equal("Error: Provided event uri (44808387) is not a valid event uri"))
                     done()
                 }
             }
