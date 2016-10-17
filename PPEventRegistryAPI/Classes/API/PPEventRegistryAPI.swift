@@ -77,9 +77,7 @@ private typealias EventsAPI = PPEventRegistryAPI
 extension EventsAPI {
 
     public func getEvent(withID id: NSNumber, completionHandler: @escaping (_ result: PPResult<PPEvent, PPError>) -> ()) {
-        let getEvent = PPGetEventOperation(identifier: id) { result in
-            completionHandler(result)
-        }
+        let getEvent = PPGetEventOperation(identifier: id, completionHandler: completionHandler)
         schedule(getEvent)
     }
 
