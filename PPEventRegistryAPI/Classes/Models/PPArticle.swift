@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// An article is a piece of news that Event Registry collects.
 public struct PPArticle {
     let title: String
     let body: String

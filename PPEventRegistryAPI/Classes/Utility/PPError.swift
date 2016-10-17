@@ -8,13 +8,21 @@
 
 import Foundation
 
+/// Errors representation in the project.
 public enum PPError {
+    /// Operation was cancelled.
     case OperationCancelled
+    /// User needs to be logged in before requesting data.
     case LogInNeeded
+    /// User with porvided creds was not found.
     case UnknownUser
+    /// Not enough information to finish the request.
     case MissingData
+    /// Response can't be recognized.
     case CorruptedResponse
+    /// Network Error with description.
     case NetworkError(String)
+    /// Generic Error that didn't fit in any above description.
     case Error(String)
 }
 

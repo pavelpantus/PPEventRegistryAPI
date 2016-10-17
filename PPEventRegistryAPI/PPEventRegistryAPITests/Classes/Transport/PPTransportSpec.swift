@@ -17,11 +17,11 @@ class PPTransportSpec: QuickSpec {
         describe("HttpMethod") {
 
             it ("Get case is in place") {
-                expect(HttpMethod(rawValue: "Get")).to(equal(HttpMethod.Get))
+                expect(PPHttpMethod(rawValue: "Get")).to(equal(PPHttpMethod.Get))
             }
 
             it ("Post case is in place") {
-                expect(HttpMethod(rawValue: "Post")).to(equal(HttpMethod.Post))
+                expect(PPHttpMethod(rawValue: "Post")).to(equal(PPHttpMethod.Post))
             }
 
         }
@@ -29,15 +29,15 @@ class PPTransportSpec: QuickSpec {
         describe("Controller") {
 
             it("Login controller is in place") {
-                expect(Controller(rawValue: "Login")).to(equal(Controller.Login))
+                expect(PPController(rawValue: "Login")).to(equal(PPController.Login))
             }
 
             it("Overview controller is in place") {
-                expect(Controller(rawValue: "Overview")).to(equal(Controller.Overview))
+                expect(PPController(rawValue: "Overview")).to(equal(PPController.Overview))
             }
 
             it("Event controller is in place") {
-                expect(Controller(rawValue: "Event")).to(equal(Controller.Event))
+                expect(PPController(rawValue: "Event")).to(equal(PPController.Event))
             }
 
         }

@@ -24,11 +24,11 @@ class PPGetRecentArticlesSpec: QuickSpec {
         }
 
         it("configured with correct httpMethod") {
-            expect(getRecentArticles.method).to(equal(HttpMethod.Get))
+            expect(getRecentArticles.method).to(equal(PPHttpMethod.Get))
         }
 
         it("configured with correct controller") {
-            expect(getRecentArticles.controller).to(equal(Controller.Overview))
+            expect(getRecentArticles.controller).to(equal(PPController.Overview))
         }
 
         it("configured with a completion") {

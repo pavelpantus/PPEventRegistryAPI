@@ -24,11 +24,11 @@ class PPGetEventOperationSpec: QuickSpec {
         }
 
         it("configured with correct httpMethod") {
-            expect(getEventOperation.method).to(equal(HttpMethod.Get))
+            expect(getEventOperation.method).to(equal(PPHttpMethod.Get))
         }
 
         it("configured with correct controller") {
-            expect(getEventOperation.controller).to(equal(Controller.Event))
+            expect(getEventOperation.controller).to(equal(PPController.Event))
         }
 
         it("configured with a completion") {

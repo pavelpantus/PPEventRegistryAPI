@@ -1,6 +1,12 @@
 # PPEventRegistryAPI — CHANGELOG
 
 ##0.0.3
+* Add documentation  
+  [Pavel Pantus](https://github.com/pantuspavel), [#119](https://github.com/pantuspavel/PPEventRegistryAPI/pull/119)
+* Reconcile naming  
+  [Pavel Pantus](https://github.com/pantuspavel), [#119](https://github.com/pantuspavel/PPEventRegistryAPI/pull/119)
+* Make PPTransport a struct  
+  [Pavel Pantus](https://github.com/pantuspavel), [#119](https://github.com/pantuspavel/PPEventRegistryAPI/pull/119)
 * Introduce generic Return type, that incapsulates returned object and error (Public API change)  
   [Pavel Pantus](https://github.com/pantuspavel), [#114](https://github.com/pantuspavel/PPEventRegistryAPI/pull/114)
 * Introduce PPError enum and return it instead of NSError (Public API change)  

@@ -8,7 +8,17 @@
 
 import Foundation
 
+/// Operation that logs in user.
 final class PPLoginOperation: PPAsyncOperation {
+    
+    /**
+     Operation initializer.
+     - Parameters:
+        - email: Email to log in user with.
+        - password: Password to log in user with.
+        - completionHandler: Completion handler that is executed upon operation completion.
+        - error: Error in case something went wrong.
+     */
     init(email: String, password: String, completionHandler: @escaping (_ error: PPError?) -> ()) {
         let parameters = ["email": email, "pass": password]
         super.init(controller: .Login, method: .Post, parameters: parameters)
