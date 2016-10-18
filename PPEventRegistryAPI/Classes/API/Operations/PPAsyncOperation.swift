@@ -27,8 +27,8 @@ class PPAsyncOperation: Operation {
     /**
      Initializer that should be used by subclasses.
      - Parameters:
-        - controller: Controller operation belongs to (See Controller).
-        - method: HTTP method that operation should use (See HttpOperation).
+        - controller: Controller operation belongs to (See PPController).
+        - method: HTTP method that operation should use (See PPHttpOperation).
         - parameters: Operation parameters that should be attached to the request.
      */
     init(controller: PPController, method: PPHttpMethod, parameters: [String: Any]) {

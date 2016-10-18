@@ -14,7 +14,7 @@ final class PPRecentArticlesOperation: PPAsyncOperation {
     /**
      Operation initializer.
      - Parameters:
-        - count: Count of articles to request.
+        - count: Articles count that should be requested.
         - completionHandler: Completion handler that is executed upon operation completion.
         - result: Result of the operation (see PPResult).
      */

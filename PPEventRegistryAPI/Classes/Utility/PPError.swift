@@ -14,7 +14,7 @@ public enum PPError {
     case OperationCancelled
     /// User needs to be logged in before requesting data.
     case LogInNeeded
-    /// User with porvided creds was not found.
+    /// User with provided creds was not found.
     case UnknownUser
     /// Not enough information to finish the request.
     case MissingData

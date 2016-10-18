@@ -14,7 +14,7 @@ final class PPGetEventOperation: PPAsyncOperation {
     /**
      Operation initializer.
      - Parameters:
-        - identifier: Requested event identifier.
+        - identifier: Identifier of requested event.
         - completionHandler: Completion handler that is executed upon operation completion.
         - result: Result of the operation (see PPResult).
      */

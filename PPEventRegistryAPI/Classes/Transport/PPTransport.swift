@@ -51,7 +51,7 @@ extension PPTransport: PPTransportProtocol {
         - controller: Controller the request should be posted to.
         - method: Http method that should be used.
         - parameters: Request parameters.
-        - completionHandler: Handler that is to be executed on request completion.
+        - completionHandler: Handler that is to be executed upon request completion.
         - result: Result of the request execution (see PPResult).
      */
     internal func postRequest(controller: PPController, method: PPHttpMethod, parameters: [String: Any], completionHandler: @escaping (_ result: PPResult<[String: Any], PPError>) -> ()) {
