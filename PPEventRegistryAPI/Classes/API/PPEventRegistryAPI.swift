@@ -108,9 +108,7 @@ extension EventsAPI {
         - result: A result of the operation (see PPResult for more details).
      */
     public func getEvent(withID id: NSNumber, completionHandler: @escaping (_ result: PPResult<PPEvent, PPError>) -> ()) {
-        let getEvent = PPGetEventOperation(identifier: id) { result in
-            completionHandler(result)
-        }
+        let getEvent = PPGetEventOperation(identifier: id, completionHandler: completionHandler)
         schedule(getEvent)
     }
 
