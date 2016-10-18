@@ -127,7 +127,7 @@ extension ArticlesAPI {
         - result: A result of the operation (see PPResult for more details).
      */
     public func getRecentArticles(count: Int = 5, _ completionHandler: @escaping (_ result: PPResult<[PPArticle], PPError>) -> ()) {
-        let getRecentActivity = PPGetRecentArticles(count: count, completionHandler: completionHandler)
+        let getRecentActivity = PPRecentArticlesOperation(count: count, completionHandler: completionHandler)
         schedule(getRecentActivity)
     }
 

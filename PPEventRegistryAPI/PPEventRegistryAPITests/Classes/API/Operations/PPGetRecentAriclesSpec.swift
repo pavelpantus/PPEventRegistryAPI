@@ -13,10 +13,10 @@ import Nimble
 class PPGetRecentArticlesSpec: QuickSpec {
     override func spec() {
 
-        var getRecentArticles = PPGetRecentArticles {_ in}
+        var getRecentArticles = PPRecentArticlesOperation {_ in}
 
         beforeEach {
-            getRecentArticles = PPGetRecentArticles {_ in}
+            getRecentArticles = PPRecentArticlesOperation {_ in}
         }
 
         it("subclass of PPAsyncOperation") {
@@ -58,31 +58,31 @@ class PPGetRecentArticlesSpec: QuickSpec {
         }
 
         it("correctly configures max articles count") {
-            getRecentArticles = PPGetRecentArticles(count: 10) {_ in}
+            getRecentArticles = PPRecentArticlesOperation(count: 10) {_ in}
             let params = getRecentArticles.parameters
             expect(params["recentActivityArticlesMaxArticleCount"] as? Int).to(equal(10))
         }
 
         it("accepts 100 as a max articles count") {
-            getRecentArticles = PPGetRecentArticles(count: 100) {_ in}
+            getRecentArticles = PPRecentArticlesOperation(count: 100) {_ in}
             let params = getRecentArticles.parameters
             expect(params["recentActivityArticlesMaxArticleCount"] as? Int).to(equal(100))
         }
 
         it("does not accept negative number as a max articles count") {
-            getRecentArticles = PPGetRecentArticles(count: -10) {_ in}
+            getRecentArticles = PPRecentArticlesOperation(count: -10) {_ in}
             let params = getRecentArticles.parameters
             expect(params["recentActivityArticlesMaxArticleCount"] as? Int).to(equal(5))
         }
 
         it("does not accept zero as a max articles count") {
-            getRecentArticles = PPGetRecentArticles(count: 0) {_ in}
+            getRecentArticles = PPRecentArticlesOperation(count: 0) {_ in}
             let params = getRecentArticles.parameters
             expect(params["recentActivityArticlesMaxArticleCount"] as? Int).to(equal(5))
         }
 
         it("does not accept too big articles count") {
-            getRecentArticles = PPGetRecentArticles(count: 10000) {_ in}
+            getRecentArticles = PPRecentArticlesOperation(count: 10000) {_ in}
             let params = getRecentArticles.parameters
             expect(params["recentActivityArticlesMaxArticleCount"] as? Int).to(equal(5))
         }

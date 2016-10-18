@@ -10,7 +10,7 @@ import Foundation
 import OHHTTPStubs
 @testable import PPEventRegistryAPI
 
-extension PPGetRecentArticles {
+extension PPRecentArticlesOperation {
 
     class func stubSuccess() {
         stub(condition: { (request) -> Bool in

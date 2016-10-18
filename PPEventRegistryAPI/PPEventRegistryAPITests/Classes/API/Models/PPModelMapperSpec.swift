@@ -34,7 +34,7 @@ class PPModelMapperSpec: QuickSpec {
                 }
 
                 it("Maps articles correctly") {
-                    let articles: [PPArticle] = modelMapper.mapDataToModelObjects(PPGetRecentArticles.successResponseData())
+                    let articles: [PPArticle] = modelMapper.mapDataToModelObjects(PPRecentArticlesOperation.successResponseData())
                     expect(articles).to(haveCount(3))
                 }
 

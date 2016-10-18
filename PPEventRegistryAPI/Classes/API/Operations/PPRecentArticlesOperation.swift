@@ -9,7 +9,7 @@
 import Foundation
 
 /// Operation to request most recent articles.
-final class PPGetRecentArticles: PPAsyncOperation {
+final class PPRecentArticlesOperation: PPAsyncOperation {
 
     /**
      Operation initializer.

@@ -66,7 +66,7 @@
 		E9EC45D71D4240F500D1A68F /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
 		E9EC45D81D4240F500D1A68F /* PPLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA061D1770EB00DBF268 /* PPLoginOperation.swift */; };
 		E9EC45D91D4240F500D1A68F /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
-		E9EC45DA1D4240F500D1A68F /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
+		E9EC45DA1D4240F500D1A68F /* PPRecentArticlesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPRecentArticlesOperation.swift */; };
 		E9EC45DB1D4240F500D1A68F /* PPEventRegistryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryAPI.swift */; };
 		E9EC45DC1D4240F500D1A68F /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
 		E9EC45DD1D4240F500D1A68F /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
@@ -96,7 +96,7 @@
 		E9EF48D01D60B3CA00D4B165 /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
 		E9EF48D11D60B3CA00D4B165 /* PPLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA061D1770EB00DBF268 /* PPLoginOperation.swift */; };
 		E9EF48D21D60B3CA00D4B165 /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
-		E9EF48D31D60B3CA00D4B165 /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
+		E9EF48D31D60B3CA00D4B165 /* PPRecentArticlesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPRecentArticlesOperation.swift */; };
 		E9EF48D41D60B3CA00D4B165 /* PPEventRegistryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryAPI.swift */; };
 		E9EF48D51D60B3CA00D4B165 /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
 		E9EF48D61D60B3CA00D4B165 /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
@@ -111,7 +111,7 @@
 		E9F845271D3B288A00F4E3D9 /* PPAsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */; };
 		E9F845281D3B288A00F4E3D9 /* PPLoginOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA061D1770EB00DBF268 /* PPLoginOperation.swift */; };
 		E9F845291D3B288A00F4E3D9 /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
-		E9F8452A1D3B288A00F4E3D9 /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
+		E9F8452A1D3B288A00F4E3D9 /* PPRecentArticlesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPRecentArticlesOperation.swift */; };
 		E9F8452B1D3B288A00F4E3D9 /* PPEventRegistryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2EA001D176E7800DBF268 /* PPEventRegistryAPI.swift */; };
 		E9F8452C1D3B288A00F4E3D9 /* PPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F2E8E51D174BE400DBF268 /* PPTransport.swift */; };
 		E9F8452D1D3B288A00F4E3D9 /* Dictionary+PPJoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E0B7391D18CAD300702E4E /* Dictionary+PPJoin.swift */; };
@@ -127,7 +127,7 @@
 		E9F845371D3B28AB00F4E3D9 /* Dictionary_PPJoinSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910476B1D32F0F90048B0DE /* Dictionary_PPJoinSpec.swift */; };
 		E9F845381D3B28AB00F4E3D9 /* PPEventRegistryAPISpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CB7B481D37C43B001BBEDB /* PPEventRegistryAPISpec.swift */; };
 		E9FB398A1D1A1F0B003E17EA /* PPGetEventOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */; };
-		E9FB398C1D1B6164003E17EA /* PPGetRecentArticles.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */; };
+		E9FB398C1D1B6164003E17EA /* PPRecentArticlesOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FB398B1D1B6164003E17EA /* PPRecentArticlesOperation.swift */; };
 		FB890A46D1BE37DC04C3D4F9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8721F8E719CE364E0F55E9D9 /* Pods_TestingPods_PPEventRegistryAPITests_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -237,7 +237,7 @@
 		E9F845141D3B286200F4E3D9 /* PPEventRegistryAPITests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PPEventRegistryAPITests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9F845391D3B28DC00F4E3D9 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPGetEventOperation.swift; path = API/Operations/PPGetEventOperation.swift; sourceTree = "<group>"; };
-		E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPGetRecentArticles.swift; path = API/Operations/PPGetRecentArticles.swift; sourceTree = "<group>"; };
+		E9FB398B1D1B6164003E17EA /* PPRecentArticlesOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PPRecentArticlesOperation.swift; path = API/Operations/PPRecentArticlesOperation.swift; sourceTree = "<group>"; };
 		EF9B939C9F4F1A971968DC33 /* Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestingPods_PPEventRegistryAPITests_tvOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F253ACCC3B82FDA39C367315 /* Pods-PPEventRegistryAPITests tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PPEventRegistryAPITests tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-PPEventRegistryAPITests tvOS/Pods-PPEventRegistryAPITests tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		F3F2ABBDC75A19713A2EE2D2 /* Pods_PPEventRegistryAPI_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PPEventRegistryAPI_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -542,7 +542,7 @@
 				E9F2EA041D176F1C00DBF268 /* PPAsyncOperation.swift */,
 				E9F2EA061D1770EB00DBF268 /* PPLoginOperation.swift */,
 				E9FB39891D1A1F0B003E17EA /* PPGetEventOperation.swift */,
-				E9FB398B1D1B6164003E17EA /* PPGetRecentArticles.swift */,
+				E9FB398B1D1B6164003E17EA /* PPRecentArticlesOperation.swift */,
 			);
 			name = Operations;
 			sourceTree = "<group>";
@@ -998,7 +998,7 @@
 				E9EF48D01D60B3CA00D4B165 /* PPAsyncOperation.swift in Sources */,
 				E9EF48D11D60B3CA00D4B165 /* PPLoginOperation.swift in Sources */,
 				E9EF48D21D60B3CA00D4B165 /* PPGetEventOperation.swift in Sources */,
-				E9EF48D31D60B3CA00D4B165 /* PPGetRecentArticles.swift in Sources */,
+				E9EF48D31D60B3CA00D4B165 /* PPRecentArticlesOperation.swift in Sources */,
 				E9EF48D41D60B3CA00D4B165 /* PPEventRegistryAPI.swift in Sources */,
 				E9EF48D51D60B3CA00D4B165 /* PPTransport.swift in Sources */,
 				E90583711DAF14B4005E6D91 /* PPResult.swift in Sources */,
@@ -1023,7 +1023,7 @@
 				E9F2E8E61D174BE400DBF268 /* PPTransport.swift in Sources */,
 				E905836F1DAF14B4005E6D91 /* PPResult.swift in Sources */,
 				E951D2E01DAC7FA000B3A230 /* PPConcept.swift in Sources */,
-				E9FB398C1D1B6164003E17EA /* PPGetRecentArticles.swift in Sources */,
+				E9FB398C1D1B6164003E17EA /* PPRecentArticlesOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1066,7 +1066,7 @@
 				E9EC45D71D4240F500D1A68F /* PPAsyncOperation.swift in Sources */,
 				E9EC45D81D4240F500D1A68F /* PPLoginOperation.swift in Sources */,
 				E9EC45D91D4240F500D1A68F /* PPGetEventOperation.swift in Sources */,
-				E9EC45DA1D4240F500D1A68F /* PPGetRecentArticles.swift in Sources */,
+				E9EC45DA1D4240F500D1A68F /* PPRecentArticlesOperation.swift in Sources */,
 				E9EC45DB1D4240F500D1A68F /* PPEventRegistryAPI.swift in Sources */,
 				E9EC45DC1D4240F500D1A68F /* PPTransport.swift in Sources */,
 				E90583721DAF14B4005E6D91 /* PPResult.swift in Sources */,
@@ -1114,7 +1114,7 @@
 				E9F845271D3B288A00F4E3D9 /* PPAsyncOperation.swift in Sources */,
 				E9F845281D3B288A00F4E3D9 /* PPLoginOperation.swift in Sources */,
 				E9F845291D3B288A00F4E3D9 /* PPGetEventOperation.swift in Sources */,
-				E9F8452A1D3B288A00F4E3D9 /* PPGetRecentArticles.swift in Sources */,
+				E9F8452A1D3B288A00F4E3D9 /* PPRecentArticlesOperation.swift in Sources */,
 				E9F8452B1D3B288A00F4E3D9 /* PPEventRegistryAPI.swift in Sources */,
 				E9F8452C1D3B288A00F4E3D9 /* PPTransport.swift in Sources */,
 				E90583701DAF14B4005E6D91 /* PPResult.swift in Sources */,
