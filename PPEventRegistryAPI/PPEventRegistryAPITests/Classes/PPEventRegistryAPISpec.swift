@@ -122,7 +122,7 @@ class PPEventRegistryAPISpec: QuickSpec {
         }
 
         it("Recent Articles return new articles in case of available") {
-            PPGetRecentArticles.stubSuccess()
+            PPRecentArticlesOperation.stubSuccess()
 
             waitUntil { done in
                 api.getRecentArticles(count: 3) { result in
@@ -134,7 +134,7 @@ class PPEventRegistryAPISpec: QuickSpec {
         }
 
         it("Recent Articles return empty array in case of no new articles") {
-            PPGetRecentArticles.stubNoArticlesFound()
+            PPRecentArticlesOperation.stubNoArticlesFound()
 
             waitUntil { done in
                 api.getRecentArticles(count: 10) { result in

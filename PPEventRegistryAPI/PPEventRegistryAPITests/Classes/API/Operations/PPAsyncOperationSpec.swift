@@ -43,11 +43,11 @@ class PPAsyncOperationSpec: QuickSpec {
         }
 
         it("correct controller set") {
-            expect(asyncOperation.controller).to(equal(Controller.Login))
+            expect(asyncOperation.controller).to(equal(PPController.Login))
         }
 
         it("correct httpMethod set") {
-            expect(asyncOperation.method).to(equal(HttpMethod.Get))
+            expect(asyncOperation.method).to(equal(PPHttpMethod.Get))
         }
 
         it("correct parameters set") {

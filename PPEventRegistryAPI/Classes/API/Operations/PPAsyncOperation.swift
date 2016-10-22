@@ -8,17 +8,30 @@
 
 import Foundation
 
+/**
+ Class representing a asynchronous network request.
+ While async operation can be used as-is, it should be subclassed to represent a concrete network operation.
+ Parameters and completion handler should be configured in a subclass' initializer.
+ - Examples: PPLoginOperation, PPGetEventOperation, PPGetRecentArticles
+ */
 class PPAsyncOperation: Operation {
     private var _executing = false
     private var _finished = false
-    internal let controller: Controller
+    internal let controller: PPController
     internal let parameters: [String: Any]
-    internal let method: HttpMethod
+    internal let method: PPHttpMethod
     internal var transport: PPTransportProtocol!
     internal var modelMapper: PPModelMapper!
     internal var completionHandler: ((PPResult<[String: Any], PPError>) -> ())?
 
-    init(controller: Controller, method: HttpMethod, parameters: [String: Any]) {
+    /**
+     Initializer that should be used by subclasses.
+     - Parameters:
+        - controller: Controller operation belongs to (See PPController).
+        - method: HTTP method that operation should use (See PPHttpOperation).
+        - parameters: Operation parameters that should be attached to the request.
+     */
+    init(controller: PPController, method: PPHttpMethod, parameters: [String: Any]) {
         self.controller = controller
         self.method = method
         self.parameters = parameters
@@ -26,6 +39,7 @@ class PPAsyncOperation: Operation {
         super.init()
     }
 
+    /// Flag representing current execution state of the operation.
     override var isExecuting: Bool {
         get { return _executing }
         set {
@@ -35,6 +49,7 @@ class PPAsyncOperation: Operation {
         }
     }
 
+    /// Flag representing current state of the operation.
     override var isFinished: Bool {
         get { return _finished }
         set {
@@ -44,6 +59,7 @@ class PPAsyncOperation: Operation {
         }
     }
 
+    /// Flag representing that the operation is asynchronous.
     override var isAsynchronous: Bool {
         get { return true }
     }

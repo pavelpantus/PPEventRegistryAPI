@@ -8,7 +8,16 @@
 
 import Foundation
 
-final class PPGetRecentArticles: PPAsyncOperation {
+/// Operation to request most recent articles.
+final class PPRecentArticlesOperation: PPAsyncOperation {
+
+    /**
+     Operation initializer.
+     - Parameters:
+        - count: Articles count that should be requested.
+        - completionHandler: Completion handler that is executed upon operation completion.
+        - result: Result of the operation (see PPResult).
+     */
     init(count: Int = 5, completionHandler: @escaping (_ result: PPResult<[PPArticle], PPError>) -> ()) {
         let parameters: [String: Any] = ["action": "getRecentActivity",
                                          "addEvents": false,

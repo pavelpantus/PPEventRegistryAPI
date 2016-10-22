@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// A concept is an annotation that can be assigned to an article, story or event.
 public struct PPConcept {
     let identifier: String
     let description: String

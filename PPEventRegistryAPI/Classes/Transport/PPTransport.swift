@@ -8,43 +8,53 @@
 
 import Foundation
 
+/// Protocol that real transport and mock conform to.
 protocol PPTransportProtocol {
-    func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ result: PPResult<[String: Any], PPError>) -> ())
+    func postRequest(controller: PPController, method: PPHttpMethod, parameters: [String: Any], completionHandler: @escaping (_ result: PPResult<[String: Any], PPError>) -> ())
 }
 
-enum HttpMethod: String {
+/// Supported http methods.
+enum PPHttpMethod: String {
     case Get
     case Post
 }
 
-enum Controller: String {
+/// Supported operation controllers.
+enum PPController: String {
     case Login
     case Event
     case Overview
 }
 
+/// Transfer protocols that API object can use.
 public enum PPTransferProtocol: String {
     case http
     case https
 }
 
-final class PPTransport: NSObject {
-    internal var session: URLSession!
+/// struct that represents transport of API object.
+struct PPTransport {
+    internal let session = URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: nil)
     internal var transferProtocol: PPTransferProtocol = .http
     internal var baseURI: String {
         return transferProtocol.rawValue + "://eventregistry.org"
-    }
-
-    internal override init() {
-        super.init()
-        session = URLSession(configuration: URLSessionConfiguration.default, delegate: self, delegateQueue: nil)
     }
 }
 
 // MARK: PPTransportProtocol
 
 extension PPTransport: PPTransportProtocol {
-    internal func postRequest(controller: Controller, method: HttpMethod, parameters: [String: Any], completionHandler: @escaping (_ result: PPResult<[String: Any], PPError>) -> ()) {
+    
+    /**
+     Posts request to the network.
+     - Parameters:
+        - controller: Controller the request should be posted to.
+        - method: Http method that should be used.
+        - parameters: Request parameters.
+        - completionHandler: Handler that is to be executed upon request completion.
+        - result: Result of the request execution (see PPResult).
+     */
+    internal func postRequest(controller: PPController, method: PPHttpMethod, parameters: [String: Any], completionHandler: @escaping (_ result: PPResult<[String: Any], PPError>) -> ()) {
 
         let urlRequest = request(with: controller, method: method, parameters: parameters)
 
@@ -66,7 +76,15 @@ extension PPTransport: PPTransportProtocol {
         task.resume()
     }
 
-    internal func request(with controller: Controller, method: HttpMethod, parameters: [String: Any]) -> URLRequest {
+    /**
+     Creates a request that will be posted to the network.
+     - Parameters:
+        - controller: Controller the request should be posted to.
+        - method: Http method that should be used.
+        - parameters: Request parameters.
+     - Returns: Network request.
+     */
+    internal func request(with controller: PPController, method: PPHttpMethod, parameters: [String: Any]) -> URLRequest {
         var request: URLRequest
 
         if method == .Get {
@@ -80,16 +98,7 @@ extension PPTransport: PPTransportProtocol {
 
         request.httpMethod = method.rawValue.uppercased()
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
 
         return request
-    }
-}
-
-// MARK: URLSessionDelegate
-
-extension PPTransport: URLSessionDelegate {
-    internal func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
-        print("Session did become invalid with error: \(error)")
     }
 }

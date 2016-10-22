@@ -8,7 +8,16 @@
 
 import Foundation
 
+/// Operation to request event by identifier.
 final class PPGetEventOperation: PPAsyncOperation {
+    
+    /**
+     Operation initializer.
+     - Parameters:
+        - identifier: Identifier of requested event.
+        - completionHandler: Completion handler that is executed upon operation completion.
+        - result: Result of the operation (see PPResult).
+     */
     init(identifier: NSNumber, completionHandler: @escaping (_ result: PPResult<PPEvent, PPError>) -> ()) {
         let parameters: [String : Any] = ["action": "getEvent",
                                           "eventUri": identifier,

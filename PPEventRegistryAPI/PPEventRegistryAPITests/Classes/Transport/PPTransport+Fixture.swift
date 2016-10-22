@@ -12,7 +12,7 @@ import OHHTTPStubs
 
 extension PPTransport {
 
-    class func stubEmptyResponse() {
+    static func stubEmptyResponse() {
         stub(condition: { request -> Bool in
             true
         }) { response -> OHHTTPStubsResponse in
@@ -21,7 +21,7 @@ extension PPTransport {
             }.name = "PPTransport Stub: Empty Response"
     }
 
-    class func stubInvalidResponse() {
+    static func stubInvalidResponse() {
         stub(condition: { request -> Bool in
             true
         }) { response -> OHHTTPStubsResponse in
@@ -30,7 +30,7 @@ extension PPTransport {
             }.name = "PPTransport Stub: Invalid Response"
     }
 
-    class func stubErrorResponse() {
+    static func stubErrorResponse() {
         stub(condition: { request -> Bool in
             true
         }) { response -> OHHTTPStubsResponse in
