@@ -194,7 +194,6 @@
 		E92194301D3EFD64005B9B68 /* PPGetEventOperation+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPGetEventOperation+Fixture.swift"; sourceTree = "<group>"; };
 		E92194331D3F070F005B9B68 /* PPGetRecentAricles+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPGetRecentAricles+Fixture.swift"; sourceTree = "<group>"; };
 		E929E9C21D9DA2EE00C93E7E /* .coverage.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = .coverage.sh; path = ../.coverage.sh; sourceTree = "<group>"; };
-		E929E9C31D9DA2EE00C93E7E /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		E929E9C41D9DA2EE00C93E7E /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		E9367DDA1D41009700EFA694 /* PPEvent+Fixture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PPEvent+Fixture.swift"; sourceTree = "<group>"; };
 		E9385AE61D17325C009716D1 /* PPEventRegistryAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PPEventRegistryAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,7 +353,6 @@
 			children = (
 				E951D2E41DAD23D500B3A230 /* Package.swift */,
 				E929E9C21D9DA2EE00C93E7E /* .coverage.sh */,
-				E929E9C31D9DA2EE00C93E7E /* .swift-version */,
 				E929E9C41D9DA2EE00C93E7E /* .travis.yml */,
 				E9DF7B931D92C72E00F5B8EA /* CHANGELOG.md */,
 				E9F845391D3B28DC00F4E3D9 /* Podfile */,
